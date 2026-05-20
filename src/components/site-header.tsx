@@ -1,0 +1,79 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/button";
+import { navItems } from "@/data/site";
+
+export function SiteHeader() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="fixed inset-x-0 top-0 z-50 pt-3 md:pt-5">
+      <div className="container-shell">
+        <nav className="flex min-h-16 items-center justify-between rounded-[20px] border border-white/10 bg-[rgba(17,22,17,0.78)] px-4 shadow-[var(--shadow-soft)] backdrop-blur-xl md:min-h-[78px] md:px-7">
+          <Link aria-label="Bitzsznn home" className="relative h-11 w-[112px] shrink-0 overflow-hidden" href="/">
+            <Image
+              alt="Bitzsznn"
+              className="object-contain object-left"
+              fill
+              priority
+              sizes="112px"
+              src="/images/bitzsznn-logo.png"
+            />
+          </Link>
+
+          <div className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
+            {navItems.map((item) => (
+              <Link
+                className="relative transition duration-200 hover:text-foreground after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-primary after:transition-all after:duration-200 hover:after:w-full"
+                href={item.href}
+                key={item.href}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="hidden md:block">
+            <Button className="min-h-11 px-5 py-2 text-sm" href="/tickets">
+              Buy tickets
+            </Button>
+          </div>
+
+          <button
+            aria-expanded={open}
+            aria-label="Toggle navigation"
+            className="grid size-11 place-items-center rounded-2xl border border-white/10 bg-white/5 text-foreground md:hidden"
+            onClick={() => setOpen((value) => !value)}
+            type="button"
+          >
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </nav>
+
+        {open ? (
+          <div className="mt-2 rounded-[20px] border border-white/10 bg-[rgba(17,22,17,0.94)] p-3 shadow-[var(--shadow-soft)] backdrop-blur-xl md:hidden">
+            <div className="grid gap-1">
+              {navItems.map((item) => (
+                <Link
+                  className="rounded-2xl px-4 py-3 text-sm text-muted-foreground transition hover:bg-white/8 hover:text-foreground"
+                  href={item.href}
+                  key={item.href}
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+            <Button className="mt-3 w-full" href="/tickets">
+              Buy tickets
+            </Button>
+          </div>
+        ) : null}
+      </div>
+    </header>
+  );
+}
