@@ -7,6 +7,7 @@ type ButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "ghost";
   className?: string;
+  showIcon?: boolean;
   type?: "button" | "submit";
   onClick?: () => void;
 };
@@ -25,6 +26,7 @@ export function Button({
   children,
   variant = "primary",
   className,
+  showIcon = false,
   type = "button",
   onClick,
 }: ButtonProps) {
@@ -37,7 +39,7 @@ export function Button({
   const content = (
     <>
       {children}
-      <ArrowRight className="size-4 transition duration-200 group-hover:translate-x-0.5" />
+      {showIcon ? <ArrowRight className="size-4 transition duration-200 group-hover:translate-x-0.5" /> : null}
     </>
   );
 

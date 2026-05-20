@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -14,13 +13,11 @@ export function SiteHeader() {
     <header className="fixed inset-x-0 top-0 z-50 pt-3 md:pt-5">
       <div className="container-shell">
         <nav className="flex min-h-16 items-center justify-between rounded-[20px] border border-white/10 bg-[rgba(17,22,17,0.78)] px-4 shadow-[var(--shadow-soft)] backdrop-blur-xl md:min-h-[78px] md:px-7">
-          <Link aria-label="Bitzsznn home" className="relative h-11 w-[112px] shrink-0 overflow-hidden" href="/">
-            <Image
+          <Link aria-label="Bitzsznn home" className="relative h-[54px] w-[124px] shrink-0 overflow-hidden" href="/">
+            {/* The Figma logo asset is intentionally cropped inside its frame. */}
+            <img
               alt="Bitzsznn"
-              className="object-contain object-left"
-              fill
-              priority
-              sizes="112px"
+              className="absolute -left-[21%] -top-[97%] h-[308%] w-[136%] max-w-none object-cover"
               src="/images/bitzsznn-logo.png"
             />
           </Link>
