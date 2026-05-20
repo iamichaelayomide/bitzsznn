@@ -9,7 +9,6 @@ import {
 import { Button } from "@/components/button";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { MotionSection } from "@/components/motion-section";
-import { SiteHeader } from "@/components/site-header";
 import { services, socialLinks, stats } from "@/data/site";
 
 const avatars = [1, 2, 3, 4, 5];
@@ -82,8 +81,6 @@ function GuideSection({
 export function LandingPage() {
   return (
     <main className="overflow-x-hidden bg-white">
-      <SiteHeader />
-
       <section className="relative min-h-[780px] overflow-hidden border-b border-[#1e2a1e] md:min-h-screen" id="home">
         <Image
           alt="Bitzsznn community at an event"

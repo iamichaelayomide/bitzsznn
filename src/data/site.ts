@@ -11,10 +11,10 @@ import {
 } from "lucide-react";
 
 export const navItems = [
-  { label: "Services", href: "#services" },
-  { label: "Events", href: "#events" },
-  { label: "Community", href: "#community" },
-  { label: "About us", href: "#about" },
+  { label: "Services", href: "/services" },
+  { label: "Events", href: "/events" },
+  { label: "Community", href: "/#community" },
+  { label: "About us", href: "/about" },
 ];
 
 export const socialLinks = {
