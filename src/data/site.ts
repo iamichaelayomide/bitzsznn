@@ -13,7 +13,7 @@ import {
 export const navItems = [
   { label: "Services", href: "/services" },
   { label: "Events", href: "/events" },
-  { label: "Community", href: "/#community" },
+  { label: "Community", href: "/community" },
   { label: "About us", href: "/about" },
 ];
 
@@ -27,22 +27,22 @@ export const stats = [
   {
     value: "500+",
     label: "Community members",
-    body: "A growing circle of ambitious, culturally plugged-in young people.",
+    body: "Young people building new circles through music, culture, and shared transition seasons.",
   },
   {
     value: "30+",
-    label: "Events thrown",
-    body: "From intimate rooftop nights to high-energy cultural moments.",
+    label: "Experiences hosted",
+    body: "From intimate hangouts to high-energy nights built for connection and memory.",
   },
   {
     value: "4+",
     label: "States reached",
-    body: "We have moved through multiple states and keep expanding.",
+    body: "Bitzsznn is growing city by city with a community-first cultural footprint.",
   },
   {
     value: "50+",
     label: "Collaborations secured",
-    body: "Partnerships with artists, creators, startups, and local brands.",
+    body: "Creators, artists, brands, and communities plugging into the Bitzsznn audience.",
   },
 ];
 
@@ -73,31 +73,31 @@ export const services = [
   {
     number: "01/",
     title: "Events & nightlife experiences",
-    body: "Concept, curation, guest flow, energy, and production for cultural nights people remember.",
+    body: "We design the room, the sound, the guest flow, and the energy so every event feels intentional from entry to last song.",
     icon: Music2,
   },
   {
     number: "02/",
     title: "NYSC & post-NYSC community",
-    body: "Moments for corps members, fresh graduates, and young professionals moving into what comes next.",
+    body: "We help corps members, graduates, and young professionals find people, places, and momentum in a new season.",
     icon: UsersRound,
   },
   {
     number: "03/",
     title: "Brand & artist collaborations",
-    body: "Meaningful access to a young audience through activations, hosting, music, creators, and launch moments.",
+    body: "We connect brands and artists to a youth audience that shows up, shares, and remembers the experience.",
     icon: BadgeCheck,
   },
   {
     number: "04/",
     title: "Content & cultural storytelling",
-    body: "Photo, video, recaps, and stories that turn one night into a memory people share after the lights come up.",
+    body: "We capture the feeling of the night through photos, recaps, creator moments, and stories people want to repost.",
     icon: Camera,
   },
   {
     number: "05/",
     title: "Networking & opportunity access",
-    body: "Curated rooms where fun meets ambition: founders, creatives, students, corps members, and builders.",
+    body: "We create rooms where fun meets ambition, giving founders, creatives, students, and builders better reasons to connect.",
     icon: Network,
   },
 ];
@@ -105,23 +105,23 @@ export const services = [
 export const reasons = [
   {
     title: "Built for the transition season",
-    body: "Bitzsznn understands the space between school, service year, first jobs, new cities, and new circles.",
+    body: "NYSC, graduation, new cities, and first jobs can feel scattered. Bitzsznn gives that season a place to belong.",
   },
   {
     title: "Premium energy, local pulse",
-    body: "The experience feels elevated without losing the warmth, sound, language, and rhythm of youth culture.",
+    body: "The experience feels polished without losing the language, warmth, music, and rhythm of young Nigerian culture.",
   },
   {
     title: "Partnership-ready",
-    body: "Brands, creators, artists, and communities can plug into an audience that actually shows up.",
+    body: "Partners get credible access to a real community, not just a logo on a flyer.",
   },
 ];
 
 export const eventHighlights = [
-  "Curated music and guest experiences",
-  "Photo-ready memories and recap content",
+  "Curated music, hosted moments, and a crowd that actually wants to be there",
+  "Photo-ready memories, recap content, and creator moments after the night",
   "Rooms designed for connection, not just attendance",
-  "Access for partners, creators, and emerging brands",
+  "Access for partners, artists, creators, and emerging youth brands",
 ];
 
 export const faqs = [
@@ -157,19 +157,120 @@ export const faqs = [
   },
 ];
 
+export const testimonials = [
+  {
+    quote:
+      "Bitzsznn feels bigger than a regular event. You meet people, enjoy the night, and still feel connected after.",
+    name: "Amaka E.",
+    role: "Community member",
+  },
+  {
+    quote:
+      "I came for the music and left with new friends, content I actually wanted to post, and people I still talk to.",
+    name: "Timi A.",
+    role: "Post-NYSC creative",
+  },
+  {
+    quote:
+      "The room felt curated without being stiff. It was easy to meet people, move around, and enjoy the whole experience.",
+    name: "Dara K.",
+    role: "Young professional",
+  },
+  {
+    quote:
+      "For a brand activation, Bitzsznn gave us culture, attention, and a crowd that understood what we were building.",
+    name: "Ife B.",
+    role: "Brand partner",
+  },
+  {
+    quote:
+      "It is one of the few communities that understands the post-NYSC transition and still keeps the energy fun.",
+    name: "Zainab O.",
+    role: "Founder",
+  },
+];
+
+export const events = [
+  {
+    slug: "batch-a2-pop-party",
+    title: "Batch A2 POP Party",
+    eyebrow: "Upcoming",
+    date: "May 21, 2026",
+    time: "7:00 PM",
+    location: "Lagos, Nigeria",
+    image: "/images/event-good-vibes.png",
+    summary: "A send-off night for corps members, fresh graduates, and their people.",
+    description:
+      "Celebrate the end of service year with music, new faces, photo moments, and a room designed for the memories before everyone moves on.",
+    highlights: ["Hosted welcome hour", "DJ-led main set", "Photo booth and recap content", "Community mixer"],
+  },
+  {
+    slug: "bitzsznn-link-up",
+    title: "Bitzsznn Link-Up",
+    eyebrow: "Upcoming",
+    date: "June 8, 2026",
+    time: "6:30 PM",
+    location: "Abuja, Nigeria",
+    image: "/images/community-party-2.png",
+    summary: "A relaxed mixer for creatives, builders, founders, and post-NYSC professionals.",
+    description:
+      "A lighter social room with conversation prompts, music, creator corners, and partnership-friendly networking.",
+    highlights: ["Curated introductions", "Creator corner", "Founder and talent mixer", "Soft nightlife energy"],
+  },
+  {
+    slug: "vibes-and-value-night",
+    title: "Vibes & Value Night",
+    eyebrow: "Upcoming",
+    date: "July 12, 2026",
+    time: "8:00 PM",
+    location: "Port Harcourt, Nigeria",
+    image: "/images/community-good-vibes.png",
+    summary: "A premium culture night for music, opportunity, and shared memories.",
+    description:
+      "A high-energy event for people who want the party and the room. Expect good music, hosted moments, and clear ticket options.",
+    highlights: ["Live guest moments", "Partner tables", "Premium entry flow", "After-event recap"],
+  },
+  {
+    slug: "corpers-homecoming",
+    title: "Corpers Homecoming",
+    eyebrow: "Past event",
+    date: "April 18, 2026",
+    time: "7:30 PM",
+    location: "Ibadan, Nigeria",
+    image: "/images/values-good-vibes.png",
+    summary: "A homecoming-style night for people returning from service and settling into what comes next.",
+    description:
+      "A warm, music-led community night built around reconnection, storytelling, and the people you meet on the way up.",
+    highlights: ["Community games", "Music sets", "Memory wall", "Group photo moments"],
+  },
+  {
+    slug: "creator-pop-up",
+    title: "Creator Pop-Up",
+    eyebrow: "Upcoming",
+    date: "August 3, 2026",
+    time: "5:00 PM",
+    location: "Lagos, Nigeria",
+    image: "/images/community-party-1.png",
+    summary: "A culture pop-up for creators, artists, small brands, and youth communities.",
+    description:
+      "A creator-first gathering with small brand showcases, content corners, and a crowd ready to discover what is next.",
+    highlights: ["Brand booths", "Creator content sets", "Artist discovery", "Networking blocks"],
+  },
+];
+
 export const ticketTiers = [
   {
     id: "early",
     name: "Early Vibe",
     price: 5000,
-    description: "Entry access for the people who move first.",
-    perks: ["General entry", "Community wristband", "Event photo access"],
+    description: "A limited first-release pass for people who move early.",
+    perks: ["General entry", "Community wristband", "Photo recap access"],
   },
   {
     id: "standard",
     name: "Main Experience",
     price: 10000,
-    description: "The full Bitzsznn night with priority entry.",
+    description: "The full event pass with smoother entry and better access.",
     perks: ["Priority entry", "Welcome drink", "Photo booth access"],
     featured: true,
   },
@@ -177,14 +278,14 @@ export const ticketTiers = [
     id: "crew",
     name: "Crew Pass",
     price: 45000,
-    description: "Five-person access for your people.",
+    description: "Bring your people in with one clean crew reservation.",
     perks: ["5 entries", "Reserved crew check-in", "Group photo moment"],
   },
   {
     id: "partner",
     name: "Partner Table",
     price: 150000,
-    description: "Premium table access for brands and hosted groups.",
+    description: "A hosted table for brands, founders, and premium groups.",
     perks: ["Table for 6", "Bottle service starter", "Brand mention option"],
   },
 ];

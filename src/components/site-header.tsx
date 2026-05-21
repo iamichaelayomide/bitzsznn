@@ -35,8 +35,8 @@ export function SiteHeader() {
           </div>
 
           <div className="hidden md:block">
-            <Button className="min-h-11 px-5 py-2 text-sm" href="/tickets">
-              Buy tickets
+            <Button className="min-h-11 px-5 py-2 text-sm" href="/events">
+              View events
             </Button>
           </div>
 
@@ -65,8 +65,8 @@ export function SiteHeader() {
                 </Link>
               ))}
             </div>
-            <Button className="mt-3 w-full" href="/tickets">
-              Buy tickets
+            <Button className="mt-3 w-full" href="/events">
+              View events
             </Button>
           </div>
         ) : null}

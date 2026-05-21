@@ -18,7 +18,7 @@ export default function ServicesPage() {
     <main>
       <InnerPageHero
         body="We create experiences, connect young people, and open doors for the NYSC and post-NYSC generation."
-        primaryCta={{ label: "Join the community", href: "/#community" }}
+        primaryCta={{ label: "Join the community", href: "/community" }}
         secondaryCta={{ label: "Explore events", href: "/events" }}
         title="We’re passionate about building a community"
         tone="sage"
@@ -85,8 +85,8 @@ export default function ServicesPage() {
                 Built for people who show up.
               </h2>
             </div>
-            <Button href="/tickets" showIcon>
-              Buy tickets
+            <Button href="/events" showIcon>
+              View events
             </Button>
           </div>
           <TestimonialSlider />

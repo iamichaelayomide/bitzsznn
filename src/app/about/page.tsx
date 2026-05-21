@@ -25,7 +25,7 @@ export default function AboutPage() {
         body="We represent moments before they move on, turning raw youth energy into connection, memories, and access."
         eyebrow="About us"
         image="/images/about-hero.png"
-        primaryCta={{ label: "Join the community", href: "/#community" }}
+        primaryCta={{ label: "Join the community", href: "/community" }}
         secondaryCta={{ label: "View events", href: "/events" }}
         title="At Bitzsznn, we craft cultural experiences with creative storytelling and real community."
         tone="dark"
@@ -73,8 +73,8 @@ export default function AboutPage() {
                 Vibes with a purpose.
               </h2>
             </div>
-            <Button href="/tickets" showIcon>
-              Buy tickets
+            <Button href="/events" showIcon>
+              View events
             </Button>
           </div>
           <div className="grid gap-5 md:grid-cols-2">
