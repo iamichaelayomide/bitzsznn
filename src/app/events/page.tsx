@@ -69,7 +69,7 @@ export default function EventsPage() {
         <div className="absolute right-[12%] top-[53%] h-[300px] w-[420px] rotate-[13deg] rounded-[50%] border border-dashed border-white/28 opacity-70" />
 
         <div className="container-shell figma-inner relative z-10 min-h-[897px]">
-          <div className="mx-auto mt-[36px] flex w-[399px] max-w-full flex-col items-center gap-6 text-center">
+          <div className="mx-auto mt-[72px] flex w-[399px] max-w-full flex-col items-center gap-6 text-center">
             <div>
               <h1 className="text-[46px] font-medium leading-none tracking-normal text-white">
                 More than a party,
@@ -92,17 +92,16 @@ export default function EventsPage() {
 
           {orbitCards.map((className, index) => (
             <div
-              className={`absolute h-[213px] w-[185px] overflow-hidden rounded-[7px] bg-[#d8f7d8] shadow-[0_24px_60px_rgba(0,0,0,0.24)] transition duration-300 hover:-translate-y-2 hover:rotate-0 hover:scale-[1.04] ${className}`}
+              className={`absolute h-[213px] w-[185px] overflow-hidden rounded-[7px] bg-[#10240c] shadow-[0_24px_60px_rgba(0,0,0,0.34)] ring-1 ring-white/18 transition duration-300 hover:-translate-y-2 hover:rotate-0 hover:scale-[1.04] ${className}`}
               key={className}
             >
               <Image
                 alt=""
-                className="object-cover opacity-55 mix-blend-multiply"
+                className="object-cover"
                 fill
                 sizes="185px"
                 src={events[index % events.length].image}
               />
-              <div className="absolute inset-0 bg-[#d8f7d8]/45" />
             </div>
           ))}
 
