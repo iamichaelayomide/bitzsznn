@@ -96,6 +96,10 @@ textarea {
   margin-inline: auto;
 }
 
+.figma-inner {
+  padding-inline: clamp(18px, 2.2vw, 48px);
+}
+
 .section-grid-lines {
   position: relative;
 }

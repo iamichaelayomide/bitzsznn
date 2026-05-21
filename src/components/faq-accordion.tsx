@@ -6,7 +6,7 @@ import { useState } from "react";
 import { faqs } from "@/data/site";
 
 export function FaqAccordion() {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(-1);
 
   return (
     <div className="mx-auto max-w-5xl">
