@@ -155,6 +155,11 @@ export const faqs = [
     answer:
       "Yes. We work with brands that want credible access to youth culture through events, content, creators, and community moments.",
   },
+  {
+    question: "Where are Bitzsznn events held?",
+    answer:
+      "Our activations move across Nigerian cities, starting with Lagos, Abuja, Port Harcourt, and Ibadan. Every event page lists the exact city, time, and access details before tickets are reserved.",
+  },
 ];
 
 export const testimonials = [

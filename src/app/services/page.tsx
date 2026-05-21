@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Button } from "@/components/button";
+import Image from "next/image";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { GuideBand, InnerPageHero, SectionKicker } from "@/components/inner-page-hero";
 import { MotionSection } from "@/components/motion-section";
@@ -23,8 +23,17 @@ export default function ServicesPage() {
         title="We’re passionate about building a community"
         tone="sage"
       >
-        <div className="relative mt-4 aspect-[2.38/1] w-full max-w-[991px] overflow-hidden rounded-[32px] bg-[#dcecd1] shadow-[0_30px_90px_rgba(24,56,20,0.14)]">
-          <div className="absolute inset-6 rounded-[24px] border border-white/50" />
+        <div className="relative mt-4 aspect-[1.25/1] w-full max-w-[991px] overflow-hidden rounded-[32px] bg-[#10240c] shadow-[0_30px_90px_rgba(24,56,20,0.18)] md:aspect-[2.38/1]">
+          <Image
+            alt="Bitzsznn community members at a cultural event"
+            className="object-cover"
+            fill
+            priority
+            sizes="991px"
+            src="/images/community-party-2.png"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,11,8,0.04),rgba(8,11,8,0.72))]" />
+          <div className="absolute inset-6 rounded-[24px] border border-white/30" />
           <div className="absolute left-6 top-6 rounded-full bg-white/72 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#4b8d16]">
             Bitzsznn experience
           </div>
@@ -81,13 +90,10 @@ export default function ServicesPage() {
           <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
               <SectionKicker>Real words from real people</SectionKicker>
-              <h2 className="mt-4 max-w-3xl text-5xl font-semibold leading-none text-[#183814] md:text-7xl">
+              <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight text-[#183814] md:text-6xl">
                 Built for people who show up.
               </h2>
             </div>
-            <Button href="/events" showIcon>
-              View events
-            </Button>
           </div>
           <TestimonialSlider />
         </MotionSection>

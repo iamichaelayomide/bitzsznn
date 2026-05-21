@@ -8,14 +8,14 @@ import { events, testimonials } from "@/data/site";
 
 export function HomeEventsCarousel() {
   return (
-    <div className="relative mt-16">
-      <div className="group no-scrollbar -mx-6 flex snap-x gap-6 overflow-x-auto px-6 pb-2">
+    <div className="relative mt-12">
+      <div className="group no-scrollbar -mx-4 flex snap-x gap-5 overflow-x-auto px-4 pb-10 pt-2 sm:-mx-6 sm:px-6 lg:gap-6">
         {events.map((event) => (
           <article
-            className="w-[min(78vw,373px)] shrink-0 snap-center overflow-hidden rounded-t-[16px] rounded-b-[8px] bg-[#0c1605] transition-[width,transform,box-shadow] duration-300 hover:w-[min(82vw,446px)] hover:-translate-y-2 hover:shadow-[0_28px_80px_rgba(0,0,0,0.34)]"
+            className="w-[min(82vw,380px)] shrink-0 snap-center overflow-hidden rounded-[16px] bg-[#f7f8f2] text-[#10240c] shadow-[0_12px_36px_rgba(0,0,0,0.16)] transition-[transform,box-shadow,border-color] duration-300 hover:z-10 hover:-translate-y-2 hover:scale-[1.025] hover:shadow-[0_30px_80px_rgba(0,0,0,0.34)] focus-within:ring-4 focus-within:ring-[#b8ff2c]/45"
             key={event.slug}
           >
-            <div className="min-h-[122px] bg-[#f4f4f1] p-6">
+            <div className="min-h-[132px] bg-[#f7f8f2] p-6">
               <div className="flex items-center gap-3">
                 <div className="w-8 text-center leading-none text-[#193214]">
                   <p className="font-mono text-[12px] uppercase">{event.date.split(" ")[0]}</p>
@@ -24,20 +24,22 @@ export function HomeEventsCarousel() {
                 <div className="h-10 w-px bg-[#9fa59d]" />
                 <h3 className="text-[20px] font-semibold text-[#10240c]">{event.title}</h3>
               </div>
-              <p className="mt-2 text-[13px] leading-[1.35] text-[#394535]">{event.summary}</p>
+              <p className="mt-3 text-[14px] leading-[1.45] text-[#354a30]">{event.summary}</p>
             </div>
-            <div className="relative h-[311px]">
+            <div className="relative h-[290px]">
               <Image alt="" className="object-cover" fill sizes="446px" src={event.image} />
-              <span className="absolute right-6 top-4 rounded-full border border-white bg-[#c8f6aa] px-3 py-1 text-[10px] text-[#090e09]">
+              <span className="absolute right-5 top-4 rounded-full border border-white bg-[#d7f8b8] px-3 py-1 text-[11px] font-semibold text-[#091309]">
                 {event.eyebrow}
               </span>
-              <div className="absolute bottom-8 left-1/2 flex w-[82%] -translate-x-1/2 gap-2">
-                <Button className="min-h-0 flex-1 rounded-[20px] bg-black px-4 py-2 text-[15px] text-white shadow-none hover:bg-[#111]" href={`/events/${event.slug}`}>
+              <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,rgba(8,11,8,0),rgba(8,11,8,0.76))] p-5">
+                <div className="flex gap-2">
+                <Button className="min-h-0 flex-1 rounded-[18px] bg-[#459c0a] px-4 py-3 text-[14px] text-[#061006] shadow-none hover:bg-[#5dc716]" href={`/events/${event.slug}`}>
                   View event
                 </Button>
-                <Button className="min-h-0 flex-1 rounded-[20px] bg-[#f5f5f5] px-4 py-2 text-[15px] text-black shadow-none hover:bg-white" href={`/events/${event.slug}#tickets`} variant="secondary">
+                <Button className="min-h-0 flex-1 rounded-[18px] bg-[#fbfff4] px-4 py-3 text-[14px] text-[#0b1709] shadow-none hover:bg-white" href={`/events/${event.slug}#tickets`} variant="secondary">
                   Tickets
                 </Button>
+                </div>
               </div>
             </div>
           </article>
@@ -61,26 +63,26 @@ export function HomeTestimonialsCarousel() {
 
   return (
     <div className="relative mt-6">
-      <div className="no-scrollbar -mx-8 flex snap-x gap-[71px] overflow-x-auto px-8 pb-10" ref={railRef}>
+      <div className="no-scrollbar -mx-4 flex snap-x gap-6 overflow-x-auto px-4 pb-8 sm:-mx-8 sm:px-8 lg:gap-10" ref={railRef}>
         {testimonials.map((item, index) => {
           const selected = index === active;
           return (
             <button
-              className={`flex w-[min(82vw,601px)] shrink-0 snap-center gap-5 text-left transition duration-300 ${
+              className={`flex w-[min(86vw,620px)] shrink-0 snap-center gap-4 rounded-[18px] border border-[#d9e5d4] bg-[#fbfff4] p-5 text-left transition duration-300 md:gap-5 md:p-7 ${
                 selected ? "scale-100 opacity-100" : "scale-[0.94] opacity-45"
               }`}
               key={`${item.name}-${index}`}
               onClick={() => setActive(index)}
               type="button"
             >
-              <Quote className={`mt-1 size-10 shrink-0 fill-current ${selected ? "text-[#131010]" : "text-[#74806f]"}`} />
+              <Quote className={`mt-1 size-9 shrink-0 fill-current ${selected ? "text-[#183814]" : "text-[#74806f]"}`} />
               <div className="max-w-[540px]">
                 <div className={`flex gap-2 ${selected ? "text-[#459c0a]" : "text-[#8b9488]"}`}>
                   {[0, 1, 2, 3, 4].map((star) => (
                     <Star className="size-5 fill-current" key={star} />
                   ))}
                 </div>
-                <p className={`mt-4 text-[22px] leading-normal md:text-[25px] ${selected ? "font-semibold text-[#183814]" : "font-medium text-[#5a6557]"}`}>
+                <p className={`mt-4 text-[19px] leading-[1.45] md:text-[22px] ${selected ? "font-semibold text-[#183814]" : "font-medium text-[#4f5c4c]"}`}>
                   {item.quote}
                 </p>
                 <div className="mt-5 flex items-center gap-4">

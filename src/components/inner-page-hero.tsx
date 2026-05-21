@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/button";
 import { cn } from "@/lib/utils";
 
@@ -33,9 +34,12 @@ export function InnerPageHero({
     >
       {image ? (
         <>
-          <img
+          <Image
             alt=""
-            className="absolute inset-0 -z-20 size-full object-cover"
+            className="-z-20 object-cover"
+            fill
+            priority
+            sizes="100vw"
             src={image}
           />
           <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(8,11,8,0.48),rgba(8,11,8,0.78))]" />
@@ -44,7 +48,7 @@ export function InnerPageHero({
 
       <div
         className={cn(
-          "container-shell relative z-10 flex min-h-[620px] flex-col items-center justify-center px-4 py-16 text-center md:min-h-[680px] md:px-12",
+          "container-shell relative z-10 flex min-h-[560px] flex-col items-center justify-center px-4 py-14 text-center md:min-h-[640px] md:px-12",
           tone === "sage" ? "gap-10" : "gap-7",
         )}
       >
@@ -62,7 +66,7 @@ export function InnerPageHero({
         <div className="mx-auto max-w-5xl">
           <h1
             className={cn(
-              "text-balance text-[clamp(3rem,8vw,8.5rem)] font-semibold leading-[0.92]",
+              "text-balance text-[clamp(2.75rem,6.2vw,6.75rem)] font-semibold leading-[0.96]",
               isDark ? "text-white" : "text-[#183814]",
             )}
           >

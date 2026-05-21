@@ -198,7 +198,7 @@ export function LandingPage() {
         </div>
       </GuideSection>
 
-      <GuideSection className="border-b-0 bg-[#0f1c07] py-[74px] text-white before:bg-white/10 after:bg-white/10">
+      <GuideSection className="border-b-0 bg-[#0f1c07] py-[64px] text-white before:bg-white/10 after:bg-white/10">
         <div className="container-shell figma-inner">
           <div className="grid gap-12 lg:grid-cols-[0.76fr_1fr] lg:items-center">
             <div>
@@ -221,7 +221,22 @@ export function LandingPage() {
                 Join the community
               </Button>
             </div>
-            <div className="min-h-[360px] rounded-[10px] bg-[#d8f7d8] lg:min-h-[529px]" />
+            <div className="relative min-h-[360px] overflow-hidden rounded-[18px] border border-white/10 bg-[#10180d] shadow-[0_28px_90px_rgba(0,0,0,0.32)] lg:min-h-[500px]">
+              <Image
+                alt="People enjoying a Bitzsznn community night"
+                className="object-cover"
+                fill
+                sizes="720px"
+                src="/images/community-party-1.png"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,11,8,0.04),rgba(8,11,8,0.62))]" />
+              <div className="absolute bottom-5 left-5 right-5 rounded-[16px] border border-white/14 bg-[#0b1208]/82 p-5 backdrop-blur">
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#b8ff2c]">Inside the room</p>
+                <p className="mt-2 text-[18px] font-semibold leading-snug text-[#fbfff4]">
+                  Music, familiar faces, clean memories, and the next connection waiting nearby.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </GuideSection>

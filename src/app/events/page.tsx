@@ -23,7 +23,7 @@ export default function EventsPage() {
           <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
             Events
           </p>
-          <h1 className="mt-6 max-w-5xl text-[clamp(3.2rem,8vw,8.4rem)] font-medium leading-[0.92]">
+          <h1 className="mt-6 max-w-5xl text-[clamp(2.85rem,6.4vw,6.8rem)] font-medium leading-[0.96]">
             More than a party, an experience.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/76">
@@ -58,24 +58,24 @@ export default function EventsPage() {
             <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {upcoming.map((event) => (
                 <Link
-                  className="group overflow-hidden rounded-[18px] bg-[#f4f4f1] text-[#183814] transition duration-300 hover:-translate-y-2 hover:shadow-[0_30px_90px_rgba(0,0,0,0.34)]"
+                  className="group flex h-full min-h-[610px] flex-col overflow-hidden rounded-[18px] bg-[#f7f8f2] text-[#10240c] shadow-[0_14px_40px_rgba(0,0,0,0.2)] transition duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_30px_90px_rgba(0,0,0,0.34)] focus-visible:outline focus-visible:outline-4 focus-visible:outline-[#b8ff2c]"
                   href={`/events/${event.slug}`}
                   key={event.slug}
                 >
-                  <div className="relative h-[320px]">
+                  <div className="relative h-[300px] shrink-0">
                     <Image alt="" className="object-cover transition duration-500 group-hover:scale-105" fill sizes="420px" src={event.image} />
                     <span className="absolute right-5 top-5 rounded-full border border-white bg-[#c8f6aa] px-3 py-1 text-xs text-[#090e09]">
                       {event.eyebrow}
                     </span>
                   </div>
-                  <div className="p-6">
-                    <div className="flex flex-wrap gap-3 text-sm font-medium text-[#183814]/72">
+                  <div className="flex flex-1 flex-col p-6">
+                    <div className="flex flex-wrap gap-3 text-sm font-medium text-[#39533a]">
                       <span className="inline-flex items-center gap-2"><CalendarDays className="size-4" /> {event.date}</span>
                       <span className="inline-flex items-center gap-2"><MapPin className="size-4" /> {event.location}</span>
                     </div>
-                    <h3 className="mt-5 text-3xl font-semibold leading-none">{event.title}</h3>
-                    <p className="mt-3 text-sm leading-6 text-[#183814]/72">{event.summary}</p>
-                    <div className="mt-6 inline-flex rounded-[20px] bg-[#459c0a] px-5 py-3 font-semibold text-white">
+                    <h3 className="mt-5 text-3xl font-semibold leading-none text-[#10240c]">{event.title}</h3>
+                    <p className="mt-3 text-sm leading-6 text-[#30472d]">{event.summary}</p>
+                    <div className="mt-auto inline-flex w-fit rounded-[18px] bg-[#459c0a] px-5 py-3 font-semibold text-[#061006]">
                       View event
                     </div>
                   </div>
@@ -94,7 +94,7 @@ export default function EventsPage() {
                 <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
                   What to expect
                 </p>
-                <h2 className="mt-4 text-5xl font-medium leading-none md:text-7xl">Vibes. Networking. Opportunity.</h2>
+                <h2 className="mt-4 text-4xl font-medium leading-tight md:text-6xl">Vibes. Networking. Opportunity.</h2>
               </div>
               <div className="grid gap-3">
                 {eventHighlights.map((highlight, index) => (

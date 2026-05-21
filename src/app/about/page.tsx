@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Button } from "@/components/button";
 import { GuideBand, InnerPageHero, SectionKicker } from "@/components/inner-page-hero";
 import { MotionSection } from "@/components/motion-section";
@@ -12,10 +13,10 @@ export const metadata: Metadata = {
 };
 
 const team = [
-  { name: "Michael Ayomide", role: "Brand direction", image: "/images/avatar-1.png" },
-  { name: "Amaka E.", role: "Community experience", image: "/images/avatar-2.png" },
-  { name: "Timi A.", role: "Events strategy", image: "/images/avatar-3.png" },
-  { name: "Ife B.", role: "Culture and content", image: "/images/avatar-4.png" },
+  { name: "Michael Ayomide", role: "Brand direction", image: "/images/community-party-1.png" },
+  { name: "Amaka E.", role: "Community experience", image: "/images/community-good-vibes.png" },
+  { name: "Timi A.", role: "Events strategy", image: "/images/event-good-vibes.png" },
+  { name: "Ife B.", role: "Culture and content", image: "/images/community-party-2.png" },
 ];
 
 export default function AboutPage() {
@@ -36,7 +37,7 @@ export default function AboutPage() {
           <div className="grid gap-10 lg:grid-cols-[0.78fr_1fr] lg:items-start">
             <div>
               <SectionKicker>Our story</SectionKicker>
-              <h2 className="mt-4 text-5xl font-semibold leading-none text-[#183814] md:text-7xl">
+              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[#183814] md:text-6xl">
                 More than a party.
               </h2>
             </div>
@@ -69,7 +70,7 @@ export default function AboutPage() {
           <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
               <SectionKicker>What drives us</SectionKicker>
-              <h2 className="mt-4 text-5xl font-semibold leading-none text-[#183814] md:text-7xl">
+              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[#183814] md:text-6xl">
                 Vibes with a purpose.
               </h2>
             </div>
@@ -101,7 +102,7 @@ export default function AboutPage() {
         <MotionSection>
           <div className="mb-10">
             <SectionKicker>Meet our team</SectionKicker>
-            <h2 className="mt-4 text-5xl font-semibold leading-none text-[#183814] md:text-7xl">
+            <h2 className="mt-4 text-4xl font-semibold leading-tight text-[#183814] md:text-6xl">
               The people behind the moments.
             </h2>
           </div>
@@ -112,10 +113,12 @@ export default function AboutPage() {
                 key={member.name}
               >
                 <div className="aspect-[0.82] overflow-hidden bg-[#dcecd1]">
-                  <img
-                    alt=""
+                  <Image
+                    alt={`${member.name}, ${member.role}`}
                     className="size-full object-cover transition duration-500 group-hover:scale-105"
+                    height={520}
                     src={member.image}
+                    width={426}
                   />
                 </div>
                 <div className="p-5">
@@ -132,7 +135,7 @@ export default function AboutPage() {
         <MotionSection>
           <div className="mb-8">
             <SectionKicker>Community proof</SectionKicker>
-            <h2 className="mt-4 max-w-3xl text-5xl font-semibold leading-none text-[#183814] md:text-7xl">
+            <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight text-[#183814] md:text-6xl">
               Real words from real people.
             </h2>
           </div>

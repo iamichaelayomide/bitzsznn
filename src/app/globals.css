@@ -66,10 +66,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at 18% 0%, rgba(75, 165, 11, 0.16), transparent 34rem),
-    radial-gradient(circle at 84% 12%, rgba(229, 185, 62, 0.12), transparent 32rem),
-    var(--background);
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-manrope), Manrope, ui-sans-serif, system-ui, sans-serif;
 }

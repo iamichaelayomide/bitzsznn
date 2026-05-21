@@ -37,7 +37,7 @@ export function TestimonialSlider() {
     <div className="overflow-hidden rounded-[28px] border border-[#dbe6d7] bg-[#f8fbf4] p-5 md:p-8">
       <motion.div
         animate={{ opacity: 1, x: 0 }}
-        className="min-h-[260px]"
+        className="min-h-[220px]"
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         exit={{ opacity: 0 }}
@@ -52,8 +52,8 @@ export function TestimonialSlider() {
         <div className="grid size-12 place-items-center rounded-full bg-[#183814] text-white">
           <Quote className="size-5" />
         </div>
-        <p className="mt-8 max-w-4xl text-2xl font-semibold leading-tight text-[#183814] md:text-4xl">
-          “{item.quote}”
+        <p className="mt-8 max-w-4xl text-xl font-semibold leading-[1.35] text-[#183814] md:text-3xl">
+          &quot;{item.quote}&quot;
         </p>
         <div className="mt-8">
           <p className="font-bold text-[#183814]">{item.name}</p>
