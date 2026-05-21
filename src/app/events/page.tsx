@@ -13,10 +13,24 @@ export const metadata: Metadata = {
 
 export default function EventsPage() {
   const upcoming = events.filter((event) => event.eyebrow === "Upcoming");
+  const orbitCards = [
+    "left-[9%] top-[46%] -rotate-[4deg]",
+    "left-[16%] top-[65%] rotate-[2deg]",
+    "left-[37%] top-[50%] -rotate-[4deg]",
+    "right-[22%] top-[38%] rotate-[7deg]",
+    "right-[20%] top-[64%] -rotate-[4deg]",
+  ];
+  const eventProof = [
+    { value: "30+", label: "Events organized", className: "left-[5%] top-[68%]" },
+    { value: "10+", label: "Cities reached", className: "left-[35%] top-[43%]" },
+    { value: "500+", label: "Community member", className: "right-[36%] top-[57%]" },
+    { value: "30+", label: "Brand collaborations", className: "left-[38%] top-[76%]" },
+    { value: "100%", label: "Event sellouts", className: "right-[9%] top-[61%]" },
+  ];
 
   return (
     <main className="bg-[#080b08]">
-      <section className="section-grid-lines relative overflow-hidden bg-[#0f1c07] pt-28 text-white md:pt-36">
+      <section className="section-grid-lines relative overflow-hidden bg-[#0f1c07] pt-28 text-white lg:hidden">
         <Image alt="" className="object-cover opacity-45" fill priority sizes="100vw" src="/images/events-hero.png" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,11,8,0.72),rgba(8,11,8,0.94))]" />
         <div className="container-shell figma-inner relative z-10 flex min-h-[680px] flex-col items-center justify-center py-16 text-center">
@@ -40,7 +54,71 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <section className="section-grid-lines bg-[#0f1c07] py-16 text-white md:py-24">
+      <section className="section-grid-lines relative hidden min-h-[1025px] overflow-hidden bg-[#231a1a] pt-28 text-white lg:block">
+        <Image
+          alt="Bitzsznn crowd energy"
+          className="object-cover opacity-40"
+          fill
+          priority
+          sizes="100vw"
+          src="/images/about-hero.png"
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_32%,rgba(69,156,10,0.24),rgba(8,11,8,0.66)_44%,rgba(8,11,8,0.9)_100%)]" />
+        <div className="absolute left-1/2 top-[44%] h-[420px] w-[900px] -translate-x-1/2 rounded-[50%] border border-dashed border-white/35 opacity-70" />
+        <div className="absolute left-[26%] top-[57%] h-[290px] w-[420px] -rotate-[9deg] rounded-[50%] border border-dashed border-white/28 opacity-70" />
+        <div className="absolute right-[12%] top-[53%] h-[300px] w-[420px] rotate-[13deg] rounded-[50%] border border-dashed border-white/28 opacity-70" />
+
+        <div className="container-shell figma-inner relative z-10 min-h-[897px]">
+          <div className="mx-auto mt-[36px] flex w-[399px] max-w-full flex-col items-center gap-6 text-center">
+            <div>
+              <h1 className="text-[46px] font-medium leading-none tracking-normal text-white">
+                More than a party,
+                <br />
+                an experience.
+              </h1>
+              <p className="mt-4 text-[18px] leading-normal text-white/86">
+                A community of high-network individuals
+                <br />
+                that are ambitious and like to vibe.
+              </p>
+            </div>
+            <a
+              className="inline-flex min-h-[70px] items-center justify-center rounded-[20px] bg-[#459c0a] px-8 py-5 text-[20px] font-medium text-[#090e09] shadow-[0_16px_38px_rgba(69,156,10,0.28)] transition duration-200 hover:-translate-y-1 hover:bg-[#5dc716] focus-visible:outline focus-visible:outline-4 focus-visible:outline-[#b8ff2c]"
+              href="#upcoming-events"
+            >
+              View all events
+            </a>
+          </div>
+
+          {orbitCards.map((className, index) => (
+            <div
+              className={`absolute h-[213px] w-[185px] overflow-hidden rounded-[7px] bg-[#d8f7d8] shadow-[0_24px_60px_rgba(0,0,0,0.24)] transition duration-300 hover:-translate-y-2 hover:rotate-0 hover:scale-[1.04] ${className}`}
+              key={className}
+            >
+              <Image
+                alt=""
+                className="object-cover opacity-55 mix-blend-multiply"
+                fill
+                sizes="185px"
+                src={events[index % events.length].image}
+              />
+              <div className="absolute inset-0 bg-[#d8f7d8]/45" />
+            </div>
+          ))}
+
+          {eventProof.map((item) => (
+            <div
+              className={`absolute z-20 inline-flex items-center gap-1 rounded-full border border-white bg-[#1d1d1d] px-3 py-2 text-[#e7e3e3] shadow-[0_12px_32px_rgba(0,0,0,0.28)] ${item.className}`}
+              key={item.label}
+            >
+              <span className="text-[15px] font-medium leading-none">{item.value}</span>
+              <span className="text-[11px] leading-none">{item.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-grid-lines bg-[#0f1c07] py-16 text-white md:py-24" id="upcoming-events">
         <div className="container-shell figma-inner">
           <MotionSection>
             <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
