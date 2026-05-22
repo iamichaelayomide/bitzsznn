@@ -66,7 +66,7 @@ export function InnerPageHero({
         <div className="mx-auto max-w-5xl">
           <h1
             className={cn(
-              "text-balance text-[clamp(2.75rem,4vw,2.875rem)] font-semibold leading-[1]",
+              "hero-title",
               isDark ? "text-white" : "text-[#183814]",
             )}
           >

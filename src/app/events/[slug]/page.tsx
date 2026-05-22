@@ -33,18 +33,18 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
 
   return (
     <main className="bg-[#f7f5f2] text-[#183814]">
-      <section className="relative min-h-[760px] overflow-hidden bg-[#0f1c07] pt-28 text-white md:pt-36">
+      <section className="relative min-h-[660px] overflow-hidden bg-[#0f1c07] pt-28 text-white md:min-h-[760px] md:pt-36">
         <Image alt="" className="object-cover opacity-55" fill priority sizes="100vw" src={event.image} />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,11,8,0.92),rgba(8,11,8,0.52),rgba(8,11,8,0.86))]" />
         <div className="container-shell figma-inner relative z-10 py-16 md:py-24">
           <Link className="text-sm text-white/72 transition hover:text-white" href="/events">
             ← Back to all events
           </Link>
-          <div className="mt-16 max-w-5xl">
+          <div className="mt-10 max-w-5xl md:mt-16">
             <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
               {event.eyebrow}
             </p>
-            <h1 className="mt-6 text-[clamp(3.2rem,8vw,8rem)] font-medium leading-[0.92]">{event.title}</h1>
+            <h1 className="hero-title mt-6">{event.title}</h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/78">{event.description}</p>
             <div className="mt-8 grid max-w-4xl gap-3 sm:grid-cols-3">
               <div className="rounded-[18px] border border-white/12 bg-white/[0.08] p-4 backdrop-blur">
@@ -71,7 +71,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
               <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
                 Event details
               </p>
-              <h2 className="mt-4 text-5xl font-medium leading-none md:text-7xl">What is inside the room?</h2>
+              <h2 className="section-title mt-4">What is inside the room?</h2>
             </div>
             <div className="grid gap-3">
               {event.highlights.map((highlight, index) => (

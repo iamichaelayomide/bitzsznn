@@ -48,7 +48,7 @@ function GuideSection({
 export function LandingPage() {
   return (
     <main className="overflow-x-hidden bg-white">
-      <section className="relative min-h-[780px] overflow-hidden border-b border-[#1e2a1e] md:min-h-screen" id="home">
+      <section className="relative min-h-[680px] overflow-hidden border-b border-[#1e2a1e] md:min-h-screen" id="home">
         <Image
           alt="Bitzsznn community at an event"
           className="object-cover"
@@ -60,23 +60,23 @@ export function LandingPage() {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,11,8,0.84),rgba(8,11,8,0.12),rgba(8,11,8,0.5))]" />
         <div className="absolute inset-0 bg-[#459c0a]/20 mix-blend-multiply" />
 
-        <div className="container-shell relative z-10 flex min-h-[780px] flex-col justify-center pt-28 md:min-h-screen">
-          <div className="max-w-[470px] md:ml-[48px]">
-            <h1 className="text-[52px] font-black leading-[0.99] tracking-normal text-white sm:text-[64px] lg:text-[72px]">
+        <div className="container-shell relative z-10 flex min-h-[680px] flex-col justify-center pt-28 md:min-h-screen">
+          <div className="max-w-[470px] px-1 md:ml-[48px] md:px-0">
+            <h1 className="hero-title text-white">
               Vibes.
               <br />
               Networking.
               <br />
               Opportunity.
             </h1>
-            <p className="mt-5 max-w-[468px] text-[16px] leading-[1.5] text-[#c1d5bf]">
+            <p className="mt-5 max-w-[468px] text-[15px] leading-[1.6] text-[#d7e4d1] md:text-[16px]">
               A youth cultural community built around NYSC life, post-NYSC transition, entertainment, music, events, shared memories, and real connection.
             </p>
             <div className="mt-7 flex flex-col gap-4 sm:flex-row">
-              <Button className="min-h-[70px] rounded-[20px] px-8 text-[20px]" href={socialLinks.whatsapp}>
+              <Button className="min-h-[56px] rounded-[18px] px-6 text-[16px] md:min-h-[70px] md:rounded-[20px] md:px-8 md:text-[20px]" href={socialLinks.whatsapp}>
                 Join the community
               </Button>
-              <Button className="min-h-[70px] rounded-[20px] px-5 text-[20px]" href="/events" variant="secondary">
+              <Button className="min-h-[56px] rounded-[18px] px-6 text-[16px] md:min-h-[70px] md:rounded-[20px] md:px-5 md:text-[20px]" href="/events" variant="secondary">
                 View events
               </Button>
             </div>
@@ -107,7 +107,7 @@ export function LandingPage() {
           <div className="mx-auto text-center">
             <FigmaLabel>Our short story</FigmaLabel>
           </div>
-          <h2 className="mx-auto mt-6 max-w-[1198px] text-center text-[30px] font-semibold leading-[1.14] text-[#183814] md:text-[40px]">
+          <h2 className="mx-auto mt-6 max-w-[1198px] text-center text-[26px] font-semibold leading-[1.18] text-[#183814] md:text-[40px]">
             We&apos;re more than a headcount; <span className="font-bold text-[#459c0a]">we&apos;re a community.</span> We connect ambitious, culturally plugged-in young people who know how to{" "}
             <span className="font-bold text-[#459c0a]">have a good time.</span>
           </h2>
@@ -128,7 +128,7 @@ export function LandingPage() {
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-start">
             <div>
               <FigmaLabel>Our services</FigmaLabel>
-              <h2 className="mt-5 text-[34px] font-medium leading-none text-[#082005] md:text-[45px]">What do we do?</h2>
+              <h2 className="section-title mt-5 text-[#082005]">What do we do?</h2>
             </div>
             <p className="max-w-[385px] text-[16px] leading-[1.2] text-[#183814] md:text-[18px]">
               Bitzsznn creates experiences that connect young people through music, events, culture, memories, and opportunity.
@@ -177,7 +177,7 @@ export function LandingPage() {
             <div className="max-w-[992px]">
               <FigmaLabel>Events</FigmaLabel>
               <div className="mt-4 flex flex-col gap-5 lg:flex-row lg:items-center lg:gap-[69px]">
-                <h2 className="text-[36px] font-medium leading-none text-white md:text-[47px]">the Bitzsznn experience</h2>
+                <h2 className="section-title text-white">the Bitzsznn experience</h2>
                 <p className="max-w-[395px] text-[16px] leading-[1.2] text-[#e5e8e4] md:text-[19px]">
                   Clean posters, clear details, and a direct path into the room.
                 </p>
@@ -206,7 +206,7 @@ export function LandingPage() {
           <div className="grid gap-12 lg:grid-cols-[0.76fr_1fr] lg:items-center">
             <div>
               <FigmaLabel>Community</FigmaLabel>
-              <h2 className="mt-4 text-[38px] font-medium leading-none text-white md:text-[50px]">
+              <h2 className="section-title mt-4 text-white">
                 built around community
               </h2>
               <p className="mt-6 max-w-[541px] text-[18px] leading-[1.2] text-[#e5e8e4] md:text-[20px]">
@@ -249,7 +249,7 @@ export function LandingPage() {
           <div className="rounded-[14px] border border-[#9c999947] bg-[#d8f7d8] px-8 py-7 md:px-11">
             <FigmaLabel>Testimonials</FigmaLabel>
             <div className="mt-4 grid gap-6 lg:grid-cols-[321px_1fr] lg:items-center lg:gap-[178px]">
-              <h2 className="text-[38px] font-medium leading-none text-[#082005] md:text-[44px]">
+              <h2 className="section-title text-[#082005]">
                 real words from
                 <br />real people.
               </h2>
@@ -267,7 +267,7 @@ export function LandingPage() {
         <div className="container-shell figma-inner">
           <div className="mx-auto max-w-[926px]">
             <FigmaLabel>Why choose us?</FigmaLabel>
-            <h2 className="mt-4 text-[36px] font-medium leading-tight text-[#082005] md:text-[44px]">Find quick answers to common questions.</h2>
+            <h2 className="section-title mt-4 text-[#082005]">Find quick answers to common questions.</h2>
             <div className="mt-9">
               <FaqAccordion />
             </div>

@@ -37,7 +37,7 @@ export function EventsGallerySection() {
       <div className="relative mt-10">
         <button
           aria-label="Previous gallery item"
-          className="absolute left-[max(16px,calc((100%-1320px)/2+24px))] top-[38%] z-20 grid size-14 place-items-center rounded-l-full bg-[#ebe7e2] text-[#10240c] shadow-[0_16px_40px_rgba(0,0,0,0.16)] transition hover:-translate-x-1"
+          className="absolute left-[max(16px,calc((100%-1320px)/2+24px))] top-[38%] z-20 hidden size-14 place-items-center rounded-l-full bg-[#ebe7e2] text-[#10240c] shadow-[0_16px_40px_rgba(0,0,0,0.16)] transition hover:-translate-x-1 md:grid"
           onClick={() => scroll(-1)}
           type="button"
         >
@@ -45,7 +45,7 @@ export function EventsGallerySection() {
         </button>
         <button
           aria-label="Next gallery item"
-          className="absolute right-[max(16px,calc((100%-1320px)/2+24px))] top-[38%] z-20 grid size-14 place-items-center rounded-r-full bg-[#ebe7e2] text-[#10240c] shadow-[0_16px_40px_rgba(0,0,0,0.16)] transition hover:translate-x-1"
+          className="absolute right-[max(16px,calc((100%-1320px)/2+24px))] top-[38%] z-20 hidden size-14 place-items-center rounded-r-full bg-[#ebe7e2] text-[#10240c] shadow-[0_16px_40px_rgba(0,0,0,0.16)] transition hover:translate-x-1 md:grid"
           onClick={() => scroll(1)}
           type="button"
         >
@@ -61,13 +61,13 @@ export function EventsGallerySection() {
             return (
               <article
                 className={`shrink-0 snap-center transition duration-300 hover:-translate-y-2 ${
-                  featured ? "w-[min(78vw,352px)]" : "w-[min(70vw,287px)]"
+                  featured ? "w-[min(82vw,352px)]" : "w-[min(72vw,287px)]"
                 }`}
                 key={`${item.name}-${index}`}
               >
                 <div
                   className={`relative overflow-hidden bg-[#d8f7d8] shadow-[0_18px_55px_rgba(24,56,20,0.12)] ${
-                    featured ? "h-[468px]" : "h-[382px]"
+                    featured ? "h-[min(112vw,468px)]" : "h-[min(96vw,382px)]"
                   }`}
                 >
                   <Image
@@ -90,4 +90,3 @@ export function EventsGallerySection() {
     </section>
   );
 }
-

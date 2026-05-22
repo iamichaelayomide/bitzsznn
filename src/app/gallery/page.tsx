@@ -31,7 +31,7 @@ export default function GalleryPage() {
             <p className="inline-flex rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
               Infinite gallery
             </p>
-            <h1 className="mt-5 max-w-3xl text-[clamp(2.75rem,4vw,2.875rem)] font-medium leading-[1]">
+            <h1 className="hero-title mt-5 max-w-3xl">
               A canvas of moments before they move on.
             </h1>
           </div>

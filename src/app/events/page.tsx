@@ -38,7 +38,7 @@ export default function EventsPage() {
           <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
             Events
           </p>
-          <h1 className="mt-6 max-w-5xl text-[clamp(2.85rem,6.4vw,6.8rem)] font-medium leading-[0.96]">
+          <h1 className="hero-title mt-6 max-w-5xl">
             More than a party, an experience.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/76">
@@ -72,7 +72,7 @@ export default function EventsPage() {
         <div className="container-shell figma-inner relative z-10 min-h-[897px]">
           <div className="mx-auto mt-[72px] flex w-[399px] max-w-full flex-col items-center gap-6 text-center">
             <div>
-              <h1 className="text-[46px] font-medium leading-none tracking-normal text-white">
+              <h1 className="hero-title text-white">
                 More than a party,
                 <br />
                 an experience.
@@ -126,7 +126,7 @@ export default function EventsPage() {
                 <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
                   Upcoming events
                 </p>
-                <h2 className="mt-5 text-5xl font-medium leading-none md:text-7xl">Pick your next room.</h2>
+                <h2 className="section-title mt-5">Pick your next room.</h2>
               </div>
               <p className="max-w-[430px] text-lg leading-7 text-white/72">
                 Each event has its own details, ticket tiers, and confirmation flow.
@@ -136,7 +136,7 @@ export default function EventsPage() {
             <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {upcoming.map((event) => (
                 <Link
-                  className="group flex h-full min-h-[610px] flex-col overflow-hidden rounded-[18px] bg-[#f7f8f2] text-[#10240c] shadow-[0_14px_40px_rgba(0,0,0,0.2)] transition duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_30px_90px_rgba(0,0,0,0.34)] focus-visible:outline focus-visible:outline-4 focus-visible:outline-[#b8ff2c]"
+                  className="group flex h-full min-h-[520px] flex-col overflow-hidden rounded-[18px] bg-[#f7f8f2] text-[#10240c] shadow-[0_14px_40px_rgba(0,0,0,0.2)] transition duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_30px_90px_rgba(0,0,0,0.34)] focus-visible:outline focus-visible:outline-4 focus-visible:outline-[#b8ff2c] md:min-h-[610px]"
                   href={`/events/${event.slug}`}
                   key={event.slug}
                 >
@@ -174,7 +174,7 @@ export default function EventsPage() {
                 <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
                   What to expect
                 </p>
-                <h2 className="mt-4 text-4xl font-medium leading-tight md:text-6xl">Vibes. Networking. Opportunity.</h2>
+                <h2 className="section-title mt-4">Vibes. Networking. Opportunity.</h2>
               </div>
               <div className="grid gap-3">
                 {eventHighlights.map((highlight, index) => (

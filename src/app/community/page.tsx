@@ -44,7 +44,7 @@ export default function CommunityPage() {
             <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
               Community
             </p>
-            <h1 className="mt-6 text-[clamp(2.75rem,4vw,2.875rem)] font-medium leading-[1]">
+            <h1 className="hero-title mt-6">
               Find your people before the moment moves on.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/76">
@@ -80,7 +80,7 @@ export default function CommunityPage() {
                 <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
                   Why join?
                 </p>
-                <h2 className="mt-4 text-4xl font-medium leading-tight md:text-6xl">Vibes that turn into access.</h2>
+                <h2 className="section-title mt-4">Vibes that turn into access.</h2>
               </div>
               <div className="grid gap-4">
                 {communityBenefits.map((benefit) => (
@@ -115,7 +115,7 @@ export default function CommunityPage() {
                 <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
                   How it works
                 </p>
-                <h2 className="mt-4 max-w-2xl text-4xl font-medium leading-tight text-[#10240c] md:text-6xl">
+                <h2 className="section-title mt-4 max-w-2xl text-[#10240c]">
                   The community keeps the event alive.
                 </h2>
                 <div className="mt-8 grid gap-4">

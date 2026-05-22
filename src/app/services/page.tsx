@@ -53,7 +53,7 @@ export default function ServicesPage() {
           <div className="grid gap-8 lg:grid-cols-[0.72fr_1fr] lg:items-end">
             <div>
               <SectionKicker>Our services</SectionKicker>
-              <h2 className="mt-4 text-5xl font-semibold leading-none text-[#183814] md:text-7xl">
+              <h2 className="section-title mt-4 font-semibold text-[#183814]">
                 What do we do?
               </h2>
             </div>
@@ -90,7 +90,7 @@ export default function ServicesPage() {
           <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
               <SectionKicker>Real words from real people</SectionKicker>
-              <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight text-[#183814] md:text-6xl">
+              <h2 className="section-title mt-4 max-w-3xl font-semibold text-[#183814]">
                 Built for people who show up.
               </h2>
             </div>
@@ -103,7 +103,7 @@ export default function ServicesPage() {
         <MotionSection>
           <div className="mb-10 text-center">
             <SectionKicker>FAQ</SectionKicker>
-            <h2 className="mt-4 text-5xl font-semibold text-[#183814] md:text-7xl">Questions before the vibe?</h2>
+            <h2 className="section-title mt-4 font-semibold text-[#183814]">Questions before the vibe?</h2>
           </div>
           <FaqAccordion />
         </MotionSection>

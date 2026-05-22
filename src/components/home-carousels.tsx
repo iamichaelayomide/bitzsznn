@@ -20,7 +20,7 @@ export function HomeEventsCarousel() {
       <div className="group no-scrollbar -mx-4 flex snap-x gap-5 overflow-x-auto px-4 pb-10 pt-2 sm:-mx-6 sm:px-6 lg:gap-6">
         {events.map((event) => (
           <article
-            className="w-[min(82vw,380px)] shrink-0 snap-center overflow-hidden rounded-[16px] bg-[#f7f8f2] text-[#10240c] shadow-[0_12px_36px_rgba(0,0,0,0.16)] transition-[transform,box-shadow,border-color] duration-300 hover:z-10 hover:-translate-y-2 hover:scale-[1.025] hover:shadow-[0_30px_80px_rgba(0,0,0,0.34)] focus-within:ring-4 focus-within:ring-[#b8ff2c]/45"
+            className="w-[min(88vw,380px)] shrink-0 snap-center overflow-hidden rounded-[16px] bg-[#f7f8f2] text-[#10240c] shadow-[0_12px_36px_rgba(0,0,0,0.16)] transition-[transform,box-shadow,border-color] duration-300 hover:z-10 hover:-translate-y-2 hover:scale-[1.025] hover:shadow-[0_30px_80px_rgba(0,0,0,0.34)] focus-within:ring-4 focus-within:ring-[#b8ff2c]/45 sm:w-[min(82vw,380px)]"
             key={event.slug}
           >
             <div className="min-h-[132px] bg-[#f7f8f2] p-6">
@@ -34,17 +34,17 @@ export function HomeEventsCarousel() {
               </div>
               <p className="mt-3 text-[14px] leading-[1.45] text-[#354a30]">{event.summary}</p>
             </div>
-            <div className="relative h-[290px]">
+            <div className="relative h-[260px] md:h-[290px]">
               <Image alt="" className="object-cover" fill sizes="446px" src={event.image} />
               <span className="absolute right-5 top-4 rounded-full border border-white bg-[#d7f8b8] px-3 py-1 text-[11px] font-semibold text-[#091309]">
                 {event.eyebrow}
               </span>
               <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,rgba(8,11,8,0),rgba(8,11,8,0.76))] p-5">
                 <div className="flex gap-2">
-                <Button className="min-h-0 flex-1 rounded-[18px] bg-[#459c0a] px-4 py-3 text-[14px] text-[#061006] shadow-none hover:bg-[#5dc716]" href={`/events/${event.slug}`}>
+                <Button className="min-h-0 flex-1 rounded-[16px] bg-[#459c0a] px-3 py-3 text-[13px] text-[#061006] shadow-none hover:bg-[#5dc716] md:rounded-[18px] md:px-4 md:text-[14px]" href={`/events/${event.slug}`}>
                   View event
                 </Button>
-                <Button className="min-h-0 flex-1 rounded-[18px] bg-[#fbfff4] px-4 py-3 text-[14px] text-[#0b1709] shadow-none hover:bg-white" href={`/events/${event.slug}#tickets`} variant="secondary">
+                <Button className="min-h-0 flex-1 rounded-[16px] bg-[#fbfff4] px-3 py-3 text-[13px] text-[#0b1709] shadow-none hover:bg-white md:rounded-[18px] md:px-4 md:text-[14px]" href={`/events/${event.slug}#tickets`} variant="secondary">
                   Tickets
                 </Button>
                 </div>

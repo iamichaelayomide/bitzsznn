@@ -13,8 +13,8 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 pt-3 md:pt-5">
       <div className="container-shell">
-        <nav className="flex min-h-16 items-center justify-between rounded-[20px] border border-white/10 bg-[rgba(17,22,17,0.78)] px-4 shadow-[var(--shadow-soft)] backdrop-blur-xl md:min-h-[78px] md:px-7">
-          <Link aria-label="Bitzsznn home" className="relative h-[54px] w-[124px] shrink-0 overflow-hidden" href="/">
+        <nav className="flex min-h-14 items-center justify-between rounded-[18px] border border-white/10 bg-[rgba(17,22,17,0.82)] px-3 shadow-[var(--shadow-soft)] backdrop-blur-xl md:min-h-[78px] md:rounded-[20px] md:px-7">
+          <Link aria-label="Bitzsznn home" className="relative h-[46px] w-[106px] shrink-0 overflow-hidden md:h-[54px] md:w-[124px]" href="/">
             {/* The Figma logo asset is intentionally cropped inside its frame. */}
             <Image
               alt="Bitzsznn"
@@ -46,7 +46,7 @@ export function SiteHeader() {
           <button
             aria-expanded={open}
             aria-label="Toggle navigation"
-            className="grid size-11 place-items-center rounded-2xl border border-white/10 bg-white/5 text-foreground md:hidden"
+            className="grid size-10 place-items-center rounded-2xl border border-white/10 bg-white/5 text-foreground md:hidden"
             onClick={() => setOpen((value) => !value)}
             type="button"
           >

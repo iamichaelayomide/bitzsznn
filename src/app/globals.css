@@ -89,12 +89,34 @@ textarea {
 }
 
 .container-shell {
-  width: min(100% - 32px, 1320px);
+  width: min(100% - 24px, 1320px);
   margin-inline: auto;
 }
 
 .figma-inner {
-  padding-inline: clamp(18px, 2.2vw, 48px);
+  padding-inline: clamp(12px, 2.2vw, 48px);
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 4vw, 2.9rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.85vw, 2.9rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+@media (min-width: 768px) {
+  .container-shell {
+    width: min(100% - 32px, 1320px);
+  }
 }
 
 .section-grid-lines {

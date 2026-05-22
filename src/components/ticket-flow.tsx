@@ -98,7 +98,7 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
                 <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
                   Tickets
                 </p>
-                <h2 className="mt-4 text-4xl font-medium leading-none md:text-6xl">Choose your access.</h2>
+                <h2 className="section-title mt-4">Choose your access.</h2>
                 <p className="mt-4 max-w-2xl text-base leading-7 text-[#183814]/72">
                   Select a ticket for {event.title}. Your details create a reservation code you can use for follow-up confirmation.
                 </p>
@@ -234,7 +234,7 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
             <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
               Ticket checkout
             </p>
-            <h1 className="mt-5 text-5xl font-medium leading-none md:text-7xl">Reserve access for {event.title}.</h1>
+            <h1 className="hero-title mt-5">Reserve access for {event.title}.</h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-white/72">{event.summary}</p>
           </div>
         </div>

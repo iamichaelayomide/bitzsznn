@@ -37,7 +37,7 @@ export default function AboutPage() {
           <div className="grid gap-10 lg:grid-cols-[0.78fr_1fr] lg:items-start">
             <div>
               <SectionKicker>Our story</SectionKicker>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[#183814] md:text-6xl">
+              <h2 className="section-title mt-4 font-semibold text-[#183814]">
                 More than a party.
               </h2>
             </div>
@@ -70,7 +70,7 @@ export default function AboutPage() {
           <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
               <SectionKicker>What drives us</SectionKicker>
-              <h2 className="mt-4 text-4xl font-semibold leading-tight text-[#183814] md:text-6xl">
+              <h2 className="section-title mt-4 font-semibold text-[#183814]">
                 Vibes with a purpose.
               </h2>
             </div>
@@ -102,7 +102,7 @@ export default function AboutPage() {
         <MotionSection>
           <div className="mb-10">
             <SectionKicker>Meet our team</SectionKicker>
-            <h2 className="mt-4 text-4xl font-semibold leading-tight text-[#183814] md:text-6xl">
+            <h2 className="section-title mt-4 font-semibold text-[#183814]">
               The people behind the moments.
             </h2>
           </div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
         <MotionSection>
           <div className="mb-8">
             <SectionKicker>Community proof</SectionKicker>
-            <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight text-[#183814] md:text-6xl">
+            <h2 className="section-title mt-4 max-w-3xl font-semibold text-[#183814]">
               Real words from real people.
             </h2>
           </div>
