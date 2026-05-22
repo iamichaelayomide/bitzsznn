@@ -30,6 +30,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
   if (!event) {
     notFound();
   }
+  const displayDate = event.date.replace(",", "").split(" ").slice(0, 3).join(" ");
 
   return (
     <main className="bg-[#f7f5f2] text-[#183814]">
@@ -49,7 +50,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
             <div className="mt-8 grid max-w-4xl gap-3 sm:grid-cols-3">
               <div className="rounded-[18px] border border-white/12 bg-white/[0.08] p-4 backdrop-blur">
                 <CalendarDays className="size-5 text-[#b8ff2c]" />
-                <p className="mt-3 font-semibold">{event.date}</p>
+                <p className="mt-3 font-semibold">{displayDate}</p>
               </div>
               <div className="rounded-[18px] border border-white/12 bg-white/[0.08] p-4 backdrop-blur">
                 <Clock className="size-5 text-[#b8ff2c]" />

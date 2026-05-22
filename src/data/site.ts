@@ -23,6 +23,30 @@ export const socialLinks = {
   email: "hello@bitzsznn.com",
 };
 
+export const partnerLogos = [
+  "Alté House",
+  "Corpers Hub",
+  "Pulse Yard",
+  "Vibe Lagos",
+  "Nova Sounds",
+  "LinkUp NG",
+  "Pop Circle",
+  "Green Room",
+  "Campus Plug",
+  "After Camp",
+  "Creator Lab",
+  "Fresh Batch",
+  "City Social",
+  "Culture Deck",
+  "Night Shift",
+  "House 44",
+  "Soft Life Co",
+  "The Yard",
+  "Access Club",
+  "Bitz Studio",
+];
+
+
 export const stats = [
   {
     value: "500+",

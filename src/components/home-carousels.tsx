@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, Quote, Star } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/button";
 import { events, testimonials } from "@/data/site";
 
@@ -14,20 +14,50 @@ const testimonialImages = [
   "/images/avatar-5.png",
 ];
 
+function shortDate(date: string) {
+  return date.replace(",", "").split(" ").slice(0, 3).join(" ");
+}
+
 export function HomeEventsCarousel() {
+  const railRef = useRef<HTMLDivElement>(null);
+  const displayEvents = [...events, ...events];
+
+  function move(direction: number) {
+    railRef.current?.scrollBy({ left: direction * 390, behavior: "smooth" });
+  }
+
+  useEffect(() => {
+    const rail = railRef.current;
+    if (!rail) return;
+    const interval = window.setInterval(() => {
+      if (rail.scrollLeft >= rail.scrollWidth / 2) {
+        rail.scrollTo({ left: 0 });
+      } else {
+        rail.scrollBy({ left: 1.2, behavior: "smooth" });
+      }
+    }, 80);
+    return () => window.clearInterval(interval);
+  }, []);
+
   return (
     <div className="relative mt-12">
-      <div className="group no-scrollbar -mx-4 flex snap-x gap-5 overflow-x-auto px-4 pb-10 pt-2 sm:-mx-6 sm:px-6 lg:gap-6">
-        {events.map((event) => (
+      <button aria-label="Previous event" className="absolute left-0 top-1/2 z-10 hidden size-12 -translate-y-1/2 place-items-center rounded-full bg-[#459c0a] text-[#041102] transition hover:scale-105 lg:grid" onClick={() => move(-1)} type="button">
+        <ArrowLeft className="size-5" />
+      </button>
+      <button aria-label="Next event" className="absolute right-0 top-1/2 z-10 hidden size-12 -translate-y-1/2 place-items-center rounded-full bg-[#459c0a] text-[#041102] transition hover:scale-105 lg:grid" onClick={() => move(1)} type="button">
+        <ArrowRight className="size-5" />
+      </button>
+      <div className="group no-scrollbar -mx-4 flex snap-x gap-5 overflow-x-auto px-4 pb-10 pt-2 sm:-mx-6 sm:px-6 lg:gap-6" ref={railRef}>
+        {displayEvents.map((event, index) => (
           <article
             className="w-[min(88vw,380px)] shrink-0 snap-center overflow-hidden rounded-[16px] bg-[#f7f8f2] text-[#10240c] shadow-[0_12px_36px_rgba(0,0,0,0.16)] transition-[transform,box-shadow,border-color] duration-300 hover:z-10 hover:-translate-y-2 hover:scale-[1.025] hover:shadow-[0_30px_80px_rgba(0,0,0,0.34)] focus-within:ring-4 focus-within:ring-[#b8ff2c]/45 sm:w-[min(82vw,380px)]"
-            key={event.slug}
+            key={`${event.slug}-${index}`}
           >
             <div className="min-h-[132px] bg-[#f7f8f2] p-6">
               <div className="flex items-center gap-3">
                 <div className="w-8 text-center leading-none text-[#193214]">
-                  <p className="font-mono text-[12px] uppercase">{event.date.split(" ")[0]}</p>
-                  <p className="mt-1 text-[20px] font-semibold">{event.date.split(" ")[1]?.replace(",", "")}</p>
+                  <p className="font-mono text-[12px] uppercase">{shortDate(event.date).split(" ")[0]}</p>
+                  <p className="mt-1 text-[20px] font-semibold">{shortDate(event.date).split(" ")[1]}</p>
                 </div>
                 <div className="h-10 w-px bg-[#9fa59d]" />
                 <h3 className="text-[20px] font-semibold text-[#10240c]">{event.title}</h3>
@@ -69,49 +99,52 @@ export function HomeTestimonialsCarousel() {
     });
   }
 
+  const activeItem = testimonials[active];
+
   return (
-    <div className="relative mt-6">
-      <div className="no-scrollbar -mx-4 flex snap-x gap-6 overflow-x-auto px-4 pb-8 sm:-mx-8 sm:px-8 lg:gap-10" ref={railRef}>
-        {testimonials.map((item, index) => {
-          const selected = index === active;
-          return (
-            <button
-              className={`flex w-[min(86vw,620px)] shrink-0 snap-center gap-4 rounded-[18px] border border-[#d9e5d4] bg-[#fbfff4] p-5 text-left transition duration-300 md:gap-5 md:p-7 ${
-                selected ? "scale-100 opacity-100" : "scale-[0.94] opacity-45"
-              }`}
-              key={`${item.name}-${index}`}
-              onClick={() => setActive(index)}
-              type="button"
-            >
-              <Quote className={`mt-1 size-9 shrink-0 fill-current ${selected ? "text-[#183814]" : "text-[#74806f]"}`} />
-              <div className="max-w-[540px]">
-                <div className={`flex gap-2 ${selected ? "text-[#459c0a]" : "text-[#8b9488]"}`}>
-                  {[0, 1, 2, 3, 4].map((star) => (
-                    <Star className="size-5 fill-current" key={star} />
-                  ))}
-                </div>
-                <p className={`mt-4 text-[19px] leading-[1.45] md:text-[22px] ${selected ? "font-semibold text-[#183814]" : "font-medium text-[#4f5c4c]"}`}>
-                  {item.quote}
-                </p>
-                <div className="mt-5 flex items-center gap-4">
-                  <div className="relative size-[58px] overflow-hidden rounded-[12px] bg-[#d8f7d8]">
-                    <Image
-                      alt=""
-                      className="object-cover"
-                      fill
-                      sizes="58px"
-                      src={testimonialImages[index % testimonialImages.length]}
-                    />
-                  </div>
-                  <div>
-                    <p className="text-[18px] font-semibold text-[#183814]">{item.name}</p>
-                    <p className="mt-1 text-[18px] font-medium text-[#434d42]">{item.role}</p>
-                  </div>
-                </div>
-              </div>
-            </button>
-          );
-        })}
+    <div className="relative mt-8">
+      <div className="grid gap-5 rounded-[22px] border border-[#d9e5d4] bg-[#fbfff4] p-5 md:grid-cols-[180px_1fr] md:p-7">
+        <div className="relative min-h-[210px] overflow-hidden rounded-[16px] bg-[#d8f7d8]">
+          <Image alt="" className="object-cover" fill sizes="220px" src={testimonialImages[active % testimonialImages.length]} />
+        </div>
+        <div className="flex flex-col justify-between">
+          <div>
+            <Quote className="size-9 fill-current text-[#183814]" />
+            <div className="mt-4 flex gap-1 text-[#459c0a]">
+              {[0, 1, 2, 3, 4].map((star) => (
+                <Star className="size-4 fill-current" key={star} />
+              ))}
+            </div>
+            <p className="mt-4 max-w-3xl text-[18px] font-semibold leading-[1.45] text-[#183814] md:text-[21px]">
+              {activeItem.quote}
+            </p>
+          </div>
+          <div className="mt-6">
+            <p className="text-[17px] font-semibold text-[#183814]">{activeItem.name}</p>
+            <p className="mt-1 text-[15px] font-medium text-[#434d42]">{activeItem.role}</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="no-scrollbar mt-4 flex gap-3 overflow-x-auto pb-2" ref={railRef}>
+        {testimonials.map((item, index) => (
+          <button
+            className={`flex min-w-[180px] items-center gap-3 rounded-[16px] border p-3 text-left transition ${
+              index === active ? "border-[#459c0a] bg-[#d8f7d8]" : "border-[#d9e5d4] bg-white opacity-70 hover:opacity-100"
+            }`}
+            key={item.name}
+            onClick={() => setActive(index)}
+            type="button"
+          >
+            <span className="relative size-10 overflow-hidden rounded-[10px] bg-[#d8f7d8]">
+              <Image alt="" className="object-cover" fill sizes="40px" src={testimonialImages[index % testimonialImages.length]} />
+            </span>
+            <span>
+              <span className="block text-sm font-semibold text-[#183814]">{item.name}</span>
+              <span className="block text-xs text-[#52614e]">{item.role}</span>
+            </span>
+          </button>
+        ))}
       </div>
       <div className="flex justify-center gap-2">
         <button aria-label="Previous testimonial" className="grid size-[54px] place-items-center rounded-full bg-[#459c0a] text-[#041102] transition hover:scale-105 md:size-[67px]" onClick={() => go(-1)} type="button">

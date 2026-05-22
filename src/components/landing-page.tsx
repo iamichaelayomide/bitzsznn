@@ -1,12 +1,14 @@
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
+import { CheckCircle2, Sparkles } from "lucide-react";
+import { AnimatedNumber } from "@/components/animated-number";
 import { Button } from "@/components/button";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { HomeEventsCarousel, HomeTestimonialsCarousel } from "@/components/home-carousels";
 import { MotionSection } from "@/components/motion-section";
-import { services, socialLinks, stats } from "@/data/site";
+import { partnerLogos, reasons, services, socialLinks, stats } from "@/data/site";
 
 const avatars = [1, 2, 3, 4, 5];
+const tickerLogos = [...partnerLogos, ...partnerLogos];
 
 const communityBullets = [
   "Early event updates",
@@ -57,11 +59,11 @@ export function LandingPage() {
           sizes="100vw"
           src="/images/hero-crowd.png"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,11,8,0.84),rgba(8,11,8,0.12),rgba(8,11,8,0.5))]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,11,8,0.78),rgba(8,11,8,0.42),rgba(8,11,8,0.86))]" />
         <div className="absolute inset-0 bg-[#459c0a]/20 mix-blend-multiply" />
 
-        <div className="container-shell relative z-10 flex min-h-[680px] flex-col justify-center pt-28 md:min-h-screen">
-          <div className="max-w-[470px] px-1 md:ml-[48px] md:px-0">
+        <div className="container-shell relative z-10 flex min-h-[680px] flex-col items-center justify-center pt-28 text-center md:min-h-screen">
+          <div className="mx-auto max-w-[620px] px-1 md:px-0">
             <h1 className="hero-title text-white">
               Vibes.
               <br />
@@ -69,10 +71,10 @@ export function LandingPage() {
               <br />
               Opportunity.
             </h1>
-            <p className="mt-5 max-w-[468px] text-[15px] leading-[1.6] text-[#d7e4d1] md:text-[16px]">
+            <p className="mx-auto mt-5 max-w-[540px] text-[15px] leading-[1.6] text-[#d7e4d1] md:text-[16px]">
               A youth cultural community built around NYSC life, post-NYSC transition, entertainment, music, events, shared memories, and real connection.
             </p>
-            <div className="mt-7 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-7 flex flex-col justify-center gap-4 sm:flex-row">
               <Button className="min-h-[56px] rounded-[18px] px-6 text-[16px] md:min-h-[70px] md:rounded-[20px] md:px-8 md:text-[20px]" href={socialLinks.whatsapp}>
                 Join the community
               </Button>
@@ -82,21 +84,23 @@ export function LandingPage() {
             </div>
           </div>
 
-          <div className="mt-16 max-w-[331px] text-center text-[16px] leading-6 text-white md:absolute md:bottom-[58px] md:left-1/2 md:mt-0 md:-translate-x-1/2">
+          <div className="mt-14 w-full max-w-4xl text-center text-[14px] leading-6 text-white md:absolute md:bottom-[42px] md:left-1/2 md:mt-0 md:-translate-x-1/2">
             <p>
-              <strong>+50 trusted partners</strong> and 4,000 people have gotten an unforgettable experience.
+              <strong>Trusted by community builders, creators, and youth culture partners.</strong>
             </p>
-            <div className="mt-5 flex justify-center -space-x-2">
+            <div className="mx-auto mt-4 flex w-fit justify-center -space-x-2">
               {avatars.map((avatar) => (
-                <Image
-                  alt=""
-                  className="size-9 rounded-full border-2 border-white object-cover"
-                  height={40}
-                  key={avatar}
-                  src={`/images/avatar-${avatar}.png`}
-                  width={40}
-                />
+                <Image alt="" className="size-8 rounded-full border-2 border-white object-cover" height={40} key={avatar} src={`/images/avatar-${avatar}.png`} width={40} />
               ))}
+            </div>
+            <div className="mx-auto mt-5 max-w-4xl overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">
+              <div className="logo-ticker ticker-pause flex w-max gap-3">
+                {tickerLogos.map((logo, index) => (
+                  <span className="inline-flex min-w-[132px] items-center justify-center rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#e8efe5]" key={`${logo}-${index}`}>
+                    {logo}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -114,7 +118,9 @@ export function LandingPage() {
           <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-[70px] xl:gap-[103px]">
             {stats.map((stat) => (
               <div className="max-w-[245px]" key={stat.label}>
-                <p className="text-[28px] font-bold leading-none text-[#183814] md:text-[34px]">{stat.value}</p>
+                <p className="text-[28px] font-bold leading-none text-[#183814] md:text-[34px]">
+                  <AnimatedNumber value={stat.value} />
+                </p>
                 <h3 className="mt-3 text-[16px] font-bold leading-tight text-[#183814] md:text-[18px]">{stat.label}</h3>
                 <p className="mt-2 text-[15px] leading-[1.24] text-[#183814] md:text-[16px]">{stat.body}</p>
               </div>
@@ -189,14 +195,27 @@ export function LandingPage() {
           </div>
 
           <div className="relative mt-16">
-            <button aria-label="Previous event" className="absolute left-0 top-1/2 z-10 hidden size-[67px] -translate-y-1/2 place-items-center rounded-full bg-[#459c0a] text-[#041102] transition hover:scale-105 xl:grid">
-              <ArrowLeft className="size-7" />
-            </button>
-            <button aria-label="Next event" className="absolute right-0 top-1/2 z-10 hidden size-[67px] -translate-y-1/2 place-items-center rounded-full bg-[#459c0a] text-[#041102] transition hover:scale-105 xl:grid">
-              <ArrowRight className="size-7" />
-            </button>
-
             <HomeEventsCarousel />
+          </div>
+        </div>
+      </GuideSection>
+
+      <GuideSection className="py-[64px] md:py-[78px]">
+        <div className="container-shell figma-inner">
+          <div className="grid gap-8 lg:grid-cols-[0.7fr_1fr] lg:items-start">
+            <div>
+              <FigmaLabel>Why choose us?</FigmaLabel>
+              <h2 className="section-title mt-5 max-w-[460px] text-[#082005]">Built for people who want the room and the reason.</h2>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {reasons.map((reason, index) => (
+                <article className="rounded-[18px] border border-[#d8e4d2] bg-[#f8fbf4] p-5 transition hover:-translate-y-1 hover:border-[#459c0a]/50" key={reason.title}>
+                  <span className="text-sm font-bold text-[#459c0a]">0{index + 1}</span>
+                  <h3 className="mt-4 text-[18px] font-semibold leading-tight text-[#183814]">{reason.title}</h3>
+                  <p className="mt-3 text-[14px] leading-6 text-[#40563d]">{reason.body}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </GuideSection>

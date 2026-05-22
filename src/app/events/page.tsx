@@ -28,6 +28,7 @@ export default function EventsPage() {
     { value: "30+", label: "Brand collaborations", className: "left-[38%] top-[76%]" },
     { value: "100%", label: "Event sellouts", className: "right-[9%] top-[61%]" },
   ];
+  const formatDate = (date: string) => date.replace(",", "").split(" ").slice(0, 3).join(" ");
 
   return (
     <main className="bg-[#080b08]">
@@ -148,7 +149,7 @@ export default function EventsPage() {
                   </div>
                   <div className="flex flex-1 flex-col p-6">
                     <div className="flex flex-wrap gap-3 text-sm font-medium text-[#39533a]">
-                      <span className="inline-flex items-center gap-2"><CalendarDays className="size-4" /> {event.date}</span>
+                      <span className="inline-flex items-center gap-2"><CalendarDays className="size-4" /> {formatDate(event.date)}</span>
                       <span className="inline-flex items-center gap-2"><MapPin className="size-4" /> {event.location}</span>
                     </div>
                     <h3 className="mt-5 text-2xl font-semibold leading-tight text-[#10240c]">{event.title}</h3>
