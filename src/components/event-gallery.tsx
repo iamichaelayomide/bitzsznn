@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { galleryMoments } from "@/data/site";
@@ -25,12 +24,6 @@ export function EventsGallerySection() {
               Swipe through the people, rooms, and recap moments that make Bitzsznn feel bigger than one night.
             </p>
           </div>
-          <Link
-            className="inline-flex w-fit items-center justify-center rounded-[18px] bg-[#459c0a] px-6 py-4 font-semibold text-[#061006] transition hover:-translate-y-0.5 hover:bg-[#5dc716]"
-            href="/gallery"
-          >
-            Open infinite gallery <ArrowRight className="ml-2 size-4" />
-          </Link>
         </div>
       </div>
 
