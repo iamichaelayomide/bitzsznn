@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays, MapPin } from "lucide-react";
 import { Button } from "@/components/button";
+import { EventsGallerySection } from "@/components/event-gallery";
 import { MotionSection } from "@/components/motion-section";
 import { events, eventHighlights, stats } from "@/data/site";
 
@@ -162,6 +163,8 @@ export default function EventsPage() {
           </MotionSection>
         </div>
       </section>
+
+      <EventsGallerySection />
 
       <section className="section-grid-lines bg-white py-16 text-[#183814] md:py-24">
         <div className="container-shell figma-inner">

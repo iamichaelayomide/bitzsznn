@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 const testimonials = [
@@ -23,6 +24,12 @@ const testimonials = [
     name: "Dara K.",
     role: "Community member",
   },
+];
+
+const testimonialImages = [
+  "/images/avatar-3.png",
+  "/images/avatar-2.png",
+  "/images/avatar-5.png",
 ];
 
 export function TestimonialSlider() {
@@ -55,9 +62,20 @@ export function TestimonialSlider() {
         <p className="mt-8 max-w-4xl text-xl font-semibold leading-[1.35] text-[#183814] md:text-3xl">
           &quot;{item.quote}&quot;
         </p>
-        <div className="mt-8">
-          <p className="font-bold text-[#183814]">{item.name}</p>
-          <p className="mt-1 text-sm text-[#183814]/62">{item.role}</p>
+        <div className="mt-8 flex items-center gap-4">
+          <div className="relative size-14 overflow-hidden rounded-[14px] bg-[#d8f7d8]">
+            <Image
+              alt=""
+              className="object-cover"
+              fill
+              sizes="56px"
+              src={testimonialImages[active % testimonialImages.length]}
+            />
+          </div>
+          <div>
+            <p className="font-bold text-[#183814]">{item.name}</p>
+            <p className="mt-1 text-sm text-[#43563f]">{item.role}</p>
+          </div>
         </div>
       </motion.div>
 

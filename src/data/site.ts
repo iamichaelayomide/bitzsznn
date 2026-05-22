@@ -195,6 +195,45 @@ export const testimonials = [
   },
 ];
 
+export const galleryMoments = [
+  {
+    name: "Amaka E.",
+    role: "Community member",
+    image: "/images/community-party-1.png",
+    caption: "The room before the night opened up.",
+  },
+  {
+    name: "Timi A.",
+    role: "Post-NYSC creative",
+    image: "/images/event-good-vibes.png",
+    caption: "A clean memory from the main set.",
+  },
+  {
+    name: "Dara K.",
+    role: "Young professional",
+    image: "/images/community-party-2.png",
+    caption: "People finding their next circle.",
+  },
+  {
+    name: "Ife B.",
+    role: "Brand partner",
+    image: "/images/community-good-vibes.png",
+    caption: "Vibes, content, and warm intros.",
+  },
+  {
+    name: "Zainab O.",
+    role: "Founder",
+    image: "/images/values-good-vibes.png",
+    caption: "The kind of night people remember.",
+  },
+  {
+    name: "Bitzsznn",
+    role: "Recap archive",
+    image: "/images/about-hero.png",
+    caption: "Moments before they move on.",
+  },
+];
+
 export const events = [
   {
     slug: "batch-a2-pop-party",

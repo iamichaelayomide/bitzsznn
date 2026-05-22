@@ -44,7 +44,7 @@ export default function CommunityPage() {
             <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
               Community
             </p>
-            <h1 className="mt-6 text-[clamp(2.85rem,6.2vw,6.1rem)] font-medium leading-[0.98]">
+            <h1 className="mt-6 text-[clamp(2.75rem,4vw,2.875rem)] font-medium leading-[1]">
               Find your people before the moment moves on.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/76">

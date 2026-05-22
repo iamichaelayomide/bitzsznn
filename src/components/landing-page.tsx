@@ -27,15 +27,18 @@ function GuideSection({
   children,
   className = "",
   id,
+  style,
 }: {
   children: React.ReactNode;
   className?: string;
   id?: string;
+  style?: React.CSSProperties;
 }) {
   return (
     <MotionSection
       className={`relative border-b border-[#dce8d8] bg-white text-[#183814] before:absolute before:bottom-0 before:left-[max(16px,calc((100%-1320px)/2))] before:top-0 before:w-px before:bg-[#dce8d8] after:absolute after:bottom-0 after:right-[max(16px,calc((100%-1320px)/2))] after:top-0 after:w-px after:bg-[#dce8d8] ${className}`}
       id={id}
+      style={style}
     >
       {children}
     </MotionSection>
@@ -168,7 +171,7 @@ export function LandingPage() {
         </div>
       </GuideSection>
 
-      <GuideSection className="overflow-hidden border-b-0 bg-[#0f1c07] py-[38px] text-white before:bg-white/10 after:bg-white/10" id="events">
+      <GuideSection className="overflow-hidden border-b-0 py-[38px] text-white before:bg-white/10 after:bg-white/10" id="events" style={{ backgroundColor: "#0f1c07", color: "#fbfff4" }}>
         <div className="container-shell figma-inner">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-[992px]">
@@ -198,7 +201,7 @@ export function LandingPage() {
         </div>
       </GuideSection>
 
-      <GuideSection className="border-b-0 bg-[#0f1c07] py-[64px] text-white before:bg-white/10 after:bg-white/10">
+      <GuideSection className="border-b-0 py-[64px] text-white before:bg-white/10 after:bg-white/10" style={{ backgroundColor: "#0f1c07", color: "#fbfff4" }}>
         <div className="container-shell figma-inner">
           <div className="grid gap-12 lg:grid-cols-[0.76fr_1fr] lg:items-center">
             <div>

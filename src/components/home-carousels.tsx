@@ -6,6 +6,14 @@ import { useRef, useState } from "react";
 import { Button } from "@/components/button";
 import { events, testimonials } from "@/data/site";
 
+const testimonialImages = [
+  "/images/avatar-1.png",
+  "/images/avatar-2.png",
+  "/images/avatar-3.png",
+  "/images/avatar-4.png",
+  "/images/avatar-5.png",
+];
+
 export function HomeEventsCarousel() {
   return (
     <div className="relative mt-12">
@@ -86,7 +94,15 @@ export function HomeTestimonialsCarousel() {
                   {item.quote}
                 </p>
                 <div className="mt-5 flex items-center gap-4">
-                  <div className="size-[54px] rounded bg-[#a0c1f2]" />
+                  <div className="relative size-[58px] overflow-hidden rounded-[12px] bg-[#d8f7d8]">
+                    <Image
+                      alt=""
+                      className="object-cover"
+                      fill
+                      sizes="58px"
+                      src={testimonialImages[index % testimonialImages.length]}
+                    />
+                  </div>
                   <div>
                     <p className="text-[18px] font-semibold text-[#183814]">{item.name}</p>
                     <p className="mt-1 text-[18px] font-medium text-[#434d42]">{item.role}</p>

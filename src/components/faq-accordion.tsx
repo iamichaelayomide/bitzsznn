@@ -2,16 +2,8 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Plus } from "lucide-react";
-import Image from "next/image";
 import { useState } from "react";
 import { faqs } from "@/data/site";
-
-const faqImages = [
-  "/images/community-party-1.png",
-  "/images/event-good-vibes.png",
-  "/images/community-good-vibes.png",
-  "/images/community-party-2.png",
-];
 
 export function FaqAccordion() {
   const [active, setActive] = useState(0);
@@ -45,19 +37,10 @@ export function FaqAccordion() {
                   initial={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.24, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <div className="grid gap-5 bg-[#d8f7d8] px-5 pb-5 md:grid-cols-[1fr_220px] md:px-6 md:pb-6">
+                  <div className="bg-[#d8f7d8] px-5 pb-5 md:px-6 md:pb-6">
                     <p className="max-w-3xl text-sm leading-7 text-[#183814] md:text-base">
                       {item.answer}
                     </p>
-                    <div className="relative min-h-[150px] overflow-hidden rounded-[14px] bg-[#10240c]">
-                      <Image
-                        alt=""
-                        className="object-cover"
-                        fill
-                        sizes="220px"
-                        src={faqImages[index % faqImages.length]}
-                      />
-                    </div>
                   </div>
                 </motion.div>
               ) : null}
