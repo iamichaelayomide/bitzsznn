@@ -117,20 +117,7 @@ textarea {
   animation: logo-ticker 28s linear infinite;
 }
 
-.event-soft-ticker {
-  animation: event-soft-ticker 42s linear infinite;
-}
-
 @keyframes logo-ticker {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes event-soft-ticker {
   from {
     transform: translateX(0);
   }
@@ -199,8 +186,7 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 
-  .logo-ticker,
-  .event-soft-ticker {
+  .logo-ticker {
     animation: none !important;
   }
 }

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, Quote, Star } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Button } from "@/components/button";
 import { events, testimonials } from "@/data/site";
 
@@ -12,6 +12,13 @@ const testimonialImages = [
   "/images/avatar-3.png",
   "/images/avatar-4.png",
   "/images/avatar-5.png",
+  "/images/community-party-1.png",
+  "/images/community-party-2.png",
+  "/images/community-good-vibes.png",
+  "/images/event-good-vibes.png",
+  "/images/values-good-vibes.png",
+  "/images/about-hero.png",
+  "/images/hero-crowd.png",
 ];
 
 function shortDate(date: string) {
@@ -20,24 +27,11 @@ function shortDate(date: string) {
 
 export function HomeEventsCarousel() {
   const railRef = useRef<HTMLDivElement>(null);
-  const displayEvents = [...events, ...events];
+  const displayEvents = events;
 
   function move(direction: number) {
     railRef.current?.scrollBy({ left: direction * 390, behavior: "smooth" });
   }
-
-  useEffect(() => {
-    const rail = railRef.current;
-    if (!rail) return;
-    const interval = window.setInterval(() => {
-      if (rail.scrollLeft >= rail.scrollWidth / 2) {
-        rail.scrollTo({ left: 0 });
-      } else {
-        rail.scrollBy({ left: 1.2, behavior: "smooth" });
-      }
-    }, 80);
-    return () => window.clearInterval(interval);
-  }, []);
 
   return (
     <div className="relative mt-12">
@@ -103,8 +97,8 @@ export function HomeTestimonialsCarousel() {
 
   return (
     <div className="relative mt-8">
-      <div className="grid gap-5 rounded-[22px] border border-[#d9e5d4] bg-[#fbfff4] p-5 md:grid-cols-[180px_1fr] md:p-7">
-        <div className="relative min-h-[210px] overflow-hidden rounded-[16px] bg-[#d8f7d8]">
+      <div className="grid gap-5 rounded-[22px] border border-[#d9e5d4] bg-[#fbfff4] p-5 md:grid-cols-[190px_1fr] md:p-7">
+        <div className="relative aspect-[0.92] overflow-hidden rounded-[28px] bg-[#d8f7d8] md:aspect-auto md:min-h-[220px]">
           <Image alt="" className="object-cover" fill sizes="220px" src={testimonialImages[active % testimonialImages.length]} />
         </div>
         <div className="flex flex-col justify-between">
@@ -136,7 +130,7 @@ export function HomeTestimonialsCarousel() {
             onClick={() => setActive(index)}
             type="button"
           >
-            <span className="relative size-10 overflow-hidden rounded-[10px] bg-[#d8f7d8]">
+            <span className="relative size-10 overflow-hidden rounded-[14px] bg-[#d8f7d8]">
               <Image alt="" className="object-cover" fill sizes="40px" src={testimonialImages[index % testimonialImages.length]} />
             </span>
             <span>

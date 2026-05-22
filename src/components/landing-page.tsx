@@ -63,7 +63,7 @@ export function LandingPage() {
         <div className="absolute inset-0 bg-[#459c0a]/20 mix-blend-multiply" />
 
         <div className="container-shell relative z-10 flex min-h-[680px] flex-col items-center justify-center pt-28 text-center md:min-h-screen">
-          <div className="mx-auto max-w-[620px] px-1 md:px-0">
+          <div className="mx-auto max-w-[620px] -translate-y-8 px-1 md:-translate-y-10 md:px-0">
             <h1 className="hero-title text-white">
               Vibes.
               <br />
@@ -78,7 +78,7 @@ export function LandingPage() {
               <Button className="min-h-[56px] rounded-[18px] px-6 text-[16px] md:min-h-[70px] md:rounded-[20px] md:px-8 md:text-[20px]" href={socialLinks.whatsapp}>
                 Join the community
               </Button>
-              <Button className="min-h-[56px] rounded-[18px] px-6 text-[16px] md:min-h-[70px] md:rounded-[20px] md:px-5 md:text-[20px]" href="/events" variant="secondary">
+              <Button className="min-h-[56px] rounded-[18px] bg-[#041102] px-6 text-[16px] text-white shadow-none hover:bg-[#10240c] md:min-h-[70px] md:rounded-[20px] md:px-5 md:text-[20px]" href="/events" variant="secondary">
                 View events
               </Button>
             </div>
@@ -200,21 +200,56 @@ export function LandingPage() {
         </div>
       </GuideSection>
 
-      <GuideSection className="py-[64px] md:py-[78px]">
+      <GuideSection className="overflow-hidden py-[64px] md:py-[82px]" style={{ backgroundColor: "#f8fbf4" }}>
         <div className="container-shell figma-inner">
-          <div className="grid gap-8 lg:grid-cols-[0.7fr_1fr] lg:items-start">
-            <div>
-              <FigmaLabel>Why choose us?</FigmaLabel>
-              <h2 className="section-title mt-5 max-w-[460px] text-[#082005]">Built for people who want the room and the reason.</h2>
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-stretch">
+            <div className="relative min-h-[420px] overflow-hidden rounded-[24px] bg-[#0f1c07] p-7 text-white shadow-[0_28px_80px_rgba(24,56,20,0.18)] md:p-9">
+              <Image
+                alt=""
+                className="object-cover opacity-[0.72]"
+                fill
+                sizes="620px"
+                src="/images/community-good-vibes.png"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,12,8,0.22),rgba(8,12,8,0.82))]" />
+              <div className="relative z-10 flex h-full min-h-[366px] flex-col justify-between">
+                <div>
+                  <FigmaLabel>Why choose us?</FigmaLabel>
+                  <h2 className="mt-5 max-w-[430px] text-[30px] font-semibold leading-[1.04] text-white md:text-[42px]">
+                    A room that feels curated, not complicated.
+                  </h2>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-[18px] border border-white/14 bg-white/10 p-4 backdrop-blur">
+                    <p className="text-[28px] font-semibold text-[#b8ff2c]">500+</p>
+                    <p className="mt-1 text-sm font-semibold text-white">People in the network</p>
+                  </div>
+                  <div className="rounded-[18px] border border-white/14 bg-white/10 p-4 backdrop-blur">
+                    <p className="text-[28px] font-semibold text-[#b8ff2c]">30+</p>
+                    <p className="mt-1 text-sm font-semibold text-white">Experiences hosted</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="grid gap-4 md:grid-cols-3">
-              {reasons.map((reason, index) => (
-                <article className="rounded-[18px] border border-[#d8e4d2] bg-[#f8fbf4] p-5 transition hover:-translate-y-1 hover:border-[#459c0a]/50" key={reason.title}>
-                  <span className="text-sm font-bold text-[#459c0a]">0{index + 1}</span>
-                  <h3 className="mt-4 text-[18px] font-semibold leading-tight text-[#183814]">{reason.title}</h3>
-                  <p className="mt-3 text-[14px] leading-6 text-[#40563d]">{reason.body}</p>
-                </article>
-              ))}
+            <div className="flex flex-col justify-center rounded-[24px] border border-[#dce8d8] bg-white p-5 md:p-7">
+              <FigmaLabel>Why choose us?</FigmaLabel>
+              <h2 className="mt-5 max-w-[520px] text-[28px] font-semibold leading-[1.08] text-[#082005] md:text-[38px]">
+                Built for people who want the vibe and the value.
+              </h2>
+              <p className="mt-4 max-w-[560px] text-[16px] leading-7 text-[#40563d]">
+                We keep the experience easy to enter, easy to enjoy, and strong enough to create real connection after the night ends.
+              </p>
+              <div className="mt-7 grid gap-3">
+                {reasons.map((reason, index) => (
+                  <article className="grid gap-4 rounded-[18px] border border-[#d8e4d2] bg-[#fbfff4] p-4 transition hover:-translate-y-1 hover:border-[#459c0a]/50 sm:grid-cols-[52px_1fr]" key={reason.title}>
+                    <span className="grid size-12 place-items-center rounded-full bg-[#d8f7d8] text-sm font-bold text-[#459c0a]">0{index + 1}</span>
+                    <div>
+                      <h3 className="text-[18px] font-semibold leading-tight text-[#183814]">{reason.title}</h3>
+                      <p className="mt-2 text-[14px] leading-6 text-[#40563d]">{reason.body}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </div>

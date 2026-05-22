@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { galleryMoments } from "@/data/site";
@@ -24,6 +25,9 @@ export function EventsGallerySection() {
               Swipe through the people, rooms, and recap moments that make Bitzsznn feel bigger than one night.
             </p>
           </div>
+          <Link className="inline-flex w-fit items-center justify-center rounded-[18px] bg-[#041102] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#10240c]" href="/gallery">
+            View all photos
+          </Link>
         </div>
       </div>
 
@@ -50,30 +54,23 @@ export function EventsGallerySection() {
           ref={railRef}
         >
           {galleryMoments.map((item, index) => {
-            const featured = index === 2;
             return (
               <article
-                className={`shrink-0 snap-center transition duration-300 hover:-translate-y-2 ${
-                  featured ? "w-[min(82vw,352px)]" : "w-[min(72vw,287px)]"
-                }`}
+                className="w-[min(78vw,312px)] shrink-0 snap-center transition duration-300 hover:-translate-y-2"
                 key={`${item.name}-${index}`}
               >
-                <div
-                  className={`relative overflow-hidden bg-[#d8f7d8] shadow-[0_18px_55px_rgba(24,56,20,0.12)] ${
-                    featured ? "h-[min(112vw,468px)]" : "h-[min(96vw,382px)]"
-                  }`}
-                >
+                <div className="relative aspect-[4/5] overflow-hidden rounded-[14px] bg-[#d8f7d8] shadow-[0_18px_55px_rgba(24,56,20,0.12)]">
                   <Image
                     alt={item.caption}
                     className="object-cover"
                     fill
-                    sizes={featured ? "352px" : "287px"}
+                    sizes="312px"
                     src={item.image}
                   />
                 </div>
-                <div className={`mt-5 ${featured ? "text-[20px] leading-[1.25]" : "text-[17px] leading-[1.28]"}`}>
+                <div className="mt-4 min-h-[74px] text-[15px] leading-[1.35]">
                   <h3 className="font-semibold text-[#183814]">{item.name}</h3>
-                  <p className="mt-2 font-medium text-[#434d42]">{item.role}</p>
+                  <p className="mt-1 font-medium text-[#434d42]">{item.caption}</p>
                 </div>
               </article>
             );

@@ -217,6 +217,48 @@ export const testimonials = [
     name: "Zainab O.",
     role: "Founder",
   },
+  {
+    quote:
+      "The experience helped me reconnect with people from camp and meet new creatives without forcing anything.",
+    name: "Kelechi N.",
+    role: "Corps member",
+  },
+  {
+    quote:
+      "Bitzsznn feels organized, warm, and current. You can tell the room is designed, not just rented.",
+    name: "Fola R.",
+    role: "Event host",
+  },
+  {
+    quote:
+      "I found two collaborators at one link-up. That is the kind of value most social events promise but rarely deliver.",
+    name: "Mira S.",
+    role: "Creative director",
+  },
+  {
+    quote:
+      "The recap content made the event live beyond the night. Everyone wanted to share it.",
+    name: "Chidi M.",
+    role: "Content creator",
+  },
+  {
+    quote:
+      "It gave our brand access to real youth culture without feeling like a forced activation.",
+    name: "Lola B.",
+    role: "Partnership lead",
+  },
+  {
+    quote:
+      "The crowd was friendly, the music was right, and the flow made it easy to settle in.",
+    name: "Ayo T.",
+    role: "Young professional",
+  },
+  {
+    quote:
+      "I came alone and left with people I still talk to. That is the Bitzsznn difference for me.",
+    name: "Nora I.",
+    role: "Community member",
+  },
 ];
 
 export const galleryMoments = [
@@ -323,6 +365,19 @@ export const events = [
     description:
       "A creator-first gathering with small brand showcases, content corners, and a crowd ready to discover what is next.",
     highlights: ["Brand booths", "Creator content sets", "Artist discovery", "Networking blocks"],
+  },
+  {
+    slug: "after-camp-social",
+    title: "After Camp Social",
+    eyebrow: "Upcoming",
+    date: "September 14, 2026",
+    time: "6:00 PM",
+    location: "Enugu, Nigeria",
+    image: "/images/hero-crowd.png",
+    summary: "A soft landing for new friends, new cities, and the next phase after camp.",
+    description:
+      "A community-first social for corps members and graduates who want an easy room for connection, games, music, and new circles.",
+    highlights: ["Icebreaker tables", "Games and hosted moments", "Community photo wall", "Soft networking"],
   },
 ];
 

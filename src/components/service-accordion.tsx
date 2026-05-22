@@ -121,9 +121,6 @@ export function ServiceAccordion() {
                 <div className="grid size-14 place-items-center rounded-full bg-[#fbfff4] text-[#183814]">
                   <Icon className="size-6" />
                 </div>
-                <p className="rounded-full bg-[#d7f8b8] px-3 py-1 text-xs font-bold uppercase tracking-[0.14em] text-[#10240c]">
-                  Bitzsznn service
-                </p>
               </div>
             </div>
 
