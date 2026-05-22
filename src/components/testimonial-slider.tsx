@@ -59,7 +59,7 @@ export function TestimonialSlider() {
         <div className="grid size-12 place-items-center rounded-full bg-[#183814] text-white">
           <Quote className="size-5" />
         </div>
-        <p className="mt-8 max-w-4xl text-xl font-semibold leading-[1.35] text-[#183814] md:text-3xl">
+        <p className="mt-8 max-w-4xl text-lg font-semibold leading-[1.45] text-[#183814] md:text-2xl">
           &quot;{item.quote}&quot;
         </p>
         <div className="mt-8 flex items-center gap-4">

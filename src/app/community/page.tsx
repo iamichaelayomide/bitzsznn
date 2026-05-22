@@ -60,11 +60,11 @@ export default function CommunityPage() {
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,11,8,0),rgba(8,11,8,0.58))]" />
             <div className="absolute bottom-5 left-5 right-5 grid gap-3 rounded-[16px] border border-white/14 bg-[#081108]/82 p-5 backdrop-blur sm:grid-cols-2">
               <div>
-                <p className="text-3xl font-semibold text-[#fbfff4]">500+</p>
+                <p className="text-2xl font-semibold text-[#fbfff4]">500+</p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-[0.14em] text-[#cfe4c8]">community members</p>
               </div>
               <div>
-                <p className="text-3xl font-semibold text-[#fbfff4]">30+</p>
+                <p className="text-2xl font-semibold text-[#fbfff4]">30+</p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-[0.14em] text-[#cfe4c8]">experiences hosted</p>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function CommunityPage() {
             <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat) => (
                 <div className="rounded-[24px] border border-[#d8e4d2] bg-[#d8f7d8] p-6" key={stat.label}>
-                  <p className="text-5xl font-semibold">{stat.value}</p>
+                  <p className="text-2xl font-semibold md:text-3xl">{stat.value}</p>
                   <p className="mt-3 font-semibold">{stat.label}</p>
                   <p className="mt-3 text-sm leading-6 text-[#183814]/72">{stat.body}</p>
                 </div>

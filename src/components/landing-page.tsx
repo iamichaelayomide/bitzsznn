@@ -107,15 +107,15 @@ export function LandingPage() {
           <div className="mx-auto text-center">
             <FigmaLabel>Our short story</FigmaLabel>
           </div>
-          <h2 className="mx-auto mt-6 max-w-[1198px] text-center text-[26px] font-semibold leading-[1.18] text-[#183814] md:text-[40px]">
+          <h2 className="mx-auto mt-6 max-w-[980px] text-center text-[22px] font-semibold leading-[1.24] text-[#183814] md:text-[32px]">
             We&apos;re more than a headcount; <span className="font-bold text-[#459c0a]">we&apos;re a community.</span> We connect ambitious, culturally plugged-in young people who know how to{" "}
             <span className="font-bold text-[#459c0a]">have a good time.</span>
           </h2>
           <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-[70px] xl:gap-[103px]">
             {stats.map((stat) => (
               <div className="max-w-[245px]" key={stat.label}>
-                <p className="text-[46px] font-bold leading-none text-[#183814] md:text-[50px]">{stat.value}</p>
-                <h3 className="mt-3 text-[18px] font-bold leading-tight text-[#183814] md:text-[20px]">{stat.label}</h3>
+                <p className="text-[28px] font-bold leading-none text-[#183814] md:text-[34px]">{stat.value}</p>
+                <h3 className="mt-3 text-[16px] font-bold leading-tight text-[#183814] md:text-[18px]">{stat.label}</h3>
                 <p className="mt-2 text-[15px] leading-[1.24] text-[#183814] md:text-[16px]">{stat.body}</p>
               </div>
             ))}
@@ -280,7 +280,7 @@ export function LandingPage() {
           <div className="grid gap-4">
             <div className="grid min-h-[482px] overflow-hidden rounded-[16px] border border-[#9c999947] bg-[#f7f5f2] p-8 md:p-9 lg:grid-cols-[1fr_0.78fr_1.12fr] lg:gap-4">
               <div className="flex flex-col justify-center">
-                <h2 className="text-[38px] font-medium leading-none text-[#082005] md:text-[50px]">
+                <h2 className="section-title text-[#082005]">
                   more than a party.
                   <br />a community.
                 </h2>
@@ -301,7 +301,7 @@ export function LandingPage() {
 
             <div className="grid gap-4 lg:grid-cols-[1.12fr_1fr]">
               <div className="overflow-hidden rounded-[16px] bg-black p-4 text-white md:p-8">
-                <p className="max-w-[649px] text-[20px] leading-normal text-[#afb5ae] md:text-[24px]">
+                <p className="max-w-[649px] text-[17px] leading-[1.5] text-[#c5cec1] md:text-[20px]">
                   Growing, meet new people, and finding their next circle. Represent the moments before they move on.
                 </p>
                 <div className="relative mt-8 min-h-[297px] overflow-hidden rounded-[10px]">
@@ -318,7 +318,7 @@ export function LandingPage() {
                 </div>
               </div>
               <div className="rounded-[16px] border border-[#9c999947] bg-[#d8f7d8] p-8 md:p-12">
-                <h2 className="max-w-[388px] text-[40px] font-medium leading-none text-black md:text-[50px]">
+                <h2 className="section-title max-w-[388px] text-black">
                   join the Bitzszn community now!
                 </h2>
                 <p className="mt-6 max-w-[429px] text-[16px] leading-[1.5] text-[#343a33]">

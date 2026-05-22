@@ -17,7 +17,7 @@ export function EventsGallerySection() {
       <div className="container-shell figma-inner">
         <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
-            <h2 className="text-[40px] font-medium leading-none text-[#082005] md:text-[44px]">
+            <h2 className="section-title text-[#082005]">
               Events gallery
             </h2>
             <p className="mt-4 max-w-xl text-base leading-7 text-[#30472d]">
@@ -71,7 +71,7 @@ export function EventsGallerySection() {
                     src={item.image}
                   />
                 </div>
-                <div className={`mt-5 ${featured ? "text-[25px] leading-[1.2]" : "text-[20px] leading-[1.2]"}`}>
+                <div className={`mt-5 ${featured ? "text-[20px] leading-[1.25]" : "text-[17px] leading-[1.28]"}`}>
                   <h3 className="font-semibold text-[#183814]">{item.name}</h3>
                   <p className="mt-2 font-medium text-[#434d42]">{item.role}</p>
                 </div>

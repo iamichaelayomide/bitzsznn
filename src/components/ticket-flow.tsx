@@ -69,7 +69,7 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
               <div className="mx-auto grid size-16 place-items-center rounded-full bg-[#459c0a] text-white">
                 <Check className="size-8" />
               </div>
-              <h2 className="mt-6 text-4xl font-semibold">Your ticket request is in.</h2>
+              <h2 className="mt-6 text-2xl font-semibold md:text-3xl">Your ticket request is in.</h2>
               <p className="mx-auto mt-4 max-w-xl text-[#183814]/72">
                 Thanks, {buyer.name}. Your {selectedTier.name} order for {event.title} has been recorded.
                 Use this code at confirmation: <strong className="text-[#183814]">{confirmationCode}</strong>.
@@ -129,7 +129,7 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
                         </div>
                         <h3 className="mt-8 text-xl font-semibold">{tier.name}</h3>
                         <p className="mt-2 text-sm leading-6 text-[#183814]/70">{tier.description}</p>
-                        <p className="mt-5 text-3xl font-semibold text-[#459c0a]">{currency.format(tier.price)}</p>
+                        <p className="mt-5 text-2xl font-semibold text-[#459c0a]">{currency.format(tier.price)}</p>
                         <ul className="mt-5 grid gap-2 text-sm text-[#183814]/72">
                           {tier.perks.map((perk) => (
                             <li className="flex items-center gap-2" key={perk}>

@@ -132,7 +132,7 @@ export function ServiceAccordion() {
                 <div className="mb-5 hidden size-16 place-items-center rounded-full bg-[#183814] text-white">
                 <Icon className="size-7" />
                 </div>
-                <h3 className="text-3xl font-semibold leading-none text-[#fbfff4] md:text-4xl">
+                <h3 className="text-2xl font-semibold leading-tight text-[#fbfff4] md:text-3xl">
                   {current.title}
                 </h3>
                 <p className="mt-5 max-w-md text-base leading-8 text-[#dce8d8]">
@@ -143,7 +143,7 @@ export function ServiceAccordion() {
               <div className="mt-10 grid grid-cols-2 gap-3">
                 {currentPanel.stats.map((stat) => (
                 <div className="rounded-[18px] border border-white/10 bg-[#fbfff4] p-4" key={stat.label}>
-                  <p className="text-3xl font-semibold text-[#183814]">{stat.value}</p>
+                  <p className="text-2xl font-semibold text-[#183814]">{stat.value}</p>
                   <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#43563f]">
                     {stat.label}
                   </p>

@@ -47,7 +47,7 @@ export default function EventsPage() {
           <div className="mt-8 grid w-full max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4">
             {stats.map((stat) => (
               <div className="rounded-[18px] border border-white/12 bg-white/[0.07] p-4 backdrop-blur" key={stat.label}>
-                <p className="text-2xl font-semibold text-white md:text-3xl">{stat.value}</p>
+                <p className="text-xl font-semibold text-white md:text-2xl">{stat.value}</p>
                 <p className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-white/70">{stat.label}</p>
               </div>
             ))}
@@ -151,7 +151,7 @@ export default function EventsPage() {
                       <span className="inline-flex items-center gap-2"><CalendarDays className="size-4" /> {event.date}</span>
                       <span className="inline-flex items-center gap-2"><MapPin className="size-4" /> {event.location}</span>
                     </div>
-                    <h3 className="mt-5 text-3xl font-semibold leading-none text-[#10240c]">{event.title}</h3>
+                    <h3 className="mt-5 text-2xl font-semibold leading-tight text-[#10240c]">{event.title}</h3>
                     <p className="mt-3 text-sm leading-6 text-[#30472d]">{event.summary}</p>
                     <div className="mt-auto inline-flex w-fit rounded-[18px] bg-[#459c0a] px-5 py-3 font-semibold text-[#061006]">
                       View event
@@ -186,7 +186,7 @@ export default function EventsPage() {
               </div>
             </div>
             <div className="mt-14 rounded-[28px] border border-[#d8e4d2] bg-[#d8f7d8] p-6 md:p-8">
-              <h3 className="text-3xl font-medium md:text-5xl">Want the full list?</h3>
+              <h3 className="text-2xl font-medium md:text-3xl">Want the full list?</h3>
               <p className="mt-3 max-w-2xl text-[#183814]/72">Browse every active event, choose the one that fits your crew, then reserve tickets from the event page.</p>
               <Button className="mt-6" href="/events/batch-a2-pop-party" showIcon>
                 See latest event

@@ -11,7 +11,7 @@ export function SiteFooter() {
       <div className="container-shell figma-inner relative z-10">
         <div className="grid gap-12 lg:grid-cols-[1.15fr_1fr]">
           <div className="max-w-[494px]">
-            <h2 className="text-[58px] font-normal leading-[0.99] md:text-[82px]">
+            <h2 className="text-[30px] font-normal leading-[1.08] md:text-[44px]">
               Vibes.
               <br />
               Networking.

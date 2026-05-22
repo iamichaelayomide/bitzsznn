@@ -48,7 +48,7 @@ export function EventTextFlow() {
               {row.label}
             </div>
             <div>
-              <h2 className="text-2xl font-semibold text-white md:text-4xl">{row.title}</h2>
+              <h2 className="text-xl font-semibold text-white md:text-2xl">{row.title}</h2>
               <p className="mt-2 max-w-3xl text-sm leading-7 text-white/68 md:text-base">{row.body}</p>
             </div>
             {index === 2 ? (
