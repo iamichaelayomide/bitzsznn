@@ -63,7 +63,7 @@ export function LandingPage() {
         <div className="absolute inset-0 bg-[#459c0a]/20 mix-blend-multiply" />
 
         <div className="container-shell relative z-10 flex min-h-[680px] flex-col items-start justify-center pt-28 text-left md:min-h-screen">
-          <div className="max-w-[620px] -translate-y-8 px-1 md:-translate-y-10 md:px-0">
+          <div className="max-w-[720px] -translate-y-4 px-1 md:-translate-y-6 md:px-0">
             <h1 className="hero-title text-white">
               Vibes.
               <br />
@@ -78,28 +78,29 @@ export function LandingPage() {
               <Button className="min-h-[56px] rounded-[18px] px-6 text-[16px] md:min-h-[70px] md:rounded-[20px] md:px-8 md:text-[20px]" href={socialLinks.whatsapp}>
                 Join the community
               </Button>
-              <Button className="min-h-[56px] rounded-[18px] bg-[#041102] px-6 text-[16px] text-white shadow-none hover:bg-[#10240c] md:min-h-[70px] md:rounded-[20px] md:px-5 md:text-[20px]" href="/events" variant="secondary">
+              <Button className="min-h-[56px] rounded-[18px] !bg-[#041102] px-6 text-[16px] !text-white shadow-none hover:!bg-[#10240c] md:min-h-[70px] md:rounded-[20px] md:px-5 md:text-[20px]" href="/events" variant="secondary">
                 View events
               </Button>
             </div>
-          </div>
-
-          <div className="mt-14 w-full max-w-[560px] text-left text-[14px] leading-6 text-white md:absolute md:bottom-[42px] md:right-[max(24px,calc((100%-1320px)/2))] md:mt-0">
-            <p>
-              <strong>Trusted by community builders, creators, and youth culture partners.</strong>
-            </p>
-            <div className="mt-4 flex w-fit justify-start -space-x-2">
-              {avatars.map((avatar) => (
-                <Image alt="" className="size-8 rounded-full border-2 border-white object-cover" height={40} key={avatar} src={`/images/avatar-${avatar}.png`} width={40} />
-              ))}
-            </div>
-            <div className="mt-5 max-w-[560px] overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">
-              <div className="logo-ticker ticker-pause flex w-max gap-3">
-                {tickerLogos.map((logo, index) => (
-                  <span className="inline-flex min-w-[132px] items-center justify-center rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#e8efe5]" key={`${logo}-${index}`}>
-                    {logo}
-                  </span>
-                ))}
+            <div className="mt-8 max-w-[620px] text-left text-[14px] leading-6 text-white">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                <div className="flex w-fit justify-start -space-x-2">
+                  {avatars.map((avatar) => (
+                    <Image alt="" className="size-8 rounded-full border-2 border-white object-cover" height={40} key={avatar} src={`/images/avatar-${avatar}.png`} width={40} />
+                  ))}
+                </div>
+                <p className="max-w-[430px]">
+                  <strong>Trusted by community builders, creators, and youth culture partners.</strong>
+                </p>
+              </div>
+              <div className="mt-5 max-w-[620px] overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">
+                <div className="logo-ticker ticker-pause flex w-max gap-3">
+                  {tickerLogos.map((logo, index) => (
+                    <span className="inline-flex min-w-[132px] items-center justify-center rounded-full border border-white/12 bg-[#041102]/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#e8efe5]" key={`${logo}-${index}`}>
+                      {logo}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
