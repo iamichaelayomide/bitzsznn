@@ -49,7 +49,7 @@ function GuideSection({
 
 export function LandingPage() {
   return (
-    <main className="overflow-x-hidden bg-white">
+    <main className="overflow-x-clip bg-white">
       <section className="relative min-h-[720px] overflow-hidden border-b border-[#1e2a1e] md:min-h-[760px]" id="home">
         <Image
           alt="Bitzsznn community at an event"
@@ -71,8 +71,8 @@ export function LandingPage() {
               <br />
               Opportunity.
             </h1>
-            <p className="mt-5 max-w-[540px] text-[15px] leading-[1.6] text-[#d7e4d1] md:text-[16px]">
-              A youth cultural community built around NYSC life, post-NYSC transition, entertainment, music, events, shared memories, and real connection.
+            <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#d7e4d1] md:text-[16px]">
+              Step into curated rooms where NYSC life, music, culture, and ambition become friendships, collaborations, content, and opportunity.
             </p>
             <div className="mt-7 flex flex-col gap-4 sm:flex-row">
               <Button className="min-h-[56px] rounded-[18px] px-6 text-[16px] md:min-h-[70px] md:rounded-[20px] md:px-8 md:text-[20px]" href={socialLinks.whatsapp}>
@@ -138,7 +138,7 @@ export function LandingPage() {
               <h2 className="section-title mt-5 text-[#082005]">What do we do?</h2>
             </div>
             <p className="max-w-[385px] text-[16px] leading-[1.2] text-[#183814] md:text-[18px]">
-              Bitzsznn creates experiences that connect young people through music, events, culture, memories, and opportunity.
+              We design culture-led experiences for people who want the night to feel good and still mean something after.
             </p>
             <Button className="min-h-[63px] rounded-[20px] border border-[#041102] bg-transparent px-5 text-[18px] text-[#041102] shadow-none hover:bg-[#041102] hover:text-white" href="/services" variant="ghost">
               View all services
@@ -168,7 +168,7 @@ export function LandingPage() {
                   <div className={`mt-auto max-w-[315px] ${index === 4 ? "lg:pb-2" : ""}`}>
                     <h3 className="text-[21px] font-semibold leading-tight md:text-[25px]">{service.title}</h3>
                     <p className="mt-3 text-[15px] leading-[1.34] md:text-[16px]">
-                      Bitzsznn creates experiences that connect young people through music, events, culture, memories, and opportunity.
+                      {service.body}
                     </p>
                   </div>
                 </article>
@@ -186,7 +186,7 @@ export function LandingPage() {
               <div className="mt-4 flex flex-col gap-5 lg:flex-row lg:items-center lg:gap-[69px]">
                 <h2 className="section-title text-white">the Bitzsznn experience</h2>
                 <p className="max-w-[395px] text-[16px] leading-[1.2] text-[#e5e8e4] md:text-[19px]">
-                  Clean posters, clear details, and a direct path into the room.
+                  Upcoming rooms, clean details, and a simple path from interest to entry.
                 </p>
               </div>
             </div>
@@ -309,7 +309,7 @@ export function LandingPage() {
                 <br />real people.
               </h2>
               <p className="max-w-[376px] text-[16px] leading-[1.2] text-[#183814] md:text-[18px]">
-                Hear what people are saying about the Bitzszn community and events and all.
+                The best proof is the way people talk after the room clears.
               </p>
             </div>
           </div>
@@ -340,7 +340,7 @@ export function LandingPage() {
                   <br />a community.
                 </h2>
                 <p className="mt-6 max-w-[423px] text-[16px] leading-[1.5] text-[#183814]">
-                  Bitzsznn creates experiences that connect young people through music, events, culture, memories, and opportunity.
+                  Come for the music, stay for the people, and leave with a story that moves with you.
                 </p>
                 <Button className="mt-10 min-h-[70px] w-fit rounded-[22px] px-5 text-[20px]" href="/events">
                   Explore events
@@ -357,7 +357,7 @@ export function LandingPage() {
             <div className="grid gap-4 lg:grid-cols-[1.12fr_1fr]">
               <div className="overflow-hidden rounded-[16px] bg-black p-4 text-white md:p-8">
                 <p className="max-w-[649px] text-[17px] leading-[1.5] text-[#c5cec1] md:text-[20px]">
-                  Growing, meet new people, and finding their next circle. Represent the moments before they move on.
+                  From service-year send-offs to city link-ups, we create rooms where people can arrive easily, connect naturally, and remember the night clearly.
                 </p>
                 <div className="relative mt-8 min-h-[297px] overflow-hidden rounded-[10px]">
                   <Image alt="" className="object-cover" fill sizes="681px" src="/images/community-good-vibes.png" />
@@ -377,7 +377,7 @@ export function LandingPage() {
                   join the Bitzszn community now!
                 </h2>
                 <p className="mt-6 max-w-[429px] text-[16px] leading-[1.5] text-[#343a33]">
-                  Bitzsznn creates experiences that connect young people through music, events, culture, memories, and opportunity.
+                  Get early event drops, community conversations, recap photos, and access to the next room before it gets loud.
                 </p>
                 <Button className="mt-14 min-h-[70px] rounded-[22px] bg-[#041102] px-5 text-[20px] text-[#edebeb] shadow-none hover:bg-[#10240c]" href={socialLinks.whatsapp}>
                   Join the community

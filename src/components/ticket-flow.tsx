@@ -224,7 +224,7 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
   }
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f7f5f2]">
+    <main className="min-h-screen overflow-x-clip bg-[#f7f5f2]">
       <section className="relative overflow-hidden bg-[#0f1c07] pt-24 text-white md:pt-36">
         <div className="container-shell figma-inner py-12 md:py-24">
           <Link className="text-sm text-white/70 transition hover:text-white" href="/events">

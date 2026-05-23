@@ -7,11 +7,6 @@ import { Button } from "@/components/button";
 import { events, testimonials } from "@/data/site";
 
 const testimonialImages = [
-  "/images/avatar-1.png",
-  "/images/avatar-2.png",
-  "/images/avatar-3.png",
-  "/images/avatar-4.png",
-  "/images/avatar-5.png",
   "/images/community-party-1.png",
   "/images/community-party-2.png",
   "/images/community-good-vibes.png",
@@ -19,6 +14,11 @@ const testimonialImages = [
   "/images/values-good-vibes.png",
   "/images/about-hero.png",
   "/images/hero-crowd.png",
+  "/images/community-party-1.png",
+  "/images/community-party-2.png",
+  "/images/community-good-vibes.png",
+  "/images/event-good-vibes.png",
+  "/images/values-good-vibes.png",
 ];
 
 function shortDate(date: string) {
@@ -104,7 +104,7 @@ export function HomeTestimonialsCarousel() {
                 <Star className="size-4 fill-current" key={star} />
               ))}
             </div>
-            <p className="mt-4 max-w-3xl text-[17px] font-semibold leading-[1.45] text-[#183814] md:text-[21px]">
+            <p className="mt-4 max-w-3xl text-[17px] font-semibold leading-[1.45] text-[#183814] md:text-[20px]">
               {activeItem.quote}
             </p>
           </div>

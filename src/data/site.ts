@@ -51,22 +51,22 @@ export const stats = [
   {
     value: "500+",
     label: "Community members",
-    body: "Young people building new circles through music, culture, and shared transition seasons.",
+    body: "Young people meeting through music, culture, and shared transition seasons.",
   },
   {
     value: "30+",
     label: "Experiences hosted",
-    body: "From intimate hangouts to high-energy nights built for connection and memory.",
+    body: "From intimate link-ups to high-energy nights built for connection and memory.",
   },
   {
     value: "4+",
     label: "States reached",
-    body: "Bitzsznn is growing city by city with a community-first cultural footprint.",
+    body: "A growing city-by-city cultural footprint with community at the center.",
   },
   {
     value: "50+",
     label: "Collaborations secured",
-    body: "Creators, artists, brands, and communities plugging into the Bitzsznn audience.",
+    body: "Creators, artists, brands, and communities plugged into the Bitzsznn audience.",
   },
 ];
 
@@ -97,31 +97,31 @@ export const services = [
   {
     number: "01/",
     title: "Events & nightlife experiences",
-    body: "We design the room, the sound, the guest flow, and the energy so every event feels intentional from entry to last song.",
+    body: "We shape the room, sound, guest flow, and content moments so every event feels intentional from entry to last song.",
     icon: Music2,
   },
   {
     number: "02/",
     title: "NYSC & post-NYSC community",
-    body: "We help corps members, graduates, and young professionals find people, places, and momentum in a new season.",
+    body: "We help corps members, graduates, and young professionals find their next circle in a new season.",
     icon: UsersRound,
   },
   {
     number: "03/",
     title: "Brand & artist collaborations",
-    body: "We connect brands and artists to a youth audience that shows up, shares, and remembers the experience.",
+    body: "We connect brands and artists to a youth audience that shows up, shares the room, and remembers who made it happen.",
     icon: BadgeCheck,
   },
   {
     number: "04/",
     title: "Content & cultural storytelling",
-    body: "We capture the feeling of the night through photos, recaps, creator moments, and stories people want to repost.",
+    body: "We turn the feeling of the night into sharp photos, recap stories, creator moments, and posts people want to share.",
     icon: Camera,
   },
   {
     number: "05/",
     title: "Networking & opportunity access",
-    body: "We create rooms where fun meets ambition, giving founders, creatives, students, and builders better reasons to connect.",
+    body: "We create rooms where fun meets ambition, giving founders, creatives, students, and builders a warmer reason to connect.",
     icon: Network,
   },
 ];
@@ -129,15 +129,15 @@ export const services = [
 export const reasons = [
   {
     title: "Built for the transition season",
-    body: "NYSC, graduation, new cities, and first jobs can feel scattered. Bitzsznn gives that season a place to belong.",
+    body: "NYSC, graduation, relocation, and first jobs can feel scattered. Bitzsznn gives that season a place to belong.",
   },
   {
     title: "Premium energy, local pulse",
-    body: "The experience feels polished without losing the language, warmth, music, and rhythm of young Nigerian culture.",
+    body: "Every room feels polished without losing the language, warmth, music, and rhythm of young Nigerian culture.",
   },
   {
     title: "Partnership-ready",
-    body: "Partners get credible access to a real community, not just a logo on a flyer.",
+    body: "Partners get credible access, content opportunities, and real attention, not just a logo on a flyer.",
   },
 ];
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Instagram, Plus, Twitter } from "lucide-react";
+import { Instagram, MessageCircle, Twitter } from "lucide-react";
 import { Button } from "@/components/button";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { HomeTestimonialsCarousel } from "@/components/home-carousels";
@@ -12,7 +12,7 @@ import { events, reasons, services, socialLinks } from "@/data/site";
 export const metadata: Metadata = {
   title: "Services | Bitzsznn",
   description:
-    "Explore Bitzsznn services across youth culture, events, NYSC community experiences, collaborations, and storytelling.",
+    "Plan culture-led youth events, brand activations, artist collaborations, and community experiences with Bitzsznn.",
 };
 
 export default function ServicesPage() {
@@ -25,17 +25,17 @@ export default function ServicesPage() {
               Services
             </p>
             <h1 className="mt-6 max-w-[720px] text-[42px] font-medium leading-[1.04] md:text-[72px]">
-              Culture-led experiences for brands, artists, and communities.
+              Culture-led experiences that people attend, post, and remember.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-white/76 md:text-lg md:leading-8">
-              We help brands, artists, founders, and community builders create rooms young people want to enter, document, and remember.
+              For brands, artists, founders, and communities that want youth culture without forcing it: we build the room, the story, and the moments people carry home.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button href={`mailto:${socialLinks.email}`} showIcon>
-                Start a partnership
+                Plan an experience
               </Button>
               <Button className="bg-white text-[#082005] shadow-none hover:bg-[#f5f7ef]" href="/events" variant="secondary">
-                See our events
+                See the rooms
               </Button>
             </div>
           </div>
@@ -64,8 +64,8 @@ export default function ServicesPage() {
               </h2>
             </div>
             <p className="max-w-2xl text-base leading-8 text-[#183814]/70">
-              We build the bridge between vibes and value: event experiences, cultural storytelling,
-              audience access, and partnership moments that feel alive long after the night ends.
+              We build the bridge between attention and trust: event strategy, cultural storytelling,
+              audience access, and partnership moments that still feel alive after the recap drops.
             </p>
           </div>
           <div className="mt-12">
@@ -80,10 +80,10 @@ export default function ServicesPage() {
             <div>
               <SectionKicker>For brands and artists</SectionKicker>
               <h2 className="mt-4 text-[32px] font-medium leading-tight text-[#082005] md:text-[44px]">
-                From campaign idea to the room people post about.
+                From campaign idea to the room your audience talks about.
               </h2>
               <p className="mt-5 max-w-xl text-sm leading-7 text-[#40563d] md:text-base">
-                We shape the guest flow, event story, ticket path, recap moments, and partner visibility so every experience feels intentional.
+                We shape the guest flow, event story, ticket path, creator moments, and partner visibility so the activation feels natural instead of pasted on.
               </p>
               <Button className="mt-7" href={`mailto:${socialLinks.email}`}>Work with us</Button>
             </div>
@@ -119,10 +119,10 @@ export default function ServicesPage() {
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ["Michael Ayomide", "Brand direction", "/images/avatar-1.png"],
-              ["Amaka E.", "Community experience", "/images/avatar-2.png"],
-              ["Timi A.", "Events strategy", "/images/avatar-3.png"],
-              ["Ife B.", "Culture and content", "/images/avatar-4.png"],
+              ["Michael Ayomide", "Brand direction", "/images/community-good-vibes.png"],
+              ["Amaka E.", "Community experience", "/images/community-party-1.png"],
+              ["Timi A.", "Events strategy", "/images/event-good-vibes.png"],
+              ["Ife B.", "Culture and content", "/images/community-party-2.png"],
             ].map(([name, role, image]) => (
               <article className="group relative overflow-hidden rounded-[22px] border border-[#dbe6d7] bg-[#f8fbf4] transition hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(24,56,20,0.12)]" key={name}>
                 <div className="relative aspect-[0.82] bg-[#d8f7d8]">
@@ -136,8 +136,8 @@ export default function ServicesPage() {
                       <Twitter className="size-4" />
                     </a>
                   </div>
-                  <div className="absolute left-4 top-4 grid size-11 place-items-center rounded-full bg-[#459c0a] text-[#061006] transition group-hover:rotate-45">
-                    <Plus className="size-5" />
+                  <div className="absolute left-4 top-4 grid size-11 place-items-center rounded-full bg-[#459c0a] text-[#061006] shadow-[0_14px_30px_rgba(69,156,10,0.32)] transition group-hover:scale-105">
+                    <MessageCircle className="size-5 stroke-[2.4]" />
                   </div>
                 </div>
                 <div className="p-5">
@@ -169,18 +169,18 @@ export default function ServicesPage() {
             <div>
               <SectionKicker>Partner with Bitzsznn</SectionKicker>
               <h2 className="mt-4 text-[34px] font-medium leading-tight text-[#082005] md:text-[52px]">
-                Bring your brand into rooms that already have culture.
+                Bring your brand into rooms that already have trust.
               </h2>
             </div>
             <div>
               <p className="max-w-2xl text-base leading-8 text-[#30472d]">
-                We help brands and artists show up with taste: audience strategy, event production, creator moments, content capture, and community access without making the activation feel forced.
+                We help brands and artists show up with taste: audience strategy, event production, creator moments, content capture, and community access that feels earned.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Button className="bg-[#041102] text-white shadow-none hover:bg-[#10240c]" href={`mailto:${socialLinks.email}`} variant="secondary">
+                <Button className="!bg-[#041102] !text-white shadow-[0_18px_50px_rgba(4,17,2,0.22)] hover:!bg-[#10240c]" href={`mailto:${socialLinks.email}`} variant="secondary">
                   Start a brand partnership
                 </Button>
-                <Button href="/events" variant="ghost">
+                <Button className="border border-[#041102]/20 bg-white/45 text-[#041102] hover:bg-white" href="/events" variant="ghost">
                   Explore event formats
                 </Button>
               </div>
