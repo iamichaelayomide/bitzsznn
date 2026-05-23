@@ -40,7 +40,11 @@ export default function EventsPage() {
             Events
           </p>
           <h1 className="hero-title mt-6 max-w-5xl">
-            More than a party, an experience.
+            More than
+            <br />
+            a party,
+            <br />
+            an experience.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-white/76">
             See what is coming up, choose the room that fits your season, and reserve access from the event page.
@@ -74,7 +78,9 @@ export default function EventsPage() {
           <div className="mx-auto mt-[72px] flex w-[399px] max-w-full flex-col items-center gap-6 text-center">
             <div>
               <h1 className="hero-title text-white">
-                More than a party,
+                More than
+                <br />
+                a party,
                 <br />
                 an experience.
               </h1>

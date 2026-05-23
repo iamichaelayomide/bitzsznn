@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useRef } from "react";
-import { galleryMoments } from "@/data/site";
+import { events } from "@/data/site";
 
 export function EventsGallerySection() {
   const railRef = useRef<HTMLDivElement>(null);
@@ -25,8 +25,8 @@ export function EventsGallerySection() {
               Swipe through the people, rooms, and recap moments that make Bitzsznn feel bigger than one night.
             </p>
           </div>
-          <Link className="inline-flex w-fit items-center justify-center rounded-[18px] bg-[#041102] px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#10240c]" href="/gallery">
-            View all photos
+          <Link className="inline-flex w-fit items-center justify-center rounded-full border border-[#459c0a]/30 bg-[#d8f7d8] px-5 py-3 text-sm font-semibold text-[#082005] transition hover:-translate-y-0.5 hover:border-[#459c0a] hover:bg-[#b8ff2c]" href="/gallery">
+            Open gallery
           </Link>
         </div>
       </div>
@@ -53,15 +53,16 @@ export function EventsGallerySection() {
           className="no-scrollbar flex snap-x gap-5 overflow-x-auto px-[max(16px,calc((100%-1320px)/2+16px))] pb-10 pt-2"
           ref={railRef}
         >
-          {galleryMoments.map((item, index) => {
+          {events.map((item, index) => {
+            const year = item.date.split(", ")[1] ?? "2026";
             return (
               <article
                 className="w-[min(78vw,312px)] shrink-0 snap-center transition duration-300 hover:-translate-y-2"
-                key={`${item.name}-${index}`}
+                key={`${item.slug}-${index}`}
               >
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[14px] bg-[#d8f7d8] shadow-[0_18px_55px_rgba(24,56,20,0.12)]">
                   <Image
-                    alt={item.caption}
+                    alt={item.title}
                     className="object-cover"
                     fill
                     sizes="312px"
@@ -69,8 +70,8 @@ export function EventsGallerySection() {
                   />
                 </div>
                 <div className="mt-4 min-h-[74px] text-[15px] leading-[1.35]">
-                  <h3 className="font-semibold text-[#183814]">{item.name}</h3>
-                  <p className="mt-1 font-medium text-[#434d42]">{item.caption}</p>
+                  <h3 className="font-semibold text-[#183814]">{item.title}</h3>
+                  <p className="mt-1 font-medium text-[#434d42]">{year} / {item.location}</p>
                 </div>
               </article>
             );

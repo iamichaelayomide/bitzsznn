@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/button";
+import { GalleryFeed } from "@/components/gallery-feed";
 import { galleryMoments, events, socialLinks } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ const photoPool = [
   ...galleryMoments,
   ...events.map((event) => ({
     name: event.title,
-    role: event.location,
+    role: `${event.date.split(", ")[1] ?? "2026"} / ${event.location}`,
     image: event.image,
     caption: event.summary,
   })),
@@ -58,31 +59,9 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <section className="py-14 md:py-20">
+      <section className="py-4 md:py-8">
         <div className="container-shell figma-inner">
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {photoPool.map((photo, index) => (
-              <article
-                className="group overflow-hidden rounded-[18px] border border-[#dce8d8] bg-white shadow-[0_16px_44px_rgba(24,56,20,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_rgba(24,56,20,0.16)]"
-                key={`${photo.name}-${index}`}
-              >
-                <div className="relative aspect-[4/5] overflow-hidden bg-[#d8f7d8]">
-                  <Image
-                    alt={photo.caption}
-                    className="object-cover transition duration-500 group-hover:scale-[1.04]"
-                    fill
-                    sizes="(min-width: 1024px) 31vw, (min-width: 640px) 48vw, 92vw"
-                    src={photo.image}
-                  />
-                </div>
-                <div className="min-h-[124px] p-5">
-                  <p className="font-mono text-xs font-semibold uppercase tracking-[0.16em] text-[#459c0a]">{photo.role}</p>
-                  <h2 className="mt-2 text-[18px] font-semibold leading-tight text-[#082005]">{photo.name}</h2>
-                  <p className="mt-2 text-[14px] leading-6 text-[#40563d]">{photo.caption}</p>
-                </div>
-              </article>
-            ))}
-          </div>
+          <GalleryFeed photos={photoPool} />
         </div>
       </section>
 

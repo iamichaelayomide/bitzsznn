@@ -83,21 +83,16 @@ export function HomeEventsCarousel() {
 
 export function HomeTestimonialsCarousel() {
   const [active, setActive] = useState(1);
-  const railRef = useRef<HTMLDivElement>(null);
 
   function go(direction: number) {
-    setActive((value) => {
-      const next = (value + direction + testimonials.length) % testimonials.length;
-      railRef.current?.children[next]?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
-      return next;
-    });
+    setActive((value) => (value + direction + testimonials.length) % testimonials.length);
   }
 
   const activeItem = testimonials[active];
 
   return (
     <div className="relative mt-8">
-      <div className="grid gap-5 rounded-[22px] border border-[#d9e5d4] bg-[#fbfff4] p-5 md:grid-cols-[190px_1fr] md:p-7">
+      <div className="grid gap-5 rounded-[22px] border border-[#d9e5d4] bg-[#fbfff4] p-5 shadow-[0_20px_70px_rgba(24,56,20,0.08)] md:grid-cols-[190px_1fr] md:p-7">
         <div className="relative aspect-[0.92] overflow-hidden rounded-[28px] bg-[#d8f7d8] md:aspect-auto md:min-h-[220px]">
           <Image alt="" className="object-cover" fill sizes="220px" src={testimonialImages[active % testimonialImages.length]} />
         </div>
@@ -109,7 +104,7 @@ export function HomeTestimonialsCarousel() {
                 <Star className="size-4 fill-current" key={star} />
               ))}
             </div>
-            <p className="mt-4 max-w-3xl text-[18px] font-semibold leading-[1.45] text-[#183814] md:text-[21px]">
+            <p className="mt-4 max-w-3xl text-[17px] font-semibold leading-[1.45] text-[#183814] md:text-[21px]">
               {activeItem.quote}
             </p>
           </div>
@@ -120,27 +115,7 @@ export function HomeTestimonialsCarousel() {
         </div>
       </div>
 
-      <div className="no-scrollbar mt-4 flex gap-3 overflow-x-auto pb-2" ref={railRef}>
-        {testimonials.map((item, index) => (
-          <button
-            className={`flex min-w-[180px] items-center gap-3 rounded-[16px] border p-3 text-left transition ${
-              index === active ? "border-[#459c0a] bg-[#d8f7d8]" : "border-[#d9e5d4] bg-white opacity-70 hover:opacity-100"
-            }`}
-            key={item.name}
-            onClick={() => setActive(index)}
-            type="button"
-          >
-            <span className="relative size-10 overflow-hidden rounded-[14px] bg-[#d8f7d8]">
-              <Image alt="" className="object-cover" fill sizes="40px" src={testimonialImages[index % testimonialImages.length]} />
-            </span>
-            <span>
-              <span className="block text-sm font-semibold text-[#183814]">{item.name}</span>
-              <span className="block text-xs text-[#52614e]">{item.role}</span>
-            </span>
-          </button>
-        ))}
-      </div>
-      <div className="flex justify-center gap-2">
+      <div className="mt-5 flex justify-center gap-2">
         <button aria-label="Previous testimonial" className="grid size-[54px] place-items-center rounded-full bg-[#459c0a] text-[#041102] transition hover:scale-105 md:size-[67px]" onClick={() => go(-1)} type="button">
           <ArrowLeft className="size-6" />
         </button>
