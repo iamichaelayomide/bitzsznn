@@ -33,7 +33,7 @@ export default function CommunityPage() {
               Community
             </p>
             <h1 className="mt-6 max-w-[760px] text-[44px] font-medium leading-[1.04] md:text-[76px]">
-              Find your people before the moment moves on.
+              Find your tribe before the moment moves on.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-white/76 md:text-lg md:leading-8">
               A living circle for corps members, graduates, creatives, founders, and culturally plugged-in young people who want connection beyond one night.
@@ -85,18 +85,8 @@ export default function CommunityPage() {
       <section className="section-grid-lines bg-[#f7f8f2] py-14 md:py-20">
         <div className="container-shell figma-inner">
           <MotionSection>
-            <div className="grid gap-8 lg:grid-cols-[1fr_0.85fr] lg:items-center">
-              <div className="relative min-h-[480px] overflow-hidden rounded-[26px] border border-[#d8e4d2] bg-[#10240c]">
-                <Image alt="" className="object-cover" fill sizes="760px" src="/images/community-party-1.png" />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,11,8,0),rgba(8,11,8,0.68))]" />
-                <div className="absolute bottom-6 left-6 right-6 rounded-[20px] bg-white/90 p-5 text-[#082005] backdrop-blur">
-                  <p className="font-semibold">Inside the community</p>
-                  <p className="mt-2 text-sm leading-6 text-[#40563d]">
-                    Updates, invites, recaps, warm introductions, and community conversations that keep the experience alive.
-                  </p>
-                </div>
-              </div>
-              <div>
+            <div className="grid gap-8 lg:grid-cols-[0.9fr_1fr] lg:items-stretch">
+              <div className="flex flex-col justify-center">
                 <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
                   How it works
                 </p>
@@ -115,6 +105,16 @@ export default function CommunityPage() {
                 <a className="mt-8 inline-flex items-center gap-2 rounded-[18px] bg-[#459c0a] px-6 py-4 font-semibold text-[#061006] transition hover:-translate-y-0.5 hover:bg-[#5dc716]" href={socialLinks.whatsapp}>
                   Join the WhatsApp community <ArrowRight className="size-4" />
                 </a>
+              </div>
+              <div className="relative min-h-[420px] overflow-hidden rounded-[26px] border border-[#d8e4d2] bg-[#10240c] lg:h-full">
+                <Image alt="" className="object-cover" fill sizes="760px" src="/images/community-party-1.png" />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,11,8,0),rgba(8,11,8,0.68))]" />
+                <div className="absolute bottom-6 left-6 right-6 rounded-[20px] bg-white/90 p-5 text-[#082005] backdrop-blur">
+                  <p className="font-semibold">Inside the community</p>
+                  <p className="mt-2 text-sm leading-6 text-[#40563d]">
+                    Updates, invites, recaps, warm introductions, and community conversations that keep the experience alive.
+                  </p>
+                </div>
               </div>
             </div>
           </MotionSection>

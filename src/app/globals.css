@@ -66,9 +66,9 @@
 
 html {
   background: var(--background);
+  height: 100%;
   max-width: 100%;
-  overflow-x: clip;
-  overflow-y: auto;
+  overflow: hidden;
   width: 100%;
 }
 
@@ -77,9 +77,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-manrope), Manrope, ui-sans-serif, system-ui, sans-serif;
+  height: 100dvh;
   max-width: 100%;
-  overflow-x: clip;
-  overflow-y: visible;
+  overflow-x: hidden;
+  overflow-y: auto;
   width: 100%;
 }
 

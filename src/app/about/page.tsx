@@ -65,7 +65,7 @@ export default function AboutPage() {
         </MotionSection>
       </GuideBand>
 
-      <GuideBand className="border-t border-[#e1eadc]">
+      <GuideBand className="border-t border-[#e1eadc]" id="team">
         <MotionSection>
           <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>

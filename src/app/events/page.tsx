@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays, MapPin } from "lucide-react";
-import { Button } from "@/components/button";
 import { EventsGallerySection } from "@/components/event-gallery";
 import { MotionSection } from "@/components/motion-section";
 import { events, eventHighlights, stats } from "@/data/site";
@@ -75,9 +74,9 @@ export default function EventsPage() {
         <div className="absolute right-[12%] top-[53%] h-[300px] w-[420px] rotate-[13deg] rounded-[50%] border border-dashed border-white/28 opacity-70" />
 
         <div className="container-shell figma-inner relative z-10 min-h-[897px]">
-          <div className="mx-auto mt-[72px] flex w-[399px] max-w-full flex-col items-center gap-6 text-center">
+          <div className="mx-auto mt-[72px] flex w-[560px] max-w-full flex-col items-center gap-6 text-center">
             <div>
-              <h1 className="hero-title text-white">
+              <h1 className="text-[64px] font-medium leading-[1.03] text-white">
                 More than
                 <br />
                 a party,
@@ -173,31 +172,27 @@ export default function EventsPage() {
 
       <EventsGallerySection />
 
-      <section className="section-grid-lines bg-white py-16 text-[#183814] md:py-24">
+      <section className="section-grid-lines bg-white py-14 text-[#183814] md:py-20">
         <div className="container-shell figma-inner">
           <MotionSection>
-            <div className="grid gap-10 lg:grid-cols-[0.72fr_1fr] lg:items-start">
-              <div>
+            <div className="grid gap-10 lg:grid-cols-[0.78fr_1fr] lg:items-start">
+              <div className="sticky top-32">
                 <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
                   What to expect
                 </p>
-                <h2 className="section-title mt-4">Vibes. Networking. Opportunity.</h2>
+                <h2 className="mt-4 text-[34px] font-medium leading-tight text-[#082005] md:text-[48px]">What is inside the room?</h2>
+                <p className="mt-4 max-w-lg text-sm leading-7 text-[#40563d] md:text-base">
+                  Every Bitzsznn event is built to help people enter easily, connect naturally, and leave with a memory worth sharing.
+                </p>
               </div>
-              <div className="grid gap-3">
+              <div className="grid gap-4">
                 {eventHighlights.map((highlight, index) => (
-                  <div className="flex items-center gap-4 rounded-[20px] border border-[#d8e4d2] bg-[#f8fbf4] p-5 transition hover:-translate-y-1 hover:border-[#459c0a]/50" key={highlight}>
-                    <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#459c0a] text-sm font-bold text-white">{index + 1}</span>
-                    <p className="text-sm font-semibold md:text-base">{highlight}</p>
+                  <div className="rounded-[28px] border border-[#d8e4d2] bg-[#f8fbf4] p-6 transition hover:-translate-y-1 hover:border-[#459c0a]/50 hover:bg-white" key={highlight}>
+                    <span className="font-mono text-sm font-bold text-[#459c0a]">0{index + 1}</span>
+                    <p className="mt-4 text-[19px] font-semibold leading-snug text-[#082005] md:text-[24px]">{highlight}</p>
                   </div>
                 ))}
               </div>
-            </div>
-            <div className="mt-14 rounded-[28px] border border-[#d8e4d2] bg-[#d8f7d8] p-6 md:p-8">
-              <h3 className="text-2xl font-medium md:text-3xl">Want the full list?</h3>
-              <p className="mt-3 max-w-2xl text-[#183814]/72">Browse every active event, choose the one that fits your crew, then reserve tickets from the event page.</p>
-              <Button className="mt-6" href="/events/batch-a2-pop-party" showIcon>
-                See latest event
-              </Button>
             </div>
           </MotionSection>
         </div>

@@ -34,7 +34,7 @@ export function EventsGallerySection() {
       <div className="relative mt-10">
         <button
           aria-label="Previous gallery item"
-          className="absolute left-[max(16px,calc((100%-1320px)/2+24px))] top-[38%] z-20 hidden size-14 place-items-center rounded-l-full bg-[#ebe7e2] text-[#10240c] shadow-[0_16px_40px_rgba(0,0,0,0.16)] transition hover:-translate-x-1 md:grid"
+          className="absolute left-[max(16px,calc((100%-1320px)/2+24px))] top-[38%] z-20 hidden size-14 place-items-center rounded-l-full bg-[#459c0a] text-[#061006] shadow-[0_16px_40px_rgba(69,156,10,0.25)] transition hover:-translate-x-1 hover:bg-[#5dc716] md:grid"
           onClick={() => scroll(-1)}
           type="button"
         >
@@ -42,7 +42,7 @@ export function EventsGallerySection() {
         </button>
         <button
           aria-label="Next gallery item"
-          className="absolute right-[max(16px,calc((100%-1320px)/2+24px))] top-[38%] z-20 hidden size-14 place-items-center rounded-r-full bg-[#ebe7e2] text-[#10240c] shadow-[0_16px_40px_rgba(0,0,0,0.16)] transition hover:translate-x-1 md:grid"
+          className="absolute right-[max(16px,calc((100%-1320px)/2+24px))] top-[38%] z-20 hidden size-14 place-items-center rounded-r-full bg-[#459c0a] text-[#061006] shadow-[0_16px_40px_rgba(69,156,10,0.25)] transition hover:translate-x-1 hover:bg-[#5dc716] md:grid"
           onClick={() => scroll(1)}
           type="button"
         >
