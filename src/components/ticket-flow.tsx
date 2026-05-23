@@ -55,7 +55,7 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
   }
 
   const checkout = (
-    <section className="section-grid-lines bg-[#f7f5f2] py-12 text-[#183814] md:py-20" id="tickets">
+    <section className="section-grid-lines overflow-hidden bg-[#f7f5f2] py-10 text-[#183814] md:py-20" id="tickets">
       <div className="container-shell figma-inner">
         <AnimatePresence mode="wait">
           {confirmed ? (
@@ -88,13 +88,13 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
           ) : (
             <motion.form
               animate={{ opacity: 1, y: 0 }}
-              className="grid gap-8 lg:grid-cols-[1fr_420px]"
+              className="grid min-w-0 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(340px,420px)] lg:gap-8"
               exit={{ opacity: 0, y: -16 }}
               initial={{ opacity: 0, y: 16 }}
               key="form"
               onSubmit={submitOrder}
             >
-              <div>
+              <div className="min-w-0">
                 <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
                   Tickets
                 </p>
@@ -102,13 +102,13 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
                 <p className="mt-4 max-w-2xl text-base leading-7 text-[#183814]/72">
                   Select a ticket for {event.title}. Your details create a reservation code you can use for follow-up confirmation.
                 </p>
-                <div className="no-scrollbar mt-8 flex snap-x gap-4 overflow-x-auto pb-2 md:grid md:grid-cols-2">
+                <div className="mt-6 grid min-w-0 gap-3 sm:grid-cols-2 md:mt-8 md:gap-4">
                   {ticketTiers.map((tier) => {
                     const selected = tier.id === selectedId;
                     return (
                       <button
                         className={cn(
-                          "group min-h-[250px] min-w-[270px] snap-center rounded-[24px] border p-5 text-left transition duration-200 hover:-translate-y-1",
+                          "group min-h-[220px] w-full min-w-0 rounded-[20px] border p-4 text-left transition duration-200 hover:-translate-y-1 md:min-h-[250px] md:rounded-[24px] md:p-5",
                           selected
                             ? "border-[#459c0a] bg-[#d8f7d8] shadow-[0_22px_60px_rgba(75,165,11,0.18)]"
                             : "border-[#d8e4d2] bg-white hover:border-[#459c0a]/60",
@@ -127,10 +127,10 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
                             </span>
                           ) : null}
                         </div>
-                        <h3 className="mt-8 text-xl font-semibold">{tier.name}</h3>
+                        <h3 className="mt-6 text-lg font-semibold md:mt-8 md:text-xl">{tier.name}</h3>
                         <p className="mt-2 text-sm leading-6 text-[#183814]/70">{tier.description}</p>
-                        <p className="mt-5 text-2xl font-semibold text-[#459c0a]">{currency.format(tier.price)}</p>
-                        <ul className="mt-5 grid gap-2 text-sm text-[#183814]/72">
+                        <p className="mt-4 text-xl font-semibold text-[#459c0a] md:mt-5 md:text-2xl">{currency.format(tier.price)}</p>
+                        <ul className="mt-4 grid gap-2 text-sm text-[#183814]/72 md:mt-5">
                           {tier.perks.map((perk) => (
                             <li className="flex items-center gap-2" key={perk}>
                               <Check className="size-4 text-[#459c0a]" />
@@ -144,18 +144,18 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
                 </div>
               </div>
 
-              <aside className="h-fit rounded-[28px] border border-[#d8e4d2] bg-white p-5 shadow-[0_24px_80px_rgba(24,56,20,0.12)] md:p-6 lg:sticky lg:top-28">
-                <h2 className="text-2xl font-semibold">Order summary</h2>
+              <aside className="h-fit min-w-0 rounded-[22px] border border-[#d8e4d2] bg-white p-4 shadow-[0_24px_80px_rgba(24,56,20,0.12)] md:rounded-[28px] md:p-6 lg:sticky lg:top-28">
+                <h2 className="text-xl font-semibold md:text-2xl">Order summary</h2>
                 <div className="mt-5 rounded-2xl border border-[#d8e4d2] bg-[#f8fbf4] p-4">
                   <p className="text-sm font-semibold text-[#459c0a]">{event.title}</p>
-                  <div className="mt-3 flex items-start justify-between gap-4">
-                    <div>
+                  <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+                    <div className="min-w-0">
                       <p className="font-bold">{selectedTier.name}</p>
                       <p className="mt-1 text-sm text-[#183814]/68">{selectedTier.description}</p>
                     </div>
-                    <p className="font-bold text-[#459c0a]">{currency.format(selectedTier.price)}</p>
+                    <p className="shrink-0 font-bold text-[#459c0a]">{currency.format(selectedTier.price)}</p>
                   </div>
-                  <div className="mt-5 flex items-center justify-between">
+                  <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
                     <span className="text-sm text-[#183814]/68">Quantity</span>
                     <div className="flex items-center gap-3">
                       <button aria-label="Decrease quantity" className="grid size-10 place-items-center rounded-full border border-[#d8e4d2] bg-white transition hover:bg-[#eef7e9]" onClick={() => setQuantity((value) => Math.max(1, value - 1))} type="button">
@@ -178,7 +178,7 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
                     <label className="grid gap-2 text-sm font-bold" key={key}>
                       {label}
                       <input
-                        className="min-h-12 rounded-2xl border border-[#d8e4d2] bg-[#f8fbf4] px-4 text-[#183814] outline-none transition placeholder:text-[#183814]/45 focus:border-[#459c0a]"
+                        className="min-h-12 w-full min-w-0 rounded-2xl border border-[#d8e4d2] bg-[#f8fbf4] px-4 text-[#183814] outline-none transition placeholder:text-[#183814]/45 focus:border-[#459c0a]"
                         onChange={(inputEvent) => setBuyer((value) => ({ ...value, [key]: inputEvent.target.value }))}
                         placeholder={placeholder}
                         required
@@ -225,17 +225,17 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f7f5f2]">
-      <section className="relative overflow-hidden bg-[#0f1c07] pt-28 text-white md:pt-36">
-        <div className="container-shell figma-inner py-16 md:py-24">
+      <section className="relative overflow-hidden bg-[#0f1c07] pt-24 text-white md:pt-36">
+        <div className="container-shell figma-inner py-12 md:py-24">
           <Link className="text-sm text-white/70 transition hover:text-white" href="/events">
             ← Back to events
           </Link>
-          <div className="mt-12 max-w-4xl">
+          <div className="mt-10 max-w-4xl">
             <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
               Ticket checkout
             </p>
-            <h1 className="hero-title mt-5">Reserve access for {event.title}.</h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-white/72">{event.summary}</p>
+            <h1 className="mt-5 text-[34px] font-semibold leading-[1.05] md:text-[54px]">Reserve access for {event.title}.</h1>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-white/72 md:text-lg md:leading-8">{event.summary}</p>
           </div>
         </div>
       </section>

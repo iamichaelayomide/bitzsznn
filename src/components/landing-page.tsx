@@ -50,7 +50,7 @@ function GuideSection({
 export function LandingPage() {
   return (
     <main className="overflow-x-hidden bg-white">
-      <section className="relative min-h-[680px] overflow-hidden border-b border-[#1e2a1e] md:min-h-screen" id="home">
+      <section className="relative min-h-[720px] overflow-hidden border-b border-[#1e2a1e] md:min-h-[760px]" id="home">
         <Image
           alt="Bitzsznn community at an event"
           className="object-cover"
@@ -62,8 +62,8 @@ export function LandingPage() {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,11,8,0.78),rgba(8,11,8,0.42),rgba(8,11,8,0.86))]" />
         <div className="absolute inset-0 bg-[#459c0a]/20 mix-blend-multiply" />
 
-        <div className="container-shell relative z-10 flex min-h-[680px] flex-col items-start justify-center pt-28 text-left md:min-h-screen">
-          <div className="max-w-[720px] -translate-y-4 px-1 md:-translate-y-6 md:px-0">
+        <div className="container-shell relative z-10 flex min-h-[720px] flex-col items-start justify-center px-2 pb-12 pt-28 text-left md:min-h-[760px] md:px-0">
+          <div className="max-w-[720px] md:translate-y-2">
             <h1 className="hero-title text-white">
               Vibes.
               <br />
