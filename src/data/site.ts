@@ -201,7 +201,7 @@ export const testimonials = [
   },
   {
     quote:
-      "The room felt curated without being stiff. It was easy to meet people, move around, and enjoy the whole experience.",
+      "It helped me meet people in a new city without the awkwardness. Bitzsznn understands the transition season perfectly.",
     name: "Dara K.",
     role: "Young professional",
   },

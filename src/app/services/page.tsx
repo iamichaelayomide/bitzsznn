@@ -192,10 +192,13 @@ export default function ServicesPage() {
       <GuideBand className="border-t border-[#e1eadc]">
         <MotionSection>
           <div className="mb-8">
-            <SectionKicker>Real words from real people</SectionKicker>
+            <SectionKicker>Community proof</SectionKicker>
             <h2 className="section-title mt-4 max-w-3xl font-semibold text-[#183814]">
-              Built for people who show up.
+              Real words from real people.
             </h2>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-[#40563d]">
+              Proof from people who came for the room, the music, the network, and the story after.
+            </p>
           </div>
           <HomeTestimonialsCarousel />
         </MotionSection>

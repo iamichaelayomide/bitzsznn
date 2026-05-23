@@ -301,17 +301,14 @@ export function LandingPage() {
 
       <GuideSection className="overflow-hidden py-[60px] md:py-[83px]">
         <div className="container-shell figma-inner">
-          <div className="rounded-[14px] border border-[#9c999947] bg-[#d8f7d8] px-8 py-7 md:px-11">
-            <FigmaLabel>Testimonials</FigmaLabel>
-            <div className="mt-4 grid gap-6 lg:grid-cols-[321px_1fr] lg:items-center lg:gap-[178px]">
-              <h2 className="section-title text-[#082005]">
-                real words from
-                <br />real people.
-              </h2>
-              <p className="max-w-[376px] text-[16px] leading-[1.2] text-[#183814] md:text-[18px]">
-                The best proof is the way people talk after the room clears.
-              </p>
-            </div>
+          <div className="mb-10">
+            <FigmaLabel>Community proof</FigmaLabel>
+            <h2 className="section-title mt-5 max-w-3xl text-[#082005]">
+              Real words from real people.
+            </h2>
+            <p className="mt-4 max-w-[520px] text-[16px] leading-7 text-[#40563d] md:text-[18px]">
+              The best proof is the way people talk after the room clears.
+            </p>
           </div>
 
           <HomeTestimonialsCarousel />

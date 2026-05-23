@@ -1,25 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, Quote, Star } from "lucide-react";
-import { useRef, useState } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useRef } from "react";
 import { Button } from "@/components/button";
-import { events, testimonials } from "@/data/site";
-
-const testimonialImages = [
-  "/images/community-party-1.png",
-  "/images/community-party-2.png",
-  "/images/community-good-vibes.png",
-  "/images/event-good-vibes.png",
-  "/images/values-good-vibes.png",
-  "/images/about-hero.png",
-  "/images/hero-crowd.png",
-  "/images/community-party-1.png",
-  "/images/community-party-2.png",
-  "/images/community-good-vibes.png",
-  "/images/event-good-vibes.png",
-  "/images/values-good-vibes.png",
-];
+import { TestimonialSlider } from "@/components/testimonial-slider";
+import { events } from "@/data/site";
 
 function shortDate(date: string) {
   return date.replace(",", "").split(" ").slice(0, 3).join(" ");
@@ -82,58 +68,5 @@ export function HomeEventsCarousel() {
 }
 
 export function HomeTestimonialsCarousel() {
-  const [active, setActive] = useState(1);
-
-  function go(direction: number) {
-    setActive((value) => (value + direction + testimonials.length) % testimonials.length);
-  }
-
-  const activeItem = testimonials[active];
-
-  return (
-    <div className="relative mt-8">
-      <div className="grid gap-5 rounded-[22px] border border-[#d9e5d4] bg-[#fbfff4] p-5 shadow-[0_20px_70px_rgba(24,56,20,0.08)] md:grid-cols-[190px_1fr] md:p-7">
-        <div className="relative aspect-[0.92] overflow-hidden rounded-[28px] bg-[#d8f7d8] md:aspect-auto md:min-h-[220px]">
-          <Image alt="" className="object-cover" fill sizes="220px" src={testimonialImages[active % testimonialImages.length]} />
-        </div>
-        <div className="flex flex-col justify-between">
-          <div>
-            <Quote className="size-9 fill-current text-[#183814]" />
-            <div className="mt-4 flex gap-1 text-[#459c0a]">
-              {[0, 1, 2, 3, 4].map((star) => (
-                <Star className="size-4 fill-current" key={star} />
-              ))}
-            </div>
-            <p className="mt-4 max-w-3xl text-[17px] font-semibold leading-[1.45] text-[#183814] md:text-[20px]">
-              {activeItem.quote}
-            </p>
-          </div>
-          <div className="mt-6">
-            <p className="text-[17px] font-semibold text-[#183814]">{activeItem.name}</p>
-            <p className="mt-1 text-[15px] font-medium text-[#434d42]">{activeItem.role}</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-5 flex justify-center gap-2">
-        <button aria-label="Previous testimonial" className="grid size-[54px] place-items-center rounded-full bg-[#459c0a] text-[#041102] transition hover:scale-105 md:size-[67px]" onClick={() => go(-1)} type="button">
-          <ArrowLeft className="size-6" />
-        </button>
-        <button aria-label="Next testimonial" className="grid size-[54px] place-items-center rounded-full bg-[#459c0a] text-[#041102] transition hover:scale-105 md:size-[67px]" onClick={() => go(1)} type="button">
-          <ArrowRight className="size-6" />
-        </button>
-      </div>
-      <div className="mt-4 flex justify-center gap-2">
-        {testimonials.map((item, index) => (
-          <button
-            aria-label={`Select testimonial from ${item.name}`}
-            className={`h-2 rounded-full transition-all ${index === active ? "w-8 bg-[#459c0a]" : "w-2 bg-[#cbd8c7]"}`}
-            key={item.name}
-            onClick={() => setActive(index)}
-            type="button"
-          />
-        ))}
-      </div>
-    </div>
-  );
+  return <TestimonialSlider />;
 }
