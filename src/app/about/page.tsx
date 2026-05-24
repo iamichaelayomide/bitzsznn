@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Instagram, MessageCircle, Twitter } from "lucide-react";
+import { Instagram, Plus, Twitter } from "lucide-react";
 import { Button } from "@/components/button";
 import { GuideBand, InnerPageHero, SectionKicker } from "@/components/inner-page-hero";
 import { MotionSection } from "@/components/motion-section";
@@ -128,7 +128,7 @@ export default function AboutPage() {
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,11,8,0),rgba(8,11,8,0.72))] opacity-0 transition duration-300 group-hover:opacity-100 group-focus-within:opacity-100" />
                   <div className="absolute left-4 top-4 grid size-11 place-items-center rounded-full bg-[#459c0a] text-[#061006] shadow-[0_16px_34px_rgba(69,156,10,0.34)] transition duration-200 group-hover:scale-105 group-focus-within:scale-105">
-                    <MessageCircle className="size-5 stroke-[2.4]" />
+                    <Plus className="size-5 stroke-[2.4]" />
                   </div>
                   <div className="absolute bottom-4 right-4 flex translate-y-3 gap-2 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100">
                     <a aria-label={`${member.name} on Instagram`} className="grid size-11 place-items-center rounded-full bg-white text-[#082005] shadow-[0_14px_34px_rgba(0,0,0,0.18)] transition hover:-translate-y-0.5 hover:bg-[#d8f7d8]" href={member.instagram} rel="noreferrer" target="_blank">

@@ -32,7 +32,7 @@ export function SiteFooter() {
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <Button className="bg-[#041102] text-white shadow-none hover:bg-[#10240c]" href={`mailto:${socialLinks.email}`} variant="secondary">
+              <Button className="!bg-[#041102] !text-white shadow-none hover:!bg-[#10240c]" href="/contact" variant="secondary">
                 Partner with us
               </Button>
               <Button href={socialLinks.whatsapp}>Join community</Button>
@@ -60,6 +60,7 @@ export function SiteFooter() {
               <div className="mt-3 grid gap-2 text-[16px] font-extralight text-white md:text-[17px]">
                 <Link href="/services">Services</Link>
                 <Link href="/events">Events</Link>
+                <Link href="/platform">RoomPass</Link>
                 <Link href="/community">Community</Link>
                 <Link href="/about">About Us</Link>
               </div>
@@ -69,7 +70,7 @@ export function SiteFooter() {
               <div className="mt-3 grid gap-2 text-[16px] font-extralight text-white md:text-[17px]">
                 <a href={socialLinks.whatsapp}>Join the Community</a>
                 <Link href="/events">View Events</Link>
-                <Link href="/#contact">Contact Us</Link>
+                <Link href="/contact">Contact Us</Link>
               </div>
             </div>
             <div>

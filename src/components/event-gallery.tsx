@@ -56,8 +56,9 @@ export function EventsGallerySection() {
           {events.map((item, index) => {
             const year = item.date.split(", ")[1] ?? "2026";
             return (
-              <article
+              <Link
                 className="w-[min(78vw,312px)] shrink-0 snap-center transition duration-300 hover:-translate-y-2"
+                href={`/gallery?event=${item.slug}`}
                 key={`${item.slug}-${index}`}
               >
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[14px] bg-[#d8f7d8] shadow-[0_18px_55px_rgba(24,56,20,0.12)]">
@@ -73,7 +74,7 @@ export function EventsGallerySection() {
                   <h3 className="font-semibold text-[#183814]">{item.title}</h3>
                   <p className="mt-1 font-medium text-[#434d42]">{year} / {item.location}</p>
                 </div>
-              </article>
+              </Link>
             );
           })}
         </div>

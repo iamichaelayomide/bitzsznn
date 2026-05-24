@@ -38,7 +38,7 @@ export default function CommunityPage() {
             <p className="mt-6 max-w-xl text-base leading-7 text-white/76 md:text-lg md:leading-8">
               A living circle for corps members, graduates, creatives, founders, and culturally plugged-in young people who want connection beyond one night.
             </p>
-            <Button className="mt-8" href={socialLinks.whatsapp} showIcon>
+            <Button className="mx-auto mt-8 md:mx-0" href={socialLinks.whatsapp} showIcon>
               Join the community
             </Button>
           </div>
@@ -102,7 +102,7 @@ export default function CommunityPage() {
                     </div>
                   ))}
                 </div>
-                <a className="mt-8 inline-flex items-center gap-2 rounded-[18px] bg-[#459c0a] px-6 py-4 font-semibold text-[#061006] transition hover:-translate-y-0.5 hover:bg-[#5dc716]" href={socialLinks.whatsapp}>
+                <a className="mx-auto mt-8 inline-flex items-center gap-2 rounded-[18px] bg-[#459c0a] px-6 py-4 font-semibold text-[#061006] transition hover:-translate-y-0.5 hover:bg-[#5dc716] md:mx-0" href={socialLinks.whatsapp}>
                   Join the WhatsApp community <ArrowRight className="size-4" />
                 </a>
               </div>

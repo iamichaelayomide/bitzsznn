@@ -51,11 +51,11 @@ export function HomeEventsCarousel() {
               </span>
               <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,rgba(8,11,8,0),rgba(8,11,8,0.76))] p-5">
                 <div className="flex gap-2">
-                <Button className="min-h-0 flex-1 rounded-[16px] bg-[#459c0a] px-3 py-3 text-[13px] text-[#061006] shadow-none hover:bg-[#5dc716] md:rounded-[18px] md:px-4 md:text-[14px]" href={`/events/${event.slug}`}>
-                  View event
+                <Button className="min-h-0 flex-1 rounded-[16px] !bg-[#041102] px-3 py-3 text-[13px] !text-white shadow-none hover:!bg-[#10240c] md:rounded-[18px] md:px-4 md:text-[14px]" href={`/events/${event.slug}`} variant="secondary">
+                  See details
                 </Button>
-                <Button className="min-h-0 flex-1 rounded-[16px] bg-[#fbfff4] px-3 py-3 text-[13px] text-[#0b1709] shadow-none hover:bg-white md:rounded-[18px] md:px-4 md:text-[14px]" href={`/events/${event.slug}#tickets`} variant="secondary">
-                  Tickets
+                <Button className="min-h-0 flex-1 rounded-[16px] bg-[#459c0a] px-3 py-3 text-[13px] text-[#061006] shadow-none hover:bg-[#5dc716] md:rounded-[18px] md:px-4 md:text-[14px]" href={`/events/${event.slug}#tickets`}>
+                  Buy ticket
                 </Button>
                 </div>
               </div>

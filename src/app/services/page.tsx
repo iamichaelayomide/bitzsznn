@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Instagram, MessageCircle, Twitter } from "lucide-react";
+import { Instagram, Plus, Twitter } from "lucide-react";
 import { Button } from "@/components/button";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { HomeTestimonialsCarousel } from "@/components/home-carousels";
@@ -24,7 +24,7 @@ export default function ServicesPage() {
             <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
               Services
             </p>
-            <h1 className="mt-6 max-w-[720px] text-[42px] font-medium leading-[1.04] md:text-[72px]">
+            <h1 className="hero-title mt-6 max-w-[720px]">
               Culture-led experiences that people attend, post, and remember.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-7 text-white/76 md:text-lg md:leading-8">
@@ -34,7 +34,7 @@ export default function ServicesPage() {
               <Button href={`mailto:${socialLinks.email}`} showIcon>
                 Plan an experience
               </Button>
-              <Button className="bg-white text-[#082005] shadow-none hover:bg-[#f5f7ef]" href="/events" variant="secondary">
+              <Button className="!bg-[#fbfff4] !text-[#082005] shadow-none hover:!bg-white" href="/events" variant="secondary">
                 See the rooms
               </Button>
             </div>
@@ -137,7 +137,7 @@ export default function ServicesPage() {
                     </a>
                   </div>
                   <div className="absolute left-4 top-4 grid size-11 place-items-center rounded-full bg-[#459c0a] text-[#061006] shadow-[0_14px_30px_rgba(69,156,10,0.32)] transition group-hover:scale-105">
-                    <MessageCircle className="size-5 stroke-[2.4]" />
+                    <Plus className="size-5 stroke-[2.4]" />
                   </div>
                 </div>
                 <div className="p-5">

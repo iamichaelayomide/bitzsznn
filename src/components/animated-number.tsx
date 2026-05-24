@@ -14,7 +14,7 @@ function parseValue(value: string) {
 
 export function AnimatedNumber({ value, className = "" }: { value: string; className?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const inView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" });
   const parsed = parseValue(value);
   const motionValue = useMotionValue(0);
   const spring = useSpring(motionValue, { damping: 24, stiffness: 90 });
@@ -26,6 +26,10 @@ export function AnimatedNumber({ value, className = "" }: { value: string; class
     }
   }, [inView, motionValue, parsed.number]);
 
+  useEffect(() => {
+    const timer = window.setTimeout(() => motionValue.set(parsed.number), 350);
+    return () => window.clearTimeout(timer);
+  }, [motionValue, parsed.number]);
+
   return <motion.span className={className} ref={ref}>{rounded}</motion.span>;
 }
-

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CalendarDays, MapPin } from "lucide-react";
 import { EventsGallerySection } from "@/components/event-gallery";
+import { EventRoomStack } from "@/components/event-room-stack";
 import { MotionSection } from "@/components/motion-section";
 import { events, eventHighlights, stats } from "@/data/site";
 
@@ -76,7 +77,7 @@ export default function EventsPage() {
         <div className="container-shell figma-inner relative z-10 min-h-[897px]">
           <div className="mx-auto mt-[72px] flex w-[560px] max-w-full flex-col items-center gap-6 text-center">
             <div>
-              <h1 className="text-[64px] font-medium leading-[1.03] text-white">
+              <h1 className="hero-title text-white">
                 More than
                 <br />
                 a party,
@@ -141,9 +142,8 @@ export default function EventsPage() {
 
             <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {upcoming.map((event) => (
-                <Link
-                  className="group flex h-full min-h-[520px] flex-col overflow-hidden rounded-[18px] bg-[#f7f8f2] text-[#10240c] shadow-[0_14px_40px_rgba(0,0,0,0.2)] transition duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_30px_90px_rgba(0,0,0,0.34)] focus-visible:outline focus-visible:outline-4 focus-visible:outline-[#b8ff2c] md:min-h-[610px]"
-                  href={`/events/${event.slug}`}
+                <article
+                  className="group flex h-full min-h-[520px] flex-col overflow-hidden rounded-[18px] bg-[#f7f8f2] text-[#10240c] shadow-[0_14px_40px_rgba(0,0,0,0.2)] transition duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_30px_90px_rgba(0,0,0,0.34)] md:min-h-[610px]"
                   key={event.slug}
                 >
                   <div className="relative h-[300px] shrink-0">
@@ -159,11 +159,16 @@ export default function EventsPage() {
                     </div>
                     <h3 className="mt-5 text-2xl font-semibold leading-tight text-[#10240c]">{event.title}</h3>
                     <p className="mt-3 text-sm leading-6 text-[#30472d]">{event.summary}</p>
-                    <div className="mt-auto inline-flex w-fit rounded-[18px] bg-[#459c0a] px-5 py-3 font-semibold text-[#061006]">
-                      View event
+                    <div className="mt-auto grid gap-3 sm:grid-cols-2">
+                      <Link className="inline-flex min-h-12 items-center justify-center rounded-[16px] bg-[#041102] px-4 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#10240c]" href={`/events/${event.slug}`}>
+                        See details
+                      </Link>
+                      <Link className="inline-flex min-h-12 items-center justify-center rounded-[16px] bg-[#459c0a] px-4 py-3 text-sm font-semibold text-[#061006] transition hover:-translate-y-0.5 hover:bg-[#5dc716]" href={`/events/${event.slug}#tickets`}>
+                        Buy ticket
+                      </Link>
                     </div>
                   </div>
-                </Link>
+                </article>
               ))}
             </div>
           </MotionSection>
@@ -172,31 +177,7 @@ export default function EventsPage() {
 
       <EventsGallerySection />
 
-      <section className="section-grid-lines bg-white py-14 text-[#183814] md:py-20">
-        <div className="container-shell figma-inner">
-          <MotionSection>
-            <div className="grid gap-10 lg:grid-cols-[0.78fr_1fr] lg:items-start">
-              <div className="sticky top-32">
-                <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
-                  What to expect
-                </p>
-                <h2 className="mt-4 text-[34px] font-medium leading-tight text-[#082005] md:text-[48px]">What is inside the room?</h2>
-                <p className="mt-4 max-w-lg text-sm leading-7 text-[#40563d] md:text-base">
-                  Every Bitzsznn event is built to help people enter easily, connect naturally, and leave with a memory worth sharing.
-                </p>
-              </div>
-              <div className="grid gap-4">
-                {eventHighlights.map((highlight, index) => (
-                  <div className="rounded-[28px] border border-[#d8e4d2] bg-[#f8fbf4] p-6 transition hover:-translate-y-1 hover:border-[#459c0a]/50 hover:bg-white" key={highlight}>
-                    <span className="font-mono text-sm font-bold text-[#459c0a]">0{index + 1}</span>
-                    <p className="mt-4 text-[19px] font-semibold leading-snug text-[#082005] md:text-[24px]">{highlight}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </MotionSection>
-        </div>
-      </section>
+      <EventRoomStack items={eventHighlights} />
     </main>
   );
 }

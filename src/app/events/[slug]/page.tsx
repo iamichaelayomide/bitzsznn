@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CalendarDays, Clock, MapPin } from "lucide-react";
+import { EventRoomStack } from "@/components/event-room-stack";
 import { TicketFlow } from "@/components/ticket-flow";
 import { events } from "@/data/site";
 
@@ -65,26 +66,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
         </div>
       </section>
 
-      <section className="section-grid-lines bg-white py-16 md:py-20">
-        <div className="container-shell figma-inner">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1fr]">
-            <div>
-              <p className="w-fit rounded-[14px] bg-[#d7e8d5] px-2 py-1 font-mono text-xs uppercase text-[#1d1d1d]">
-                Event details
-              </p>
-              <h2 className="section-title mt-4">What is inside the room?</h2>
-            </div>
-            <div className="grid gap-3">
-              {event.highlights.map((highlight, index) => (
-                <div className="rounded-[20px] border border-[#d8e4d2] bg-[#f8fbf4] p-5" key={highlight}>
-                  <p className="text-sm font-bold text-[#459c0a]">0{index + 1}</p>
-                  <p className="mt-2 text-xl font-semibold">{highlight}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <EventRoomStack eyebrow="Event details" items={event.highlights} />
 
       <TicketFlow embedded eventSlug={event.slug} />
     </main>

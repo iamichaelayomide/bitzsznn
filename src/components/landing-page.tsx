@@ -74,11 +74,11 @@ export function LandingPage() {
             <p className="mt-5 max-w-[560px] text-[15px] leading-[1.6] text-[#d7e4d1] md:text-[16px]">
               Step into curated rooms where NYSC life, music, culture, and ambition become friendships, collaborations, content, and opportunity.
             </p>
-            <div className="mt-7 flex flex-col gap-4 sm:flex-row">
-              <Button className="min-h-[56px] rounded-[18px] px-6 text-[16px] md:min-h-[70px] md:rounded-[20px] md:px-8 md:text-[20px]" href={socialLinks.whatsapp}>
+            <div className="mt-7 flex w-full max-w-[560px] flex-col gap-4 sm:flex-row">
+              <Button className="min-h-[56px] w-full rounded-[18px] px-6 text-[16px] sm:w-auto md:min-h-[70px] md:rounded-[20px] md:px-8 md:text-[20px]" href={socialLinks.whatsapp}>
                 Join the community
               </Button>
-              <Button className="min-h-[56px] rounded-[18px] !bg-[#041102] px-6 text-[16px] !text-white shadow-none hover:!bg-[#10240c] md:min-h-[70px] md:rounded-[20px] md:px-5 md:text-[20px]" href="/events" variant="secondary">
+              <Button className="min-h-[56px] w-full rounded-[18px] !bg-[#041102] px-6 text-[16px] !text-white shadow-none hover:!bg-[#10240c] sm:w-auto md:min-h-[70px] md:rounded-[20px] md:px-5 md:text-[20px]" href="/events" variant="secondary">
                 View events
               </Button>
             </div>
@@ -330,8 +330,8 @@ export function LandingPage() {
       <GuideSection className="py-[22px]" id="community">
         <div className="container-shell figma-inner">
           <div className="grid gap-4">
-            <div className="grid min-h-[482px] overflow-hidden rounded-[16px] border border-[#9c999947] bg-[#f7f5f2] p-8 md:p-9 lg:grid-cols-[1fr_0.78fr_1.12fr] lg:gap-4">
-              <div className="flex flex-col justify-center">
+            <div className="grid overflow-hidden rounded-[16px] border border-[#9c999947] bg-[#f7f5f2] p-6 md:min-h-[482px] md:p-9 lg:grid-cols-[1fr_0.78fr_1.12fr] lg:gap-4">
+              <div className="flex flex-col justify-center text-center md:text-left">
                 <h2 className="section-title text-[#082005]">
                   more than a party.
                   <br />a community.
@@ -339,7 +339,7 @@ export function LandingPage() {
                 <p className="mt-6 max-w-[423px] text-[16px] leading-[1.5] text-[#183814]">
                   Come for the music, stay for the people, and leave with a story that moves with you.
                 </p>
-                <Button className="mt-10 min-h-[70px] w-fit rounded-[22px] px-5 text-[20px]" href="/events">
+                <Button className="mx-auto mt-8 min-h-[56px] w-fit rounded-[18px] px-5 text-[16px] md:mx-0 md:mt-10 md:min-h-[70px] md:rounded-[22px] md:text-[20px]" href="/events">
                   Explore events
                 </Button>
               </div>

@@ -58,6 +58,9 @@
   --type-section: clamp(1.45rem, 2.1vw, 1.9rem);
   --type-card-title: clamp(1.05rem, 1.45vw, 1.35rem);
   --type-body: clamp(0.94rem, 1vw, 1rem);
+  --space-section-sm: clamp(3.5rem, 7vw, 5rem);
+  --space-section-md: clamp(4.5rem, 8vw, 6.5rem);
+  --space-section-lg: clamp(5.5rem, 10vw, 8rem);
 }
 
 * {
