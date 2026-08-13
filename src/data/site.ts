@@ -302,6 +302,20 @@ export const galleryMoments = [
 
 export const events = [
   {
+    slug: "batch-b-pop-party-akure",
+    title: "Batch B POP Party",
+    eyebrow: "Upcoming",
+    date: "September 2026",
+    time: "To be announced",
+    location: "Akure, Nigeria",
+    image: "/images/batch-b-pop-party-akure.jpg",
+    summary: "Akure's Batch B POP celebration with music, games, dancing, networking, and more.",
+    description:
+      "Celebrate the end of service with the Batch B community in Akure. Come ready for music, games, dancing, networking, and a proper Bitzsznn send-off.",
+    highlights: ["Music and dancing", "Hosted games", "Community networking", "Batch B celebration"],
+    ticketPrice: 3000,
+  },
+  {
     slug: "batch-a2-pop-party",
     title: "Batch A2 POP Party",
     eyebrow: "Upcoming",

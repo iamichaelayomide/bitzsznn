@@ -35,10 +35,16 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
   const [quantity, setQuantity] = useState(1);
   const [buyer, setBuyer] = useState<Buyer>({ name: "", email: "", phone: "" });
   const [confirmationCode, setConfirmationCode] = useState("");
+  const [paymentError, setPaymentError] = useState("");
+  const [isPaying, setIsPaying] = useState(false);
 
-  const selectedTier = ticketTiers.find((tier) => tier.id === selectedId) ?? ticketTiers[1];
+  const eventTicket = "ticketPrice" in event && typeof event.ticketPrice === "number"
+    ? [{ id: "standard", name: "General Admission", price: event.ticketPrice, description: "Entry to the full Batch B POP Party experience.", perks: ["General entry", "Music and games", "Networking access"], featured: true }]
+    : ticketTiers;
+  const selectedTier = eventTicket.find((tier) => tier.id === selectedId) ?? eventTicket[0]!;
   const subtotal = selectedTier.price * quantity;
-  const serviceFee = Math.round(subtotal * 0.03);
+  const isPaidEvent = "ticketPrice" in event;
+  const serviceFee = isPaidEvent ? 0 : Math.round(subtotal * 0.03);
   const total = subtotal + serviceFee;
   const confirmed = confirmationCode.length > 0;
 
@@ -47,10 +53,31 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
     [buyer],
   );
 
-  function submitOrder(formEvent: FormEvent<HTMLFormElement>) {
+  async function submitOrder(formEvent: FormEvent<HTMLFormElement>) {
     formEvent.preventDefault();
-    if (canSubmit) {
+    if (!canSubmit) return;
+
+    if (!isPaidEvent) {
       setConfirmationCode(makeCode());
+      return;
+    }
+
+    setIsPaying(true);
+    setPaymentError("");
+    try {
+      const response = await fetch("/api/payments/initialize", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...buyer, eventSlug: event.slug, quantity }),
+      });
+      const result = (await response.json()) as { authorizationUrl?: string; error?: string };
+      if (!response.ok || !result.authorizationUrl) {
+        throw new Error(result.error || "Payment could not be started.");
+      }
+      window.location.assign(result.authorizationUrl);
+    } catch (error) {
+      setPaymentError(error instanceof Error ? error.message : "Payment could not be started.");
+      setIsPaying(false);
     }
   }
 
@@ -100,10 +127,12 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
                 </p>
                 <h2 className="section-title mt-4">Choose your access.</h2>
                 <p className="mt-4 max-w-2xl text-base leading-7 text-[#183814]/72">
-                  Select a ticket for {event.title}. Your details create a reservation code you can use for follow-up confirmation.
+                  {isPaidEvent
+                    ? `Pay securely for ${event.title}. Your ticket costs ${currency.format(selectedTier.price)} per person.`
+                    : `Select a ticket for ${event.title}. Your details create a reservation code you can use for follow-up confirmation.`}
                 </p>
                 <div className="mt-6 grid min-w-0 gap-3 sm:grid-cols-2 md:mt-8 md:gap-4">
-                  {ticketTiers.map((tier) => {
+                  {eventTicket.map((tier) => {
                     const selected = tier.id === selectedId;
                     return (
                       <button
@@ -204,12 +233,15 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
                   </div>
                 </div>
 
-                <Button className="mt-6 w-full disabled:pointer-events-none disabled:opacity-50" type="submit">
-                  Reserve my ticket
+                {paymentError ? <p className="mt-4 text-sm font-semibold text-red-700" role="alert">{paymentError}</p> : null}
+                <Button className="mt-6 w-full disabled:pointer-events-none disabled:opacity-50" disabled={!canSubmit || isPaying} type="submit">
+                  {isPaidEvent ? (isPaying ? "Opening secure payment…" : `Pay ${currency.format(total)}`) : "Reserve my ticket"}
                 </Button>
                 <div className="mt-4 flex gap-2 rounded-2xl bg-[#eef7e9] p-3 text-xs leading-5 text-[#183814]/72">
                   <ShieldCheck className="mt-0.5 size-4 shrink-0 text-[#459c0a]" />
-                  No payment is charged in this v1 flow. Confirmation code is generated after submission.
+                  {isPaidEvent
+                    ? "Payment is processed securely by Paystack. Bitzsznn does not store your card or bank details."
+                    : "No payment is charged in this v1 flow. Confirmation code is generated after submission."}
                 </div>
               </aside>
             </motion.form>
