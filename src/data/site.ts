@@ -314,6 +314,7 @@ export const events = [
       "Celebrate the end of service with the Batch B community in Akure. Come ready for music, games, dancing, networking, and a proper Bitzsznn send-off.",
     highlights: ["Music and dancing", "Hosted games", "Community networking", "Batch B celebration"],
     ticketPrice: 3000,
+    gatePrice: 4000,
   },
   {
     slug: "batch-a2-pop-party",

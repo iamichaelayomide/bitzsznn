@@ -44,6 +44,7 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
   const selectedTier = eventTicket.find((tier) => tier.id === selectedId) ?? eventTicket[0]!;
   const subtotal = selectedTier.price * quantity;
   const isPaidEvent = "ticketPrice" in event;
+  const gatePrice = "gatePrice" in event && typeof event.gatePrice === "number" ? event.gatePrice : null;
   const serviceFee = isPaidEvent ? 0 : Math.round(subtotal * 0.03);
   const total = subtotal + serviceFee;
   const confirmed = confirmationCode.length > 0;
@@ -128,7 +129,7 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
                 <h2 className="section-title mt-4">Choose your access.</h2>
                 <p className="mt-4 max-w-2xl text-base leading-7 text-[#183814]/72">
                   {isPaidEvent
-                    ? `Pay securely for ${event.title}. Your ticket costs ${currency.format(selectedTier.price)} per person.`
+                    ? `Pay securely for ${event.title}. Tickets are ${currency.format(selectedTier.price)} online${gatePrice ? ` or ${currency.format(gatePrice)} at the gate` : ""}.`
                     : `Select a ticket for ${event.title}. Your details create a reservation code you can use for follow-up confirmation.`}
                 </p>
                 <div className="mt-6 grid min-w-0 gap-3 sm:grid-cols-2 md:mt-8 md:gap-4">
@@ -159,6 +160,7 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
                         <h3 className="mt-6 text-lg font-semibold md:mt-8 md:text-xl">{tier.name}</h3>
                         <p className="mt-2 text-sm leading-6 text-[#183814]/70">{tier.description}</p>
                         <p className="mt-4 text-xl font-semibold text-[#459c0a] md:mt-5 md:text-2xl">{currency.format(tier.price)}</p>
+                        {gatePrice ? <p className="mt-1 text-sm font-semibold text-[#183814]/65">{currency.format(gatePrice)} at the gate</p> : null}
                         <ul className="mt-4 grid gap-2 text-sm text-[#183814]/72 md:mt-5">
                           {tier.perks.map((perk) => (
                             <li className="flex items-center gap-2" key={perk}>
@@ -227,6 +229,12 @@ export function TicketFlow({ eventSlug = "batch-a2-pop-party", embedded = false 
                     <span>Service fee</span>
                     <span>{currency.format(serviceFee)}</span>
                   </div>
+                  {gatePrice ? (
+                    <div className="flex justify-between text-[#183814]/68">
+                      <span>Gate price</span>
+                      <span>{currency.format(gatePrice)}</span>
+                    </div>
+                  ) : null}
                   <div className="flex justify-between text-lg font-bold">
                     <span>Total</span>
                     <span>{currency.format(total)}</span>

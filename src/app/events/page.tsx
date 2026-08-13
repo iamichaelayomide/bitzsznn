@@ -160,7 +160,7 @@ export default function EventsPage() {
                     <h3 className="mt-5 text-2xl font-semibold leading-tight text-[#10240c]">{event.title}</h3>
                     <p className="mt-3 text-sm leading-6 text-[#30472d]">{event.summary}</p>
                     <div className="mt-auto grid gap-3 sm:grid-cols-2">
-                      <Link className="inline-flex min-h-12 items-center justify-center rounded-[16px] bg-[#041102] px-4 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#10240c]" href={`/events/${event.slug}`}>
+                      <Link className="inline-flex min-h-12 items-center justify-center rounded-[16px] bg-[#041102] px-4 py-3 text-sm font-semibold !text-white transition hover:-translate-y-0.5 hover:bg-[#10240c]" href={`/events/${event.slug}`}>
                         See details
                       </Link>
                       <Link className="inline-flex min-h-12 items-center justify-center rounded-[16px] bg-[#459c0a] px-4 py-3 text-sm font-semibold text-[#061006] transition hover:-translate-y-0.5 hover:bg-[#5dc716]" href={`/events/${event.slug}#tickets`}>
