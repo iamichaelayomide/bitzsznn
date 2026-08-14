@@ -27,3 +27,10 @@ pnpm-debug.log*
 Thumbs.db
 
 .vercel
+# Local recovery and deployment artifacts
+work/
+.vercel/
+dist/
+.DS_Store
+.next/
+node_modules/
