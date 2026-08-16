@@ -332,6 +332,14 @@ export const cultureEventPhotos = [
   "/images/bitz-event-brand-wall.jpeg",
   "/images/bitz-event-light-props.jpeg",
   "/images/bitz-event-host-crowd.jpeg",
+  "/images/bitz-event-balloon-crowd.jpeg",
+  "/images/events/community-landscape-group.jpg",
+  "/images/events/meet-your-people-panel.jpg",
+  "/images/events/services-hero-owambe-highfive.jpg",
+  "/images/events/last-dance-smoke-bar.jpg",
+  "/images/events/pop-rave-smoke-moment.jpg",
+  "/images/community-party-1.png",
+  "/images/community-party-2.png",
 ];
 
 export const galleryMoments = [
@@ -366,7 +374,25 @@ export const galleryMoments = [
     caption: "Friends, conversations, and the in-between memories.",
   },
   {
-    name: "Bitzsznn",
+    name: "Community link-up",
+    role: "Bitzsznn recap",
+    image: "/images/events/community-landscape-group.jpg",
+    caption: "Corps members and friends coming together.",
+  },
+  {
+    name: "Meet your people",
+    role: "Bitzsznn recap",
+    image: "/images/events/meet-your-people-panel.jpg",
+    caption: "Connections and conversations that last beyond the night.",
+  },
+  {
+    name: "Owambe highfive",
+    role: "Bitzsznn recap",
+    image: "/images/events/services-hero-owambe-highfive.jpg",
+    caption: "Pure energy and celebration in the room.",
+  },
+  {
+    name: "Bitzsznn signal",
     role: "Recap archive",
     image: "/images/bitz-event-light-props.jpeg",
     caption: "The kind of room that carries the Bitzsznn signal.",

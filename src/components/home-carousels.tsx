@@ -13,7 +13,7 @@ function shortDate(date: string) {
 
 export function HomeEventsCarousel() {
   const railRef = useRef<HTMLDivElement>(null);
-  const displayEvents = events.filter((event) => event.eyebrow === "Upcoming");
+  const displayEvents = events;
 
   function move(direction: number) {
     railRef.current?.scrollBy({ left: direction * 390, behavior: "smooth" });

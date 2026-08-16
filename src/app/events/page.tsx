@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function EventsPage() {
-  const upcoming = events.filter((event) => event.eyebrow === "Upcoming");
+  const upcoming = events;
   const orbitCards = [
     "left-[9%] top-[46%] -rotate-[4deg]",
     "left-[16%] top-[65%] rotate-[2deg]",
