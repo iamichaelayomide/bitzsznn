@@ -1,0 +1,18 @@
+
+> bitzsznn-website@0.1.0 dev
+> next dev -p 3012
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3012
+- Network:       http://172.20.10.4:3012
+- Environments: .env.local
+✓ Ready in 1556ms
+
+ GET / 200 in 2.8s (next.js: 1063ms, application-code: 1773ms)
+ GET / 200 in 576ms (next.js: 9ms, application-code: 568ms)
+✓ Compiled in 726ms
+ GET / 200 in 1031ms (next.js: 461ms, application-code: 570ms)
+ GET / 200 in 259ms (next.js: 35ms, application-code: 224ms)
+ GET / 200 in 1452ms (next.js: 167ms, application-code: 1285ms)
+ GET / 200 in 1849ms (next.js: 283ms, application-code: 1567ms)
+[?25h

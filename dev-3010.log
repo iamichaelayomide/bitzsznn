@@ -1,0 +1,14 @@
+
+> bitzsznn-website@0.1.0 dev
+> next dev -p 3010
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3010
+- Network:       http://172.20.10.4:3010
+- Environments: .env.local
+✓ Ready in 770ms
+
+ GET /about 200 in 1093ms (next.js: 425ms, application-code: 668ms)
+ GET /about 200 in 735ms (next.js: 12ms, application-code: 723ms)
+ GET /community 200 in 416ms (next.js: 51ms, application-code: 365ms)
+[?25h

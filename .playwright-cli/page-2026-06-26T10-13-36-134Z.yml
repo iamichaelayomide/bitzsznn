@@ -1,0 +1,504 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e4]:
+      - link "Bitzsznn home" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Bitzsznn" [ref=e6]
+      - generic [ref=e7]:
+        - link "Services" [ref=e8] [cursor=pointer]:
+          - /url: /services
+        - link "Events" [ref=e9] [cursor=pointer]:
+          - /url: /events
+        - link "Community" [ref=e10] [cursor=pointer]:
+          - /url: /community
+        - link "About us" [ref=e11] [cursor=pointer]:
+          - /url: /about
+      - link "Join community" [ref=e13] [cursor=pointer]:
+        - /url: https://chat.whatsapp.com/KFiRyQR9akv6Kp4wWWBGUD?s=cl&p=i&mlu=4&amv=0
+  - main [ref=e14]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]: Bitzsznn presents culture-led events
+        - heading "Vibes meet opportunity." [level=1] [ref=e20]
+        - paragraph [ref=e21]: Bitzsznn builds premium youth culture experiences for corps members, recent graduates, creators, brands, and the people looking for their next circle.
+        - generic [ref=e22]:
+          - link "Buy ticket" [ref=e23] [cursor=pointer]:
+            - /url: /events/freed-at-last-batch-b1-pop-party#tickets
+            - text: Buy ticket
+            - img [ref=e24]
+          - link "See events" [ref=e26] [cursor=pointer]:
+            - /url: /events
+        - paragraph [ref=e29]: Trusted by young professionals, creators, community builders, artists, and youth-facing brands.
+      - generic [ref=e30]:
+        - generic [ref=e31]: 500+ community members
+        - generic [ref=e32]: 30+ hosted experiences
+        - img "Bitzsznn event crowd" [ref=e35]
+        - img "Bitzsznn party moment" [ref=e38]
+        - generic [ref=e39]:
+          - paragraph [ref=e40]: Next event
+          - paragraph [ref=e41]: "Freed At Last: Batch B1 POP Party"
+          - paragraph [ref=e42]:
+            - img [ref=e43]
+            - text: De Javu Lounge, Alagbaka, Akure
+    - generic [ref=e49]:
+      - generic "Chrome Naija" [ref=e50]
+      - generic "Rod Rayek" [ref=e51]
+      - generic "Kaka's Cravings" [ref=e52]
+      - generic "Joniah Global Entertainment" [ref=e53]
+      - generic "Genesis Entertainment Hospitality" [ref=e54]
+      - generic "Bants Arena" [ref=e55]
+      - generic "The Hangout" [ref=e56]
+      - generic "VDJ Lee" [ref=e57]
+      - generic "Aqua Fiesta" [ref=e58]
+      - generic "GMA" [ref=e59]
+      - generic "Alte House" [ref=e60]:
+        - generic [ref=e61]: Alte House
+      - generic "Corpers Hub" [ref=e62]:
+        - generic [ref=e63]: Corpers Hub
+      - generic "Pulse Yard" [ref=e64]:
+        - generic [ref=e65]: Pulse Yard
+      - generic "Vibe Lagos" [ref=e66]:
+        - generic [ref=e67]: Vibe Lagos
+      - generic "Nova Sounds" [ref=e68]:
+        - generic [ref=e69]: Nova Sounds
+      - generic "LinkUp NG" [ref=e70]:
+        - generic [ref=e71]: LinkUp NG
+      - generic "Pop Circle" [ref=e72]:
+        - generic [ref=e73]: Pop Circle
+      - generic "Green Room" [ref=e74]:
+        - generic [ref=e75]: Green Room
+      - generic "Campus Plug" [ref=e76]:
+        - generic [ref=e77]: Campus Plug
+      - generic "After Camp" [ref=e78]:
+        - generic [ref=e79]: After Camp
+      - generic "Creator Lab" [ref=e80]:
+        - generic [ref=e81]: Creator Lab
+      - generic "Fresh Batch" [ref=e82]:
+        - generic [ref=e83]: Fresh Batch
+      - generic "City Social" [ref=e84]:
+        - generic [ref=e85]: City Social
+      - generic "Culture Deck" [ref=e86]:
+        - generic [ref=e87]: Culture Deck
+      - generic "Night Shift" [ref=e88]:
+        - generic [ref=e89]: Night Shift
+      - generic "House 44" [ref=e90]:
+        - generic [ref=e91]: House 44
+      - generic "Soft Life Co" [ref=e92]:
+        - generic [ref=e93]: Soft Life Co
+      - generic "The Yard" [ref=e94]:
+        - generic [ref=e95]: The Yard
+      - generic "Access Club" [ref=e96]:
+        - generic [ref=e97]: Access Club
+      - generic "Bitz Studio" [ref=e98]:
+        - generic [ref=e99]: Bitz Studio
+      - generic "Chrome Naija" [ref=e100]
+      - generic "Rod Rayek" [ref=e101]
+      - generic "Kaka's Cravings" [ref=e102]
+      - generic "Joniah Global Entertainment" [ref=e103]
+      - generic "Genesis Entertainment Hospitality" [ref=e104]
+      - generic "Bants Arena" [ref=e105]
+      - generic "The Hangout" [ref=e106]
+      - generic "VDJ Lee" [ref=e107]
+      - generic "Aqua Fiesta" [ref=e108]
+      - generic "GMA" [ref=e109]
+      - generic "Alte House" [ref=e110]:
+        - generic [ref=e111]: Alte House
+      - generic "Corpers Hub" [ref=e112]:
+        - generic [ref=e113]: Corpers Hub
+      - generic "Pulse Yard" [ref=e114]:
+        - generic [ref=e115]: Pulse Yard
+      - generic "Vibe Lagos" [ref=e116]:
+        - generic [ref=e117]: Vibe Lagos
+      - generic "Nova Sounds" [ref=e118]:
+        - generic [ref=e119]: Nova Sounds
+      - generic "LinkUp NG" [ref=e120]:
+        - generic [ref=e121]: LinkUp NG
+      - generic "Pop Circle" [ref=e122]:
+        - generic [ref=e123]: Pop Circle
+      - generic "Green Room" [ref=e124]:
+        - generic [ref=e125]: Green Room
+      - generic "Campus Plug" [ref=e126]:
+        - generic [ref=e127]: Campus Plug
+      - generic "After Camp" [ref=e128]:
+        - generic [ref=e129]: After Camp
+      - generic "Creator Lab" [ref=e130]:
+        - generic [ref=e131]: Creator Lab
+      - generic "Fresh Batch" [ref=e132]:
+        - generic [ref=e133]: Fresh Batch
+      - generic "City Social" [ref=e134]:
+        - generic [ref=e135]: City Social
+      - generic "Culture Deck" [ref=e136]:
+        - generic [ref=e137]: Culture Deck
+      - generic "Night Shift" [ref=e138]:
+        - generic [ref=e139]: Night Shift
+      - generic "House 44" [ref=e140]:
+        - generic [ref=e141]: House 44
+      - generic "Soft Life Co" [ref=e142]:
+        - generic [ref=e143]: Soft Life Co
+      - generic "The Yard" [ref=e144]:
+        - generic [ref=e145]: The Yard
+      - generic "Access Club" [ref=e146]:
+        - generic [ref=e147]: Access Club
+      - generic "Bitz Studio" [ref=e148]:
+        - generic [ref=e149]: Bitz Studio
+    - generic [ref=e151]:
+      - generic [ref=e152]:
+        - generic [ref=e153]: Why Bitzsznn works
+        - heading "Connection feels natural." [level=2] [ref=e154]
+        - paragraph [ref=e155]: "We shape the event before doors open: audience, ticketing, entry flow, hosting, content, music, and post-event community."
+      - generic [ref=e156]:
+        - generic [ref=e157]:
+          - paragraph [ref=e158]: 0+
+          - heading "Community members" [level=3] [ref=e159]
+          - paragraph [ref=e160]: Young people meeting through music, culture, and shared transition seasons.
+        - generic [ref=e161]:
+          - paragraph [ref=e162]: 0+
+          - heading "Experiences hosted" [level=3] [ref=e163]
+          - paragraph [ref=e164]: From intimate link-ups to high-energy nights built for connection and memory.
+        - generic [ref=e165]:
+          - paragraph [ref=e166]: 0+
+          - heading "States reached" [level=3] [ref=e167]
+          - paragraph [ref=e168]: A growing city-by-city cultural footprint with community at the center.
+        - generic [ref=e169]:
+          - paragraph [ref=e170]: 0+
+          - heading "Collaborations secured" [level=3] [ref=e171]
+          - paragraph [ref=e172]: Creators, artists, brands, and communities plugged into the Bitzsznn audience.
+    - generic [ref=e174]:
+      - generic [ref=e175]:
+        - heading "Plan the event." [level=2] [ref=e177]
+        - paragraph [ref=e179]: "From POP parties to creator pop-ups and brand activations, Bitzsznn gives young culture a premium system: clear tickets, better energy, strong visuals, and a crowd that understands why they showed up."
+      - generic [ref=e180]:
+        - generic [ref=e181]:
+          - img [ref=e183]
+          - heading "Culture-first events" [level=3] [ref=e186]
+          - paragraph [ref=e187]: Music, hosting, crowd flow, photos, and details planned so the night feels intentional from entry to last song.
+        - generic [ref=e188]:
+          - img [ref=e190]
+          - heading "NYSC to next chapter" [level=3] [ref=e194]
+          - paragraph [ref=e195]: A warmer way for corps members, graduates, creators, and young professionals to find their next circle.
+        - generic [ref=e196]:
+          - img [ref=e198]
+          - heading "Brand-ready community" [level=3] [ref=e203]
+          - paragraph [ref=e204]: Partners get credible access to youth culture through moments people actually attend, share, and remember.
+      - generic [ref=e205]:
+        - generic [ref=e206]:
+          - img "People at a Bitzsznn experience" [ref=e209]
+          - generic [ref=e211]:
+            - generic [ref=e212]: For guests
+            - heading "Meet your people." [level=3] [ref=e213]
+            - paragraph [ref=e214]: Every event is designed to be easy to enter, easy to enjoy, and easy to remember.
+        - generic [ref=e215]:
+          - heading "Best-fit activations" [level=3] [ref=e216]
+          - generic [ref=e217]:
+            - generic [ref=e218]:
+              - img [ref=e220]
+              - generic [ref=e223]: POP parties and service-year send-offs
+            - generic [ref=e224]:
+              - img [ref=e226]
+              - generic [ref=e229]: City link-ups for post-NYSC connection
+            - generic [ref=e230]:
+              - img [ref=e232]
+              - generic [ref=e235]: Creator nights, music events, and cultural pop-ups
+            - generic [ref=e236]:
+              - img [ref=e238]
+              - generic [ref=e241]: Brand activations that feel native to the crowd
+    - generic [ref=e243]:
+      - generic [ref=e244]:
+        - generic [ref=e245]:
+          - generic [ref=e246]: Tickets and events
+          - heading "Next events." [level=2] [ref=e247]
+        - link "View all events" [ref=e248] [cursor=pointer]:
+          - /url: /events
+      - generic [ref=e249]:
+        - button "Previous event" [ref=e250]:
+          - img [ref=e251]
+        - button "Next event" [ref=e253]:
+          - img [ref=e254]
+        - generic [ref=e256]:
+          - article [ref=e257]:
+            - generic [ref=e258]:
+              - generic [ref=e259]:
+                - generic [ref=e260]:
+                  - paragraph [ref=e261]: July
+                  - paragraph [ref=e262]: "9"
+                - 'heading "Freed At Last: Batch B1 POP Party" [level=3] [ref=e264]'
+              - paragraph [ref=e265]: A Y2K-themed POP party for Batch B1, built for games, networking, music, dance, giveaways, and final-service-year memories.
+            - generic [ref=e266]:
+              - generic [ref=e267]: Upcoming
+              - generic [ref=e269]:
+                - link "See details" [ref=e270] [cursor=pointer]:
+                  - /url: /events/freed-at-last-batch-b1-pop-party
+                - link "Buy ticket" [ref=e271] [cursor=pointer]:
+                  - /url: /events/freed-at-last-batch-b1-pop-party#tickets
+          - article [ref=e272]:
+            - generic [ref=e273]:
+              - generic [ref=e274]:
+                - generic [ref=e275]:
+                  - paragraph [ref=e276]: May
+                  - paragraph [ref=e277]: "21"
+                - heading "Batch A2 POP Party" [level=3] [ref=e279]
+              - paragraph [ref=e280]: A send-off night for corps members, fresh graduates, and their people.
+            - generic [ref=e281]:
+              - generic [ref=e282]: Upcoming
+              - generic [ref=e284]:
+                - link "See details" [ref=e285] [cursor=pointer]:
+                  - /url: /events/batch-a2-pop-party
+                - link "See details" [ref=e286] [cursor=pointer]:
+                  - /url: /events/batch-a2-pop-party
+          - article [ref=e287]:
+            - generic [ref=e288]:
+              - generic [ref=e289]:
+                - generic [ref=e290]:
+                  - paragraph [ref=e291]: June
+                  - paragraph [ref=e292]: "8"
+                - heading "Bitzsznn Link-Up" [level=3] [ref=e294]
+              - paragraph [ref=e295]: A relaxed mixer for creatives, builders, founders, and post-NYSC professionals.
+            - generic [ref=e296]:
+              - generic [ref=e297]: Upcoming
+              - generic [ref=e299]:
+                - link "See details" [ref=e300] [cursor=pointer]:
+                  - /url: /events/bitzsznn-link-up
+                - link "See details" [ref=e301] [cursor=pointer]:
+                  - /url: /events/bitzsznn-link-up
+          - article [ref=e302]:
+            - generic [ref=e303]:
+              - generic [ref=e304]:
+                - generic [ref=e305]:
+                  - paragraph [ref=e306]: July
+                  - paragraph [ref=e307]: "12"
+                - heading "Vibes & Value Night" [level=3] [ref=e309]
+              - paragraph [ref=e310]: A premium culture night for music, opportunity, and shared memories.
+            - generic [ref=e311]:
+              - generic [ref=e312]: Upcoming
+              - generic [ref=e314]:
+                - link "See details" [ref=e315] [cursor=pointer]:
+                  - /url: /events/vibes-and-value-night
+                - link "See details" [ref=e316] [cursor=pointer]:
+                  - /url: /events/vibes-and-value-night
+          - article [ref=e317]:
+            - generic [ref=e318]:
+              - generic [ref=e319]:
+                - generic [ref=e320]:
+                  - paragraph [ref=e321]: April
+                  - paragraph [ref=e322]: "18"
+                - heading "Corpers Homecoming" [level=3] [ref=e324]
+              - paragraph [ref=e325]: A homecoming-style night for people returning from service and settling into what comes next.
+            - generic [ref=e326]:
+              - generic [ref=e327]: Past event
+              - generic [ref=e329]:
+                - link "See details" [ref=e330] [cursor=pointer]:
+                  - /url: /events/corpers-homecoming
+                - link "See details" [ref=e331] [cursor=pointer]:
+                  - /url: /events/corpers-homecoming
+          - article [ref=e332]:
+            - generic [ref=e333]:
+              - generic [ref=e334]:
+                - generic [ref=e335]:
+                  - paragraph [ref=e336]: August
+                  - paragraph [ref=e337]: "3"
+                - heading "Creator Pop-Up" [level=3] [ref=e339]
+              - paragraph [ref=e340]: A culture pop-up for creators, artists, small brands, and youth communities.
+            - generic [ref=e341]:
+              - generic [ref=e342]: Upcoming
+              - generic [ref=e344]:
+                - link "See details" [ref=e345] [cursor=pointer]:
+                  - /url: /events/creator-pop-up
+                - link "See details" [ref=e346] [cursor=pointer]:
+                  - /url: /events/creator-pop-up
+          - article [ref=e347]:
+            - generic [ref=e348]:
+              - generic [ref=e349]:
+                - generic [ref=e350]:
+                  - paragraph [ref=e351]: September
+                  - paragraph [ref=e352]: "14"
+                - heading "After Camp Social" [level=3] [ref=e354]
+              - paragraph [ref=e355]: A soft landing for new friends, new cities, and the next phase after camp.
+            - generic [ref=e356]:
+              - generic [ref=e357]: Upcoming
+              - generic [ref=e359]:
+                - link "See details" [ref=e360] [cursor=pointer]:
+                  - /url: /events/after-camp-social
+                - link "See details" [ref=e361] [cursor=pointer]:
+                  - /url: /events/after-camp-social
+    - generic [ref=e363]:
+      - img "Bitzsznn good vibes only" [ref=e367]
+      - generic [ref=e368]:
+        - generic [ref=e369]: How it flows
+        - heading "Easy entry." [level=2] [ref=e370]
+        - generic [ref=e371]:
+          - generic [ref=e372]:
+            - generic [ref=e373]: "01"
+            - generic [ref=e374]:
+              - heading "Pick the event that matches your energy." [level=3] [ref=e375]
+              - paragraph [ref=e376]: Event pages make the date, city, audience, and value clear before anyone taps buy.
+          - generic [ref=e377]:
+            - generic [ref=e378]: "02"
+            - generic [ref=e379]:
+              - heading "Reserve your ticket before the list closes." [level=3] [ref=e380]
+              - paragraph [ref=e381]: Ticket CTAs stay direct and visible because conversion should never feel hidden.
+          - generic [ref=e382]:
+            - generic [ref=e383]: "03"
+            - generic [ref=e384]:
+              - heading "Arrive to a hosted experience with music, photos, and warm introductions." [level=3] [ref=e385]
+              - paragraph [ref=e386]: The event is hosted, photographed, and shaped for social comfort.
+          - generic [ref=e387]:
+            - generic [ref=e388]: "04"
+            - generic [ref=e389]:
+              - heading "Stay connected through recaps, community updates, and the next invite." [level=3] [ref=e390]
+              - paragraph [ref=e391]: The night becomes proof, content, and the next reason to return.
+    - generic [ref=e393]:
+      - generic [ref=e394]:
+        - generic [ref=e395]: Community proof
+        - heading "People feel seen." [level=2] [ref=e396]
+      - generic [ref=e398]:
+        - generic [ref=e399]:
+          - img [ref=e401]
+          - paragraph [ref=e404]: "\"It helped me meet people in a new city without the awkwardness. Bitzsznn understands the transition season perfectly.\""
+          - generic [ref=e405]:
+            - img "Dara K. testimonial portrait" [ref=e407]
+            - generic [ref=e408]:
+              - paragraph [ref=e409]: Dara K.
+              - paragraph [ref=e410]: Young professional
+        - generic [ref=e411]:
+          - generic [ref=e412]:
+            - button "Show testimonial from Amaka E." [ref=e413]
+            - button "Show testimonial from Timi A." [ref=e414]
+            - button "Show testimonial from Dara K." [ref=e415]
+            - button "Show testimonial from Ife B." [ref=e416]
+            - button "Show testimonial from Zainab O." [ref=e417]
+            - button "Show testimonial from Kelechi N." [ref=e418]
+            - button "Show testimonial from Fola R." [ref=e419]
+            - button "Show testimonial from Mira S." [ref=e420]
+            - button "Show testimonial from Chidi M." [ref=e421]
+            - button "Show testimonial from Lola B." [ref=e422]
+            - button "Show testimonial from Ayo T." [ref=e423]
+            - button "Show testimonial from Nora I." [ref=e424]
+          - generic [ref=e425]:
+            - button "Previous testimonial" [ref=e426]:
+              - img [ref=e427]
+            - button "Next testimonial" [ref=e429]:
+              - img [ref=e430]
+    - generic [ref=e433]:
+      - generic [ref=e434]:
+        - generic [ref=e435]: Join the community
+        - heading "Get early drops." [level=2] [ref=e436]
+        - paragraph [ref=e437]: Come for the event. Stay for the people, opportunities, and memories that travel after the night ends.
+        - generic [ref=e438]:
+          - link "Join the community" [ref=e439] [cursor=pointer]:
+            - /url: https://chat.whatsapp.com/KFiRyQR9akv6Kp4wWWBGUD?s=cl&p=i&mlu=4&amv=0
+            - text: Join the community
+            - img [ref=e440]
+          - link "Partner with us" [ref=e442] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e443]:
+        - generic [ref=e444]:
+          - img [ref=e446]
+          - paragraph [ref=e448]: Ticketing
+        - generic [ref=e449]:
+          - img [ref=e451]
+          - paragraph [ref=e454]: Hosted flow
+        - generic [ref=e455]:
+          - img [ref=e457]
+          - paragraph [ref=e460]: Recap content
+        - generic [ref=e461]:
+          - img [ref=e463]
+          - paragraph [ref=e466]: Premium crowd
+    - generic [ref=e469]:
+      - generic [ref=e470]: Quick answers
+      - heading "Before you enter." [level=2] [ref=e471]
+      - generic [ref=e473]:
+        - generic [ref=e474]:
+          - button "What is Bitzsznn?" [ref=e475]:
+            - generic [ref=e476]: What is Bitzsznn?
+            - img [ref=e478]
+          - paragraph [ref=e483]: Bitzsznn is a youth cultural community brand built around NYSC and post-NYSC lifestyle, entertainment, music, events, memories, connection, and opportunity.
+        - button "Is Bitzsznn only about parties?" [ref=e485]:
+          - generic [ref=e486]: Is Bitzsznn only about parties?
+          - img [ref=e488]
+        - button "Who is Bitzsznn for?" [ref=e490]:
+          - generic [ref=e491]: Who is Bitzsznn for?
+          - img [ref=e493]
+        - button "How can I join the community?" [ref=e495]:
+          - generic [ref=e496]: How can I join the community?
+          - img [ref=e498]
+        - button "Can Bitzsznn plan or host my event?" [ref=e500]:
+          - generic [ref=e501]: Can Bitzsznn plan or host my event?
+          - img [ref=e503]
+        - button "Can brands partner with Bitzsznn?" [ref=e505]:
+          - generic [ref=e506]: Can brands partner with Bitzsznn?
+          - img [ref=e508]
+        - button "Where are Bitzsznn events held?" [ref=e510]:
+          - generic [ref=e511]: Where are Bitzsznn events held?
+          - img [ref=e513]
+    - generic [ref=e516]:
+      - generic [ref=e517]:
+        - img [ref=e519]
+        - heading "Enter the event." [level=2] [ref=e522]
+        - paragraph [ref=e523]: Buy the next ticket, bring your people, or talk to us about building a culture-led activation for your audience.
+        - generic [ref=e524]:
+          - link "Buy ticket" [ref=e525] [cursor=pointer]:
+            - /url: /events/freed-at-last-batch-b1-pop-party#tickets
+          - link "See details" [ref=e526] [cursor=pointer]:
+            - /url: /contact
+      - img "Bitzsznn community party" [ref=e528]
+  - contentinfo [ref=e529]:
+    - paragraph: BITZSZNN
+    - generic [ref=e530]:
+      - generic [ref=e533]:
+        - generic [ref=e534]:
+          - paragraph [ref=e535]: Before the next room opens
+          - heading "Bring Bitzsznn to your people, your brand, or your city." [level=2] [ref=e536]
+          - paragraph [ref=e537]: Partner on an experience, join the community list, or tell us what kind of room you want to build next.
+        - generic [ref=e538]:
+          - link "Partner with us" [ref=e539] [cursor=pointer]:
+            - /url: /contact
+          - link "Join community" [ref=e540] [cursor=pointer]:
+            - /url: https://chat.whatsapp.com/KFiRyQR9akv6Kp4wWWBGUD?s=cl&p=i&mlu=4&amv=0
+      - generic [ref=e541]:
+        - generic [ref=e542]:
+          - heading "Vibes. Networking. Opportunity." [level=2] [ref=e543]:
+            - text: Vibes.
+            - text: Networking.
+            - text: Opportunity.
+          - paragraph [ref=e544]: A youth cultural community for corps members, creatives, builders, artists, and storytellers shaping moments that move people.
+        - generic [ref=e545]:
+          - generic [ref=e546]:
+            - paragraph [ref=e547]: Links
+            - generic [ref=e548]:
+              - link "Services" [ref=e549] [cursor=pointer]:
+                - /url: /services
+              - link "Events" [ref=e550] [cursor=pointer]:
+                - /url: /events
+              - link "RoomPass" [ref=e551] [cursor=pointer]:
+                - /url: /platform
+              - link "Community" [ref=e552] [cursor=pointer]:
+                - /url: /community
+              - link "About Us" [ref=e553] [cursor=pointer]:
+                - /url: /about
+          - generic [ref=e554]:
+            - paragraph [ref=e555]: Actions
+            - generic [ref=e556]:
+              - link "Join the Community" [ref=e557] [cursor=pointer]:
+                - /url: https://chat.whatsapp.com/KFiRyQR9akv6Kp4wWWBGUD?s=cl&p=i&mlu=4&amv=0
+              - link "View Events" [ref=e558] [cursor=pointer]:
+                - /url: /events
+              - link "Contact Us" [ref=e559] [cursor=pointer]:
+                - /url: /contact
+          - generic [ref=e560]:
+            - paragraph [ref=e561]: Social
+            - generic [ref=e562]:
+              - link "Instagram" [ref=e563] [cursor=pointer]:
+                - /url: https://instagram.com/bitzsznn
+              - link "TikTok" [ref=e564] [cursor=pointer]:
+                - /url: https://instagram.com/bitzsznn
+              - link "X/Twitter" [ref=e565] [cursor=pointer]:
+                - /url: https://instagram.com/bitzsznn
+              - link "WhatsApp" [ref=e566] [cursor=pointer]:
+                - /url: https://chat.whatsapp.com/KFiRyQR9akv6Kp4wWWBGUD?s=cl&p=i&mlu=4&amv=0
+          - generic [ref=e567]:
+            - paragraph [ref=e568]: Contact
+            - paragraph [ref=e569]: hello@bitzsznn.com
+      - generic [ref=e570]:
+        - paragraph [ref=e571]: © Bitzsznn 2026. All rights reserved.
+        - link "Join the community" [ref=e572] [cursor=pointer]:
+          - /url: https://chat.whatsapp.com/KFiRyQR9akv6Kp4wWWBGUD?s=cl&p=i&mlu=4&amv=0

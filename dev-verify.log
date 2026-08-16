@@ -1,0 +1,12 @@
+
+> bitzsznn-website@0.1.0 dev
+> next dev -p 3011
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3011
+- Network:       http://172.20.10.4:3011
+- Environments: .env.local
+✓ Ready in 1090ms
+
+ GET / 200 in 5.7s (next.js: 3.2s, application-code: 2.5s)
+[?25h

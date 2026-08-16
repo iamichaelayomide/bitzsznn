@@ -1,0 +1,184 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e4]:
+      - link "Bitzsznn home" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Bitzsznn" [ref=e6]
+      - generic [ref=e7]:
+        - link "Services" [ref=e8] [cursor=pointer]:
+          - /url: /services
+        - link "Events" [ref=e9] [cursor=pointer]:
+          - /url: /events
+        - link "Community" [ref=e10] [cursor=pointer]:
+          - /url: /community
+        - link "About us" [ref=e11] [cursor=pointer]:
+          - /url: /about
+      - link "Join community" [ref=e13] [cursor=pointer]:
+        - /url: https://chat.whatsapp.com/KFiRyQR9akv6Kp4wWWBGUD?s=cl&p=i&mlu=4&amv=0
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - img "Bitzsznn crowd energy" [ref=e16]
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - heading "Upcoming events." [level=1] [ref=e24]:
+              - text: Upcoming
+              - text: events.
+            - paragraph [ref=e25]:
+              - text: POP parties, link-ups, and creator rooms
+              - text: built for people finding their next circle.
+          - link "View all events" [ref=e26] [cursor=pointer]:
+            - /url: "#upcoming-events"
+        - generic [ref=e32]:
+          - generic [ref=e33]: 30+
+          - generic [ref=e34]: Events organized
+        - generic [ref=e35]:
+          - generic [ref=e36]: 10+
+          - generic [ref=e37]: Cities reached
+        - generic [ref=e38]:
+          - generic [ref=e39]: 500+
+          - generic [ref=e40]: Community member
+        - generic [ref=e41]:
+          - generic [ref=e42]: 30+
+          - generic [ref=e43]: Brand collaborations
+        - generic [ref=e44]:
+          - generic [ref=e45]: 100%
+          - generic [ref=e46]: Event sellouts
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - paragraph [ref=e52]: Upcoming events
+          - heading "Next events." [level=2] [ref=e53]
+        - paragraph [ref=e54]: Pick the next room, check the details, and reserve your access before the list closes.
+      - article [ref=e56]:
+        - generic [ref=e58]: Y2K POP party
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - img [ref=e62]
+              - text: July 9 2026
+            - generic [ref=e64]:
+              - img [ref=e65]
+              - text: De Javu Lounge, Alagbaka, Akure
+          - 'heading "Freed At Last: Batch B1 POP Party" [level=3] [ref=e68]'
+          - paragraph [ref=e69]: A Y2K-themed POP party for Batch B1, built for games, networking, music, dance, giveaways, and final-service-year memories.
+          - generic [ref=e70]:
+            - link "See details" [ref=e71] [cursor=pointer]:
+              - /url: /events/freed-at-last-batch-b1-pop-party
+            - link "Buy ticket" [ref=e72] [cursor=pointer]:
+              - /url: /events/freed-at-last-batch-b1-pop-party#tickets
+    - generic [ref=e73]:
+      - generic [ref=e76]:
+        - heading "Events gallery" [level=2] [ref=e77]
+        - paragraph [ref=e78]: Swipe through the people, parties, and recap moments that make Bitzsznn feel bigger than one night.
+      - generic [ref=e79]:
+        - button "Previous gallery item" [ref=e80]:
+          - img [ref=e81]
+        - button "Next gallery item" [ref=e83]:
+          - img [ref=e84]
+        - generic [ref=e86]:
+          - 'button "Open Freed At Last: Batch B1 POP Party preview" [ref=e87]':
+            - 'img "Freed At Last: Batch B1 POP Party" [ref=e89]'
+            - generic [ref=e90]:
+              - 'heading "Freed At Last: Batch B1 POP Party" [level=3] [ref=e91]'
+              - paragraph [ref=e92]: Y2K POP party / 2026
+          - button "Open The Owambe Experience C1 POP24 preview" [ref=e93]:
+            - img "The Owambe Experience C1 POP24" [ref=e95]
+            - generic [ref=e96]:
+              - heading "The Owambe Experience C1 POP24" [level=3] [ref=e97]
+              - paragraph [ref=e98]: Owambe POP experience / 2024 recap
+          - button "Open The Last Dance 24A2 POP preview" [ref=e99]:
+            - img "The Last Dance 24A2 POP" [ref=e101]
+            - generic [ref=e102]:
+              - heading "The Last Dance 24A2 POP" [level=3] [ref=e103]
+              - paragraph [ref=e104]: NYSC POP party / 2024 recap
+          - button "Open POP Apocalypse preview" [ref=e105]:
+            - img "POP Apocalypse" [ref=e107]
+            - generic [ref=e108]:
+              - heading "POP Apocalypse" [level=3] [ref=e109]
+              - paragraph [ref=e110]: POP nightlife / 2024 recap
+          - button "Open POP Rave Party preview" [ref=e111]:
+            - img "POP Rave Party" [ref=e113]
+            - generic [ref=e114]:
+              - heading "POP Rave Party" [level=3] [ref=e115]
+              - paragraph [ref=e116]: Rave party / 2024 recap
+    - generic [ref=e119]:
+      - generic [ref=e120]:
+        - paragraph [ref=e121]: What to expect
+        - heading "What to expect" [level=2] [ref=e122]
+        - paragraph [ref=e123]: Every Bitzsznn event is built to help people enter easily, connect naturally, and leave with a memory worth sharing.
+      - generic [ref=e124]:
+        - article [ref=e125]:
+          - generic [ref=e126]: "01"
+          - paragraph [ref=e127]: Curated music, hosted moments, and a crowd that actually wants to be there
+        - article [ref=e128]:
+          - generic [ref=e129]: "02"
+          - paragraph [ref=e130]: Photo-ready memories, recap content, and creator moments after the night
+        - article [ref=e131]:
+          - generic [ref=e132]: "03"
+          - paragraph [ref=e133]: Events designed for connection, not just attendance
+        - article [ref=e134]:
+          - generic [ref=e135]: "04"
+          - paragraph [ref=e136]: Access for partners, artists, creators, and emerging youth brands
+  - contentinfo [ref=e137]:
+    - paragraph: BITZSZNN
+    - generic [ref=e138]:
+      - generic [ref=e141]:
+        - generic [ref=e142]:
+          - paragraph [ref=e143]: Before the next room opens
+          - heading "Bring Bitzsznn to your people, your brand, or your city." [level=2] [ref=e144]
+          - paragraph [ref=e145]: Partner on an experience, join the community list, or tell us what kind of room you want to build next.
+        - generic [ref=e146]:
+          - link "Partner with us" [ref=e147] [cursor=pointer]:
+            - /url: /contact
+          - link "Join community" [ref=e148] [cursor=pointer]:
+            - /url: https://chat.whatsapp.com/KFiRyQR9akv6Kp4wWWBGUD?s=cl&p=i&mlu=4&amv=0
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - heading "Vibes. Networking. Opportunity." [level=2] [ref=e151]:
+            - text: Vibes.
+            - text: Networking.
+            - text: Opportunity.
+          - paragraph [ref=e152]: A youth cultural community for corps members, creatives, builders, artists, and storytellers shaping moments that move people.
+        - generic [ref=e153]:
+          - generic [ref=e154]:
+            - paragraph [ref=e155]: Links
+            - generic [ref=e156]:
+              - link "Services" [ref=e157] [cursor=pointer]:
+                - /url: /services
+              - link "Events" [ref=e158] [cursor=pointer]:
+                - /url: /events
+              - link "RoomPass" [ref=e159] [cursor=pointer]:
+                - /url: /platform
+              - link "Community" [ref=e160] [cursor=pointer]:
+                - /url: /community
+              - link "About Us" [ref=e161] [cursor=pointer]:
+                - /url: /about
+          - generic [ref=e162]:
+            - paragraph [ref=e163]: Actions
+            - generic [ref=e164]:
+              - link "Join the Community" [ref=e165] [cursor=pointer]:
+                - /url: https://chat.whatsapp.com/KFiRyQR9akv6Kp4wWWBGUD?s=cl&p=i&mlu=4&amv=0
+              - link "View Events" [ref=e166] [cursor=pointer]:
+                - /url: /events
+              - link "Contact Us" [ref=e167] [cursor=pointer]:
+                - /url: /contact
+          - generic [ref=e168]:
+            - paragraph [ref=e169]: Social
+            - generic [ref=e170]:
+              - link "Instagram" [ref=e171] [cursor=pointer]:
+                - /url: https://instagram.com/bitzsznn
+              - link "TikTok" [ref=e172] [cursor=pointer]:
+                - /url: https://instagram.com/bitzsznn
+              - link "X/Twitter" [ref=e173] [cursor=pointer]:
+                - /url: https://instagram.com/bitzsznn
+              - link "WhatsApp" [ref=e174] [cursor=pointer]:
+                - /url: https://chat.whatsapp.com/KFiRyQR9akv6Kp4wWWBGUD?s=cl&p=i&mlu=4&amv=0
+          - generic [ref=e175]:
+            - paragraph [ref=e176]: Contact
+            - paragraph [ref=e177]: hello@bitzsznn.com
+      - generic [ref=e178]:
+        - paragraph [ref=e179]: © Bitzsznn 2026. All rights reserved.
+        - link "Join the community" [ref=e180] [cursor=pointer]:
+          - /url: https://chat.whatsapp.com/KFiRyQR9akv6Kp4wWWBGUD?s=cl&p=i&mlu=4&amv=0
+  - alert [ref=e181]
